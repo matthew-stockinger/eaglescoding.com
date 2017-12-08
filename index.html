@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- Version History
+1.0   functional side navbar.
+1.1   responsive navbar for tablet screens.
+2.0   add image to right of navbar.  
+2.1   add heading inside of image.
+2.2   add videos.
+2.3   restructure links and directories, add Google font Biryani
+2.4   rewrote navbar CSS with flexboxes.
+3.0   add phone width responsiveness.
+4.0   rewrite with w3.css.
+-->
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Home of Apollo coding class">
+<meta name="author" content="Matthew Stockinger" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apollo Coding</title>
+<link rel="stylesheet" href="styles/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Biryani:800' rel='stylesheet' type='text/css'>
+<style>
+    .w3-biryani {
+        line-height: 22.5px;
+        text-transform: uppercase;
+        font-family: "Biryani", sans-serif;
+        font-size: 22.5px;
+        font-weight: 800;
+    }
+    
+    .w3-biryani-title {
+        text-transform: uppercase;
+        font-family: "Biryani", sans-serif;
+        font-size: 2.8em;
+        font-weight: 800;
+        width: 80%;
+    }
+    
+    /* On very narrow screens, prevents header from growing larger than the laptop image. */
+    @media screen and (max-width: 486px) {
+        .w3-biryani-title {
+            font-size: 1.6em;
+        }
+    }
+    
+    .flexcontainer {
+        /* extra garbage here for old browser compatibility. */
+        /* centers the sidenav vertically on the screen. */
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    /* hack I found to make YouTube videos scale with the window */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- w3-collapse = phone hamburger menu.  flexcontainer centers vertically on screen. -->
+<nav class="w3-sidenav w3-collapse w3-animate-left w3-padding flexcontainer" style="width: 239px;" id="mySidenav">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+    <div class="w3-black w3-margin">
+        <a href="http://eaglescoding.com" class="w3-biryani">APOLLO CODING CLASS</a>
+    </div>
+    <div class="w3-black w3-margin">
+        <a href="http://eaglescoding.com/makey/makey.html" class="w3-biryani" target="_blank">Makey Makey!<br><br></a>
+    </div>
+    <div class="w3-black w3-margin">
+        <a href="http://eaglescoding.com/students/student_pages.php" class="w3-biryani">Student Web Pages<br><br></a>
+    </div>
+    <div class="w3-black w3-margin">
+        <a href="https://docs.google.com/document/d/1vKCEiX8_v1ddkuj7ESkJER_Td3g5LwW0JrJtyiqIlpY/edit?usp=sharing" class="w3-biryani" target="_blank">Student Code Art<br><br></a>
+    </div>
+</nav>
+
+<!-- w3-main container needed for hamburger menu -->
+<!-- wraps around all of page content -->
+<div class="w3-main" style="margin-left: 239px;">
+    <header class="w3-container w3-black">
+        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</span>
+    </header>
+
+    <!-- The top image -->
+    <div class="w3-display-container w3-container w3-margin-top">
+        <img src="images/laptop2.jpg" alt="MacBook" style="width: 100%">
+        <div class="w3-display-middle w3-black w3-biryani-title w3-padding">ANYONE CAN LEARN TO CODE</div>
+    </div>
+
+    <!-- first youtube video -->
+    <div class="video-container w3-container w3-margin-top w3-margin-bottom">
+        <iframe class="w3-container" width="2000" height="1125" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- second youtube video -->
+    <div class="video-container w3-container w3-margin-top w3-margin-bottom">
+        <iframe class="w3-container" width="2000" height="1125" src="https://www.youtube.com/embed/mFPg96gdPkc" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+</div>
+
+<script>
+    function w3_open() {
+        document.getElementById("mySidenav").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidenav").style.display = "none";
+    }
+</script>
+
+</body>
+</html>

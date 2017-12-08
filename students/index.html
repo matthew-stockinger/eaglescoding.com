@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<! --  This is an html test version for CSS design work.  -->
+<html lang="en-US">
+  <head>
+    <title>Apollo Coding Student Work</title>
+    <link rel="stylesheet" href="student_pages.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="Student work on display.">
+    <meta name="author" content="Matthew Stockinger">
+  </head>
+  <body>
+
+<!--    <h2>This page is currently under construction.</h2>-->
+    <h2>
+      <a id="backLink" href="http://eaglescoding.com">eaglescoding.com</a>
+    </h2>
+    
+    <div id="studentLinkList">
+      <input type="text" size="40" placeholder="Search for names..." id="myInput" onkeyup="filterFunction()">
+      
+      <ul id="myUL">
+        <li>
+          <a href="Abdi_Osman/index.html" target="_blank">Abdi Osman</a>
+        </li>
+        <li>
+          <a href="Abdiaziz_Muhumed/index.html" target="_blank">Abdiaziz Muhumed</a>
+        </li>
+        <li>
+          <a href="Abdirahman_Mohamud/index.html" target="_blank">Abdirahman Mohamud</a>
+        </li>
+        <li>
+          <a href="Abdisadik_Aidrus/index.html" target="_blank">Abdisadik Aidrus</a>
+        </li>
+        <li>
+          <a href="Ahmed_Mohamed/index.html" target="_blank">Ahmed Mohamed</a>
+        </li>
+        <li>
+          <a href="Aidan_Schiltz/index.html" target="_blank">Aidan Schiltz</a>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      function filterFunction() {
+          var input, filter, ul, li, a, i;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+              if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+              } else {
+                  li[i].style.display = "none";
+              }
+          }
+      }
+    </script>
+      
+  </body>
+</html>
