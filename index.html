@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- Version History
 1.0   functional side navbar.
 1.1   responsive navbar for tablet screens.
@@ -18,61 +18,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apollo Coding</title>
 <link rel="stylesheet" href="styles/w3.css">
+<link rel="stylesheet" href="styles/styles.css" />
 <link href='https://fonts.googleapis.com/css?family=Biryani:800' rel='stylesheet' type='text/css'>
-<style>
-    .w3-biryani {
-        line-height: 22.5px;
-        text-transform: uppercase;
-        font-family: "Biryani", sans-serif;
-        font-size: 22.5px;
-        font-weight: 800;
-    }
-    
-    .w3-biryani-title {
-        text-transform: uppercase;
-        font-family: "Biryani", sans-serif;
-        font-size: 2.8em;
-        font-weight: 800;
-        width: 80%;
-    }
-    
-    /* On very narrow screens, prevents header from growing larger than the laptop image. */
-    @media screen and (max-width: 486px) {
-        .w3-biryani-title {
-            font-size: 1.6em;
-        }
-    }
-    
-    .flexcontainer {
-        /* extra garbage here for old browser compatibility. */
-        /* centers the sidenav vertically on the screen. */
-        display: -webkit-flex;
-        display: flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    
-    /* hack I found to make YouTube videos scale with the window */
-    .video-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
-        height: 0;
-        overflow: hidden;
-    }
-    
-    .video-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-</style>
 </head>
 
 <body>
@@ -119,14 +66,7 @@
 
 </div>
 
-<script>
-    function w3_open() {
-        document.getElementById("mySidenav").style.display = "block";
-    }
-
-    function w3_close() {
-        document.getElementById("mySidenav").style.display = "none";
-    }
+<script src="js/index.js">
 </script>
 
 </body>
