@@ -9,6 +9,12 @@
 2.4   rewrote navbar CSS with flexboxes.
 3.0   add phone width responsiveness.
 4.0   rewrite with w3.css.
+
+12.11.2017: added function to index.js to toggle top image art display.
+To do:
+-make toggle fade in.
+-create art display carousel.
+-add link to extras in google doc.
 -->
 <html lang="en-US">
 <head>
@@ -37,7 +43,8 @@
         <a href="http://eaglescoding.com/students/student_pages.php" class="w3-biryani">Student Web Pages<br><br></a>
     </div>
     <div class="w3-black w3-margin">
-        <a href="https://docs.google.com/document/d/1vKCEiX8_v1ddkuj7ESkJER_Td3g5LwW0JrJtyiqIlpY/edit?usp=sharing" class="w3-biryani" target="_blank">Student Code Art<br><br></a>
+        <!-- <a href="https://docs.google.com/document/d/1vKCEiX8_v1ddkuj7ESkJER_Td3g5LwW0JrJtyiqIlpY/edit?usp=sharing" class="w3-biryani" target="_blank" onclick="toggleArt();">Student Code Art<br><br></a> -->
+        <a href="#" class="w3-biryani" onclick="toggleArt();">Student Code Art<br><br></a>
     </div>
 </nav>
 
@@ -49,9 +56,16 @@
     </header>
 
     <!-- The top image -->
-    <div class="w3-display-container w3-container w3-margin-top">
+    <div id="topImg" class="w3-display-container w3-container w3-margin-top">
         <img src="img/laptop2.jpg" alt="MacBook" style="width: 100%">
         <div class="w3-display-middle w3-black w3-biryani-title w3-padding">ANYONE CAN LEARN TO CODE</div>
+    </div>
+    
+    <!-- The student code art carousel -->
+    <!-- Shows up onclick of student art in navbar -->
+    <div id="topArt" class="w3-displaycontainer w3-container w3-margin-top w3-black w3-hide">
+        <img src="img/laptop2.jpg" alt="MacBook" style="width: 100%">
+        <div class="w3-display-middle w3-black w3-biryani-title w3-padding">Carousel Test</div>
     </div>
 
     <!-- first youtube video -->
