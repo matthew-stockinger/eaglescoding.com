@@ -1,16 +1,66 @@
 <!DOCTYPE html>
+<!-- To do
+    -slideshow bottom links
+        -move beneath images.
+        -prevent from selecting on click.
+    -add border to images, or make background dark grey.
+    -tweak sizing of everything.
+    -get hamburger working (and white)
+    -actually make slideshow for 2017 T1.
+        -add captions to slides.   
+    -add year selectors.
+-->
+
 <html lang="en-US">
 <head>
-<link rel="stylesheet" href="../styles/styles2.3.css" />
-<meta charset="UTF-8" />
-<meta name="author" content="Matthew Stockinger" />
-<title>Code Art!</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Home of Apollo coding class">
+    <meta name="author" content="Matthew Stockinger" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Coding</title>
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/studentArt.css" />
+    <link href='https://fonts.googleapis.com/css?family=Biryani:800' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
-  <h1>Check out these artworks, created by coding students!</h1>
-  <ul>
-    <li><a href="https://studio.code.org/projects/artist/KtP3t3KY6JAUUNJmu34Yaw" target="_blank">Mr. Stockinger</a></li>
-  </ul>
-  
+<body class="w3-black">
+
+<!-- w3-collapse = phone hamburger menu.  flexcontainer centers vertically on screen. -->
+
+<!-- <nav class="w3-sidenav w3-collapse w3-animate-left w3-padding flexcontainer" style="width: 239px;" id="mySidenav">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+    <div class="w3-black w3-margin">
+        <a href="http://eaglescoding.com" class="w3-biryani">APOLLO CODING CLASS</a>
+    </div>
+    <div class="w3-black w3-margin">
+        <a href="http://eaglescoding.com/makey/makey.html" class="w3-biryani" target="_blank">Makey Makey!<br><br></a>
+    </div>
+    <div class="w3-black w3-margin">
+        <a href="http://eaglescoding.com/students/student_pages.php" class="w3-biryani">Student Web Pages<br><br></a>
+    </div>
+    <div class="w3-black w3-margin"> -->
+        <!--<a href="https://docs.google.com/document/d/1vKCEiX8_v1ddkuj7ESkJER_Td3g5LwW0JrJtyiqIlpY/edit?usp=sharing" class="w3-biryani" target="_blank" onclick="toggleArt();">Student Code Art<br><br></a> -->
+        <!-- <a href="#" class="w3-biryani" onclick="toggleArt();">Student Code Art<br><br></a>
+    </div>
+</nav> -->
+
+<div class="w3-main w3-black"> <!-- wrapper for page content.  Helps hamburger menu. -->
+    <div class="w3-content w3-display-container" style="max-width:400px">
+        <img class="mySlides" src="img/RyanNguyen.jpg" style="width:100%">
+        <img class="mySlides" src="img/HindaMohamed AbdiowasohoMahamed.JPG" style="width:100%">
+        <img class="mySlides" src="img/TrevorThumb.JPG" style="width:100%">
+        <div class="w3-center w3-container w3-section w3-xxlarge w3-text-white w3-display-bottommiddle" style="width:100%">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+    </div>
+</div>
+
+<script src="studentArt.js">
+</script>
+
 </body>
+</html>
