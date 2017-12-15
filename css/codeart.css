@@ -1,0 +1,42 @@
+/* slideshow bottom of images */
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.w3-biryani {
+    line-height: 22.5px;
+    text-transform: uppercase;
+    font-family: "Biryani", sans-serif;
+    font-size: 22.5px;
+    font-weight: 800;
+}
+
+.w3-biryani-title {
+    text-transform: uppercase;
+    font-family: "Biryani", sans-serif;
+    font-size: 2.8em;
+    font-weight: 800;
+    width: 80%;
+}
+
+/* On very narrow screens, prevents header from growing larger than the laptop image. */
+@media screen and (max-width: 486px) {
+    .w3-biryani-title {
+        font-size: 1.6em;
+    }
+}
+
+.flexcontainer {
+    /* extra garbage here for old browser compatibility. */
+    /* centers the sidenav vertically on the screen. */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
