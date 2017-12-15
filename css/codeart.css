@@ -34,6 +34,12 @@
     }
 }
 
+@media screen and (min-width: 487px) {
+    #picDiv {
+        margin-top: 16px;
+    }
+}
+
 .flexcontainer {
     /* extra garbage here for old browser compatibility. */
     /* centers the sidenav vertically on the screen. */
