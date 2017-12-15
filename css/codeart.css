@@ -2,7 +2,15 @@
 .mySlides {display:none}
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 .w3-badge {height:13px;width:13px;padding:0}
+/* unselectable used to prevent ugly text selection of < and > on slideshow controls. */
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
+/* fonts */
 .w3-biryani {
     line-height: 22.5px;
     text-transform: uppercase;
