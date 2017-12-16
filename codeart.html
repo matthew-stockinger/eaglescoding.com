@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- To do
-    -set up for lots of pictures.  (Dots will take up too much space.)
     -get hamburger working (and white)
     -actually make slideshow for 2017 T1.
         -add captions to slides.   
     -add year selectors.
     -add keypress for right and left
+    -recreate with art generation videos.
 -->
 
 <html lang="en-US">
@@ -17,7 +17,8 @@
     <title>Apollo Coding</title>
     <link rel="stylesheet" href="css/w3.css">
     <link rel="stylesheet" href="css/codeart.css" />
-    <link href='https://fonts.googleapis.com/css?family=Biryani:800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Biryani:800' 
+        rel='stylesheet' type='text/css'>
 </head>
 
 <body class="w3-darker-gray">
@@ -41,18 +42,26 @@
     </div>
 </nav> -->
 
-<div class="w3-main w3-darker-gray"> <!-- wrapper for page content.  Helps hamburger menu. -->
+<!-- wrapper for page content. Helps hamburger menu. -->
+<div class="w3-main w3-darker-gray"> 
     <div class="w3-content" id="picDiv" style="max-width:360px">
-        <!-- images here should have an aspect ratio of 0.71 -->
+        <!-- images here should have an aspect ratio of 0.71 
+        That's 317 x 446 -->
+        <img class="mySlides" src="img/codeart/HindaMohamedAbdiowasohoMahamed.jpg" style="width:100%">
+        <img class="mySlides" src="img/codeart/HunterArmstrongMahamudYusufBrettKayfes.jpg" style="width:100%">
+        <img class="mySlides" src="img/codeart/JamesNguyen.jpg" style="width:100%">
+        <img class="mySlides" src="img/codeart/MaxOverboe.jpg" style="width:100%">
         <img class="mySlides" src="img/codeart/RyanNguyen.jpg" style="width:100%">
-        <img class="mySlides" src="img/codeart/HindaMohamed AbdiowasohoMahamed.JPG" style="width:100%">
-        <img class="mySlides" src="img/codeart/TrevorThumb.JPG" style="width:100%">
+        <img class="mySlides" src="img/codeart/TrevorThumb.jpg" style="width:100%">
     </div>
     <div class="w3-center w3-container w3-section w3-xxlarge w3-text-white" style="width:100%">
         <span class="w3-hover-text-khaki w3-margin-right unselectable" onclick="plusDivs(-1)">&#10094;</span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        <span class="w3-badge navdots w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-badge navdots w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-badge navdots w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        <span class="w3-badge navdots w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+        <span class="w3-badge navdots w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+        <span class="w3-badge navdots w3-border w3-transparent w3-hover-white" onclick="currentDiv(6)"></span>
         <span class="w3-hover-text-khaki w3-margin-left unselectable" onclick="plusDivs(1)">&#10095;</span>
     </div>
 </div>
