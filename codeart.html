@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <!-- To do
-    -add title bar (for hamburger and years)
-    -get hamburger working (and white)
+    -add image black border.  Troubleshoot bottom border.
+    -fix color of image nav.
     -add captions to slides.   
-    -add year selectors.
+    -add year selectors to header for phones.
+        -somewhere else for computers?
     -add keypress for right and left
     -recreate with art generation videos.
 -->
+
+<!-- Layout notes/desires
+    narrow header bar with hamburger menu on phones.
+    white background to unify with rest of site.
+    on big screens, always visible site navbar.  
+        image content centered horizontally and vertically in space to the right.
+    on tiny screens (e.g. Nokia Lumia) find a way to squeeze all this in.
+-->
+
 
 <html lang="en-US">
 <head>
@@ -21,12 +31,11 @@
         rel='stylesheet' type='text/css'>
 </head>
 
-<body class="w3-darker-gray">
+<body>
 
 <!-- w3-collapse = phone hamburger menu.  flexcontainer centers vertically on screen. -->
-
 <nav class="w3-sidenav w3-collapse w3-animate-left w3-padding flexcontainer" 
-style="width: 239px; top:0px;" id="mySidenav">
+style="width: 239px;" id="mySidenav">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large w3-hide-large">Close &times;</a>
     <div class="w3-black w3-margin">
         <a href="http://eaglescoding.com" class="w3-biryani">APOLLO CODING CLASS</a>
@@ -44,8 +53,13 @@ style="width: 239px; top:0px;" id="mySidenav">
 </nav>
 
 <!-- wrapper for page content. Helps hamburger menu. -->
-<main class="w3-main w3-darker-gray">
-    <div class="w3-content" id="picDiv" style="max-width:360px">
+<main class="w3-main">
+    <!-- hamburger icon header bar -->
+    <header class="w3-container w3-black">
+        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</span>
+    </header>
+
+    <div class="w3-content" id="picDiv">
         <!-- images here should have an aspect ratio of 0.71 
         That's 317 x 446 -->
         <img class="mySlides" src="img/codeart/HindaMohamedAbdiowasohoMahamed.jpg" style="width:100%">
