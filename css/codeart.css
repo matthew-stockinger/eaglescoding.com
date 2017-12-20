@@ -5,7 +5,14 @@
 }
 
 /* image nav underneath pics. */
-.mySlides {display:none}
+#imageNav {
+    width: 100%;
+}
+
+.mySlides {
+    display:none;
+    width: 100%;
+}
 
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
 
