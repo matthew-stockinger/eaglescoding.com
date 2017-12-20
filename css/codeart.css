@@ -37,6 +37,10 @@
 }
 
 /* sidenav */
+#mySidenav {
+    width: 239px;
+}
+
 .flexcontainer {
     /* extra garbage here for old browser compatibility. */
     /* centers the sidenav vertically on the screen. */
