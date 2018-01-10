@@ -8,6 +8,10 @@
     width: 100%;
 }
 
+.navarrow {
+    padding: 0px 8px 7px 8px;
+}
+
 .mySlides {
     display: none;
     width: 100%;
