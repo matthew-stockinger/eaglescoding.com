@@ -1,7 +1,6 @@
 /* pics */
 #picDiv {
     max-width: 360px;
-    border: 1px solid black;
 }
 
 /* image nav underneath pics. */
@@ -10,8 +9,9 @@
 }
 
 .mySlides {
-    display:none;
+    display: none;
     width: 100%;
+    border: 1px solid black;
 }
 
 .w3-left, .w3-right, .w3-badge {cursor:pointer}
