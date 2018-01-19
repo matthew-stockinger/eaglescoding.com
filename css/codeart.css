@@ -24,7 +24,12 @@ img {
 }
 
 .navarrow {
-    padding: 0px 8px 7px 8px;
+    padding: 0px 8px 4px 8px;
+    /* padding: 0px 8px 7px 8px; for Macbook? */
+}
+
+.navdots {
+    margin-bottom: 5px;
 }
 
 .mySlides {

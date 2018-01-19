@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- To do
-    -fix super-narrow nav problem.
     -deal with many-item nav
         --suggestion: if >= some number, just have arrows?
         --harder: use a numbered, google-style solution. 
     -add year selectors to header for phones.
         -somewhere else for computers?
+        -visual indicator of current selection.
     -add keypress for right and left
     -recreate with art generation videos.
 -->
@@ -25,7 +25,7 @@
     <meta name="description" content="Home of Apollo coding class">
     <meta name="author" content="Matthew Stockinger" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo Coding</title>
+    <title>Student Code Art</title>
     <link rel="stylesheet" href="css/w3.css">
     <link rel="stylesheet" href="css/codeart.css" />
     <link href='https://fonts.googleapis.com/css?family=Biryani:800' 
@@ -88,14 +88,14 @@
         </figure>
     </div>
     <nav id="imageNav" class="w3-center w3-container w3-xxlarge w3-text-black">
-        <span class="w3-hover-black w3-round w3-margin-right unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>
+        <span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>
         <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
         <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
         <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
         <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(4)"></span>
         <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(5)"></span>
         <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(6)"></span>
-        <span class="w3-hover-black w3-round w3-margin-left unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>
+        <span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>
     </nav>
 </main>
 
