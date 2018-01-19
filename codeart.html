@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <!-- To do
-    -add captions to slides.   
+    -fix super-narrow nav problem.
+    -deal with many-item nav
+        --suggestion: if >= some number, just have arrows?
+        --harder: use a numbered, google-style solution. 
     -add year selectors to header for phones.
         -somewhere else for computers?
     -add keypress for right and left
@@ -59,14 +62,32 @@
     <div id="picDiv" class="w3-content">
         <!-- images here should have an aspect ratio of 0.71 
         That's 317 x 446 -->
-        <img class="mySlides" src="img/codeart/HindaMohamedAbdiowasohoMahamed.jpg">
-        <img class="mySlides" src="img/codeart/HunterArmstrongMahamudYusufBrettKayfes.jpg">
-        <img class="mySlides" src="img/codeart/JamesNguyen.jpg">
-        <img class="mySlides" src="img/codeart/MaxOverboe.jpg">
-        <img class="mySlides" src="img/codeart/RyanNguyen.jpg">
-        <img class="mySlides" src="img/codeart/TrevorThumb.jpg">
+        <figure class="mySlides">
+            <img src="img/codeart/HindaMohamedAbdiowasohoMahamed.jpg">
+            <figcaption>Hinda Mohamed, Abdiowasoho Mohamed</figcaption>
+        </figure>
+        <figure class="mySlides">
+            <img src="img/codeart/HunterArmstrongMahamudYusufBrettKayfes.jpg">            
+            <figcaption>Hunter Armstrong, Mahamud Yusuf, Brett Kayfes</figcaption>
+        </figure>        
+        <figure class="mySlides">
+            <img src="img/codeart/JamesNguyen.jpg">
+            <figcaption>James Nguyen</figcaption>
+        </figure>
+        <figure class="mySlides">
+            <img src="img/codeart/MaxOverboe.jpg">
+            <figcaption>Max Overboe</figcaption>
+        </figure>
+        <figure class="mySlides">
+            <img src="img/codeart/RyanNguyen.jpg">
+            <figcaption>Ryan Nguyen</figcaption>
+        </figure>
+        <figure class="mySlides">
+            <img src="img/codeart/TrevorThumb.jpg">
+            <figcaption>Trevor Thumb</figcaption>
+        </figure>
     </div>
-    <nav id="imageNav" class="w3-center w3-container w3-section w3-xxlarge w3-text-black">
+    <nav id="imageNav" class="w3-center w3-container w3-xxlarge w3-text-black">
         <span class="w3-hover-black w3-round w3-margin-right unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>
         <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
         <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>

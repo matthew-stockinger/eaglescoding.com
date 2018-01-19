@@ -3,6 +3,20 @@
     max-width: 360px;
 }
 
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    height: 45px;
+}
+
+img {
+    border: 1px solid black;
+    width: 100%;
+}
+
 /* image nav underneath pics. */
 #imageNav {
     width: 100%;
@@ -15,8 +29,6 @@
 
 .mySlides {
     display: none;
-    width: 100%;
-    border: 1px solid black;
 }
 
 .w3-left, .w3-right, .w3-badge {cursor:default}
