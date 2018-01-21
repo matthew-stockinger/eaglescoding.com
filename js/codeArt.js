@@ -130,7 +130,7 @@ function displayDotNav() {
 function displayNumNav() {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
     var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
-    var a = '<span class="navnums w3-hover-text-blue" onclick="currentDiv(';
+    var a = '<span class="navnums w3-xlarge w3-hover-text-blue" onclick="currentDiv(';
     var b = ')">'
     var c = '</span>';
     var res = "";

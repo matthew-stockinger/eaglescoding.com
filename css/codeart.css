@@ -32,6 +32,14 @@ img {
     margin: 0px 6px 5px 6px;
 }
 
+.navnums {
+    display: inline-block;
+    width: 32px;
+    position: relative;
+    bottom: 3px;
+    margin: 0px 4px;
+}
+
 .mySlides {
     display: none;
 }
