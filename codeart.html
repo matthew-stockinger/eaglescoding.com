@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <!-- To do
-    -add year selectors to header for phones.
-        -somewhere else for computers?
-        -visual indicator of current selection.
+    -Year Submenu:
+        -highlight current selection.
+        -add close button to mobile menu. (so user can close from year selection menu).
+        -when user clicks a year, make hamburger open straight back to year selection.
+        -doesn't animate first time.
+    -fix narrow screen imageNav.
     -add keypress for right and left
     -recreate with art generation videos.
     -animate numnav.
@@ -34,7 +37,7 @@
 
 <!-- w3-collapse = phone hamburger menu.  flexcontainer centers vertically on screen. -->
 <nav id="mySidenav" class="w3-sidenav w3-collapse w3-animate-left w3-padding flexcontainer">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-white w3-large w3-hide-large">Close &times;</a>
     <div class="w3-black w3-margin">
         <a href="http://eaglescoding.com" class="w3-biryani">APOLLO CODING CLASS</a>
     </div>
@@ -46,11 +49,19 @@
     </div>
     <div class="w3-black w3-margin">
         <!--<a href="https://docs.google.com/document/d/1vKCEiX8_v1ddkuj7ESkJER_Td3g5LwW0JrJtyiqIlpY/edit?usp=sharing" class="w3-biryani" target="_blank" onclick="toggleArt();">Student Code Art<br><br></a> -->
-        <a href="#" class="w3-biryani">Student Code Art<br><br></a>
+        <a href="javascript:void(0)" onclick="openCodeArtNav()" class="w3-biryani">Student Code Art<br><br></a>
     </div>
 </nav>
 
-<!-- wrapper for page content. Helps hamburger menu. -->
+<!-- original: <nav id="codeArtNav" class="w3-sidenav w3-collapse w3-animate-right w3-padding flexcontainer"> -->
+<nav id="codeArtNav" class="w3-sidenav w3-animate-left w3-padding flexcontainer">
+    <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large">Back &#8678;</a>
+    <div class="w3-black w3-margin">
+        <a href="codeart.html" class="w3-biryani"><br>Fall 2017<br><br></a>
+    </div>
+</nav>
+
+<!-- wrapper for page content. Helper class for hamburger menu. -->
 <main class="w3-main">
     <!-- hamburger icon header bar -->
     <header class="w3-container w3-black">

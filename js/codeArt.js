@@ -1,10 +1,24 @@
 // Hamburger menu
 function w3_open() {
-    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("mySidenav").style.display = "flex";
 }
 
 function w3_close() {
     document.getElementById("mySidenav").style.display = "none";
+}
+
+function openCodeArtNav() {
+    var mySidenav = document.getElementById("mySidenav");
+    mySidenav.className = mySidenav.className.replace(" w3-collapse",""); 
+    mySidenav.style.display = "none";
+    document.getElementById("codeArtNav").style.display = "flex";
+}
+
+function closeCodeArtNav() {
+    document.getElementById("codeArtNav").style.display = "none";
+    var mySidenav = document.getElementById("mySidenav");
+    mySidenav.className += " w3-collapse";
+    mySidenav.style.display = "flex";
 }
 
 /*********** Slideshow Updating Functions **************** */
