@@ -1,4 +1,4 @@
-// Hamburger menu
+// Hamburger/side menu
 function w3_open() {
     document.getElementById("mySidenav").style.display = "flex";
 }
@@ -19,6 +19,15 @@ function closeCodeArtNav() {
     var mySidenav = document.getElementById("mySidenav");
     mySidenav.className += " w3-collapse";
     mySidenav.style.display = "flex";
+}
+
+function highlightMe(elt) {
+    var codeArtNavDivs = document.getElementsByClassName("codeArtNavDivs");
+    var i;
+    for (i = 0; i < codeArtNavDivs.length; i++) {
+        codeArtNavDivs[i].className = codeArtNavDivs[i].className.replace(" w3-blue", " w3-black");
+    }
+    elt.className = elt.className.replace(" w3-black", " w3-blue");
 }
 
 /*********** Slideshow Updating Functions **************** */
