@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- To do
     -Year Submenu:
-        -style back and close buttons.
         -add close button to mobile menu. (so user can close from year selection menu).
         -when user clicks a year, make hamburger open straight back to year selection.
         -doesn't animate first time.
@@ -9,6 +8,7 @@
     -add keypress for right and left
     -recreate with art generation videos.
     -animate numnav.
+    -Make sure codeart sidenav transfers to main index.
 -->
 
 <!-- Layout notes/desires
@@ -37,7 +37,7 @@
 
 <!-- w3-collapse = phone hamburger menu.  flexcontainer centers vertically on screen. -->
 <nav id="mySidenav" class="w3-sidenav w3-collapse w3-animate-left w3-padding flexcontainer">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-white w3-large w3-hide-large">Close &times;</a>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-white w3-large w3-hide-large w3-padding">Close &times;</a>
     <div class="w3-black w3-margin">
         <a href="http://eaglescoding.com" class="w3-biryani">APOLLO CODING CLASS</a>
     </div>
@@ -55,7 +55,9 @@
 
 <!-- original: <nav id="codeArtNav" class="w3-sidenav w3-collapse w3-animate-right w3-padding flexcontainer"> -->
 <nav id="codeArtNav" class="w3-sidenav w3-animate-left w3-padding flexcontainer">
-    <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large">Back &#8678;</a>
+    <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large w3-padding">
+        &#10094; Back
+    </a>
     <div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">
         <a href="#" class="w3-biryani"><br>Fall 2017<br><br></a>
     </div>
