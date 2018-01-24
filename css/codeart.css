@@ -24,7 +24,7 @@ img {
 }
 
 .navarrow {
-    padding: 0px 8px 4px 8px;
+    padding: 0px 4px 4px 4px;
     /* padding: 0px 8px 7px 8px; for Macbook? */
 }
 
@@ -37,7 +37,7 @@ img {
     width: 32px;
     position: relative;
     bottom: 3px;
-    margin: 0px 4px;
+    margin: 0px 2px;
 }
 
 .mySlides {

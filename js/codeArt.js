@@ -42,9 +42,9 @@ function highlightMe(elt) {
     var codeArtNavDivs = document.getElementsByClassName("codeArtNavDivs");
     var i;
     for (i = 0; i < codeArtNavDivs.length; i++) {
-        codeArtNavDivs[i].className = codeArtNavDivs[i].className.replace(" w3-blue", " w3-black");
+        codeArtNavDivs[i].className = codeArtNavDivs[i].className.replace(" w3-gray", " w3-black");
     }
-    elt.className = elt.className.replace(" w3-black", " w3-blue");
+    elt.className = elt.className.replace(" w3-black", " w3-gray");
 }
 
 /*********** Slideshow Updating Functions **************** */
