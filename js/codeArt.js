@@ -1,6 +1,10 @@
 // Hamburger/side menu
 function openMainNav() {
-    document.getElementById("mySidenav").style.display = "flex";
+    var mySideNav = document.getElementById("mySidenav");
+    mySideNav.style.display = "flex";
+    if(mySideNav.className.indexOf(" w3-animate-left") === -1) {
+        mySideNav.className += " w3-animate-left";
+    }
 }
 
 function closeMainNav() {
@@ -11,7 +15,13 @@ function openCodeArtNav() {
     var mySidenav = document.getElementById("mySidenav");
     mySidenav.className = mySidenav.className.replace(" w3-collapse",""); 
     mySidenav.style.display = "none";
-    document.getElementById("codeArtNav").style.display = "flex";
+    var codeArtNav = document.getElementById("codeArtNav");
+    codeArtNav.style.display = "flex";
+    // need this if to get animation to run the first time user opens the submenu.
+    // otherwise it'll just appear with no animation.
+    if (codeArtNav.className.indexOf(" w3-animate-left") === -1) {
+        codeArtNav.className += " w3-animate-left";
+    }
 }
 
 function closeCodeArtNav() {
