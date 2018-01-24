@@ -1,9 +1,9 @@
 // Hamburger/side menu
-function w3_open() {
+function openMainNav() {
     document.getElementById("mySidenav").style.display = "flex";
 }
 
-function w3_close() {
+function closeMainNav() {
     document.getElementById("mySidenav").style.display = "none";
 }
 
@@ -15,6 +15,10 @@ function openCodeArtNav() {
 }
 
 function closeCodeArtNav() {
+    document.getElementById("codeArtNav").style.display = "none";
+}
+
+function backToMainNav() {
     document.getElementById("codeArtNav").style.display = "none";
     var mySidenav = document.getElementById("mySidenav");
     mySidenav.className += " w3-collapse";
