@@ -1,6 +1,6 @@
 // Hamburger/side menu
 function openMainNav() {
-    var mySideNav = document.getElementById("mySidenav");
+    var mySideNav = document.getElementById("mySideNav");
     mySideNav.style.display = "flex";
     if(mySideNav.className.indexOf(" w3-animate-left") === -1) {
         mySideNav.className += " w3-animate-left";
@@ -8,13 +8,13 @@ function openMainNav() {
 }
 
 function closeMainNav() {
-    document.getElementById("mySidenav").style.display = "none";
+    document.getElementById("mySideNav").style.display = "none";
 }
 
 function openCodeArtNav() {
-    var mySidenav = document.getElementById("mySidenav");
-    mySidenav.className = mySidenav.className.replace(" w3-collapse",""); 
-    mySidenav.style.display = "none";
+    var mySideNav = document.getElementById("mySideNav");
+    mySideNav.className = mySideNav.className.replace(" w3-collapse",""); 
+    mySideNav.style.display = "none";
     var codeArtNav = document.getElementById("codeArtNav");
     codeArtNav.style.display = "flex";
     // need this if to get animation to run the first time user opens the submenu.
@@ -30,9 +30,12 @@ function closeCodeArtNav() {
 
 function backToMainNav() {
     document.getElementById("codeArtNav").style.display = "none";
-    var mySidenav = document.getElementById("mySidenav");
-    mySidenav.className += " w3-collapse";
-    mySidenav.style.display = "flex";
+    var mySideNav = document.getElementById("mySideNav");
+    mySideNav.className += " w3-collapse";
+    if(mySideNav.className.indexOf(" w3-animate-left") === -1) {
+        mySideNav.className += " w3-animate-left";
+    }
+    mySideNav.style.display = "flex";
 }
 
 function highlightMe(elt) {

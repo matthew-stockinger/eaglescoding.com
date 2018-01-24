@@ -2,11 +2,15 @@
 <!-- To do
     -Year Submenu:
         -when user clicks a year, make hamburger open straight back to year selection.
+        -add and test multiple years.
     -fix narrow screen imageNav.
     -add keypress for right and left
     -recreate with art generation videos.
     -animate numnav.
     -Make sure codeart sidenav transfers to main index.
+    -put imagenav over the top of the images.
+        -make a background bar to contain it.
+        -use event handlers to make it autohide.
 -->
 
 <!-- Layout notes/desires
@@ -34,7 +38,7 @@
 <body>
 
 <!-- w3-collapse = phone hamburger menu.  flexcontainer centers vertically on screen. -->
-<nav id="mySidenav" class="w3-sidenav w3-collapse w3-padding flexcontainer">
+<nav id="mySideNav" class="w3-sidenav w3-collapse w3-padding flexcontainer">
     <a href="javascript:void(0)" onclick="closeMainNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
     <div class="w3-black w3-margin">
         <a href="http://eaglescoding.com" class="w3-biryani">APOLLO CODING CLASS</a>
@@ -66,7 +70,7 @@
 <main class="w3-main">
     <!-- hamburger icon header bar -->
     <header class="w3-container w3-black">
-        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
+        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openCodeArtNav()">&#9776;</span>
     </header>
 
     <div id="picDiv" class="w3-content">
