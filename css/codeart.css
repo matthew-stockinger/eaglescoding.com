@@ -40,6 +40,22 @@ img {
     margin: 0px 2px;
 }
 
+.num-animate-right{position:relative;-webkit-animation:animateShortRight 0.3s;animation:animateShortRight 0.3s}
+@-webkit-keyframes animateShortRight{from{right:-30px;} to{right:0;}}
+@keyframes animateShortRight{from{right:-30px;} to{right:0;}}
+
+.num-fade-animate-right{position:relative;-webkit-animation:animateShortFadeRight 0.3s;animation:animateShortFadeRight 0.3s}
+@-webkit-keyframes animateShortFadeRight{from{right:-30px;opacity:0} to{right:0;opacity:1}}
+@keyframes animateShortFadeRight{from{right:-30px;opacity:0} to{right:0;opacity:1}}
+
+.num-animate-left{position:relative;-webkit-animation:animateShortLeft 0.3s;animation:animateShortLeft 0.3s}
+@-webkit-keyframes animateShortLeft{from{right:30px} to{right:0}}
+@keyframes animateShortLeft{from{right:30px} to{right:0}}
+
+.num-fade-animate-left{position:relative;-webkit-animation:animateFadeShortLeft 0.3s;animation:animateFadeShortLeft 0.3s}
+@-webkit-keyframes animateFadeShortLeft{from{right:30px;opacity:0} to{right:0;opacity:1}}
+@keyframes animateFadeShortLeft{from{right:30px;opacity:0} to{right:0;opacity:1}}
+
 .mySlides {
     display: none;
 }

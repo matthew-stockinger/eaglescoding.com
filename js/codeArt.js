@@ -49,6 +49,7 @@ function highlightMe(elt) {
 
 /*********** Slideshow Updating Functions **************** */
 var slideIndex = 1;
+var direction;
 var numFigures = document.getElementsByTagName("figure").length;
 if (numFigures === 1) {
     var navType = "noNav";
@@ -61,6 +62,7 @@ displayNav(navType);
 showDivs(slideIndex);
 
 function plusDivs(n) {
+    direction = n;
     showDivs(slideIndex += n);
 }
 
@@ -86,7 +88,7 @@ function showDivs(n) {
             updateDots(n);
             break;
         case "numNav":
-            updateNums(n);
+            updateNums();
     }
 }
 
@@ -99,7 +101,7 @@ function updateDots(n) {
     dots[slideIndex - 1].className += " w3-black";
 }
 
-function updateNums(n) {
+function updateNums() {
     // generate and display number list.  Handles wrapping and scrolling scenarios.
     displayNumNav();
     var navnumElements = document.getElementsByClassName("navnums");
@@ -117,27 +119,6 @@ function updateNums(n) {
     } else if (slideIndex > numFigures - 3) {
         navnumElements[6 + slideIndex - numFigures].className += " w3-text-blue";
     }
-    
-    /* original thoughts on algortihm */
-    // // Use slideIndex and numFigures to decide where I am on the display (left, middle, or end)
-    // if (slideIndex === 1) {
-    //     // if first, need to regenerate number list 1 - 7, in case of wrapping.
-    //     displayNumNav();
-
-    // } else if (slideIndex === 2 || slideIndex === 3) {
-    //     // If left, black out numbers and highlight next/previous one.
-    // } else if (slideIndex > 3 && slideIndex < numFigures - 2) {
-    //     // If middle, regenerate numbers and highlight middle.
-    // } else if (slideIndex in [numFigures - 2, numFigures - 1]) {
-    //     // If right, black out and highlight next/previous.
-    // } else if (slideIndex === numFigures) {
-    //     // if last, need to regenerate number list, in case of wrapping
-    // } else {
-    //     alert("slideIndex outside of valid range in updateNums.");
-    // }
-    // var nums = document.getElementsByClassName("navnums");
-    // var i;
-    // for (i = 0; )
 }
 
 /******* Functions for generating navigation under the slideshow  ************* */
@@ -171,23 +152,37 @@ function displayNumNav() {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
     var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
     var a = '<span class="navnums w3-xlarge w3-hover-text-blue" onclick="currentDiv(';
+    var aRight = '<span class="navnums w3-xlarge w3-hover-text-blue num-animate-right" onclick="currentDiv(';
+    var aFadeRight = '<span class="navnums w3-xlarge w3-hover-text-blue num-fade-animate-right" onclick="currentDiv(';
+    var aLeft = '<span class="navnums w3-xlarge w3-hover-text-blue num-animate-left" onclick="currentDiv(';
+    var aFadeLeft = '<span class="navnums w3-xlarge w3-hover-text-blue num-fade-animate-left" onclick="currentDiv(';
     var b = ')">'
     var c = '</span>';
     var res = "";
     if (slideIndex <= 4) {
         var i;
         for (i = 1; i <= 7; i++) {
-            res += a + i + b + i + c;
+            res += a + i.toString() + b + i.toString() + c;
         }
     } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
         var i;
-        for (i = slideIndex - 3; i <= slideIndex + 3; i++) {
-            res += a + i + b + i + c;
+        if (direction === 1) {
+            for (i = slideIndex - 3; i <= slideIndex + 2; i++) {
+                res += aRight + i.toString() + b + i.toString() + c;
+            }
+            // make the last number fade in on arrow click.  The rest just move without fade.
+            res += aFadeRight + (slideIndex + 3).toString() + b + (slideIndex + 3).toString() + c;
+        } else if (direction === -1) {
+            // make the first number fade in on arrow click.  The rest just move without fade.
+            res += aFadeLeft + (slideIndex - 3).toString() + b + (slideIndex - 3).toString() + c;
+            for (i = slideIndex - 2; i <= slideIndex + 3; i++) {
+                res += aLeft + i.toString() + b + i.toString() + c;
+            }
         }
     } else if (slideIndex > numFigures - 3) {
         var i;
         for (i = numFigures - 6; i <= numFigures; i++) {
-            res += a + i + b + i + c;
+            res += a + i.toString() + b + i.toString() + c;
         }
     }
     document.getElementById("imageNav").innerHTML = leftArrow + res + rightArrow;
