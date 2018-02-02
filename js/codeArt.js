@@ -153,9 +153,9 @@ function displayNumNav() {
     var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
     var a = '<span class="navnums w3-xlarge w3-hover-text-blue" onclick="currentDiv(';
     var aRight = '<span class="navnums w3-xlarge w3-hover-text-blue num-animate-right" onclick="currentDiv(';
-    var aFadeRight = '<span class="navnums w3-xlarge w3-hover-text-blue num-fade-animate-right" onclick="currentDiv(';
+    var aFadeRight = '<span class="navnums w3-xlarge num-fade-animate-right" onclick="currentDiv(';
     var aLeft = '<span class="navnums w3-xlarge w3-hover-text-blue num-animate-left" onclick="currentDiv(';
-    var aFadeLeft = '<span class="navnums w3-xlarge w3-hover-text-blue num-fade-animate-left" onclick="currentDiv(';
+    var aFadeLeft = '<span class="navnums w3-xlarge num-fade-animate-left" onclick="currentDiv(';
     var b = ')">'
     var c = '</span>';
     var res = "";
@@ -186,4 +186,18 @@ function displayNumNav() {
         }
     }
     document.getElementById("imageNav").innerHTML = leftArrow + res + rightArrow;
+    // add blue hover CSS after animation completes.  Otherwise will be blue during animation.
+    // Only an issue for the far right or left number.
+    setTimeout(function() {
+        var x = document.getElementsByClassName("navnums");
+        if (direction === 1) {
+            if (x[6].className.indexOf("w3-hover-text-blue") === -1) {
+                x[6].className += " w3-hover-text-blue";
+            }
+        } else if (direction === -1) {
+            if (x[0].className.indexOf("w3-hover-text-blue") === -1) {
+                x[0].className += " w3-hover-text-blue";
+            }
+        }
+    }, 300);
 }

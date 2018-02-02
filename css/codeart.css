@@ -17,7 +17,7 @@ img {
     width: 100%;
 }
 
-/* image nav underneath pics. */
+/*********************** image nav underneath pics. **************************/
 #imageNav {
     width: 100%;
     cursor: default;
@@ -40,13 +40,35 @@ img {
     margin: 0px 2px;
 }
 
-.num-animate-right{position:relative;-webkit-animation:animateShortRight 0.3s;animation:animateShortRight 0.3s}
-@-webkit-keyframes animateShortRight{from{right:-30px;} to{right:0;}}
-@keyframes animateShortRight{from{right:-30px;} to{right:0;}}
+.num-animate-right {
+    position:relative;
+    -webkit-animation: animateShortRight 0.3s;
+    animation: animateShortRight 0.3s
+}
+@-webkit-keyframes animateShortRight {
+    from { right:-30px; } 
+    to { right:0; }
+}
+@keyframes animateShortRight {
+    from { right:-30px; } 
+    to { right:0; }
+}
 
-.num-fade-animate-right{position:relative;-webkit-animation:animateShortFadeRight 0.3s;animation:animateShortFadeRight 0.3s}
-@-webkit-keyframes animateShortFadeRight{from{right:-30px;opacity:0} to{right:0;opacity:1}}
-@keyframes animateShortFadeRight{from{right:-30px;opacity:0} to{right:0;opacity:1}}
+.num-fade-animate-right {
+    position: relative;
+    -webkit-animation: animateShortFadeRight 0.3s;
+    animation: animateShortFadeRight 0.3s;
+}
+@-webkit-keyframes animateShortFadeRight {
+    from { right:-30px; opacity:0; }
+    to { right:0; opacity:1; }
+}
+@keyframes animateShortFadeRight {
+    from { right:-30px; opacity:0; }
+    to { right:0; opacity:1; }
+}
+
+/* .num-fade-animate-right:hover {color:#2196F3} */
 
 .num-animate-left{position:relative;-webkit-animation:animateShortLeft 0.3s;animation:animateShortLeft 0.3s}
 @-webkit-keyframes animateShortLeft{from{right:30px} to{right:0}}
@@ -81,7 +103,7 @@ img {
     user-select: none;
   }
 
-/* fonts */
+/*********************** fonts ******************************/
 .w3-biryani {
     line-height: 22.5px;
     text-transform: uppercase;
@@ -98,7 +120,7 @@ img {
     width: 80%;
 }
 
-/* sidenav */
+/**************************** sidenav *******************************/
 #mySideNav {
     width: 239px;
 }
