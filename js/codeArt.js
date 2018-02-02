@@ -49,7 +49,7 @@ function highlightMe(elt) {
 
 /*********** Slideshow Updating Functions **************** */
 var slideIndex = 1;
-var direction;
+var direction = 0;
 var numFigures = document.getElementsByTagName("figure").length;
 if (numFigures === 1) {
     var navType = "noNav";
@@ -159,31 +159,48 @@ function displayNumNav() {
     var b = ')">'
     var c = '</span>';
     var res = "";
-    if (slideIndex <= 4) {
-        var i;
-        for (i = 1; i <= 7; i++) {
-            res += a + i.toString() + b + i.toString() + c;
-        }
-    } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
-        var i;
-        if (direction === 1) {
-            for (i = slideIndex - 3; i <= slideIndex + 2; i++) {
-                res += aRight + i.toString() + b + i.toString() + c;
+    // the direction of scrolling affects the numbers upon which animation should run.
+    switch (direction) {
+        case 0:
+        case 1:
+            if (slideIndex <= 4) {
+                var i;
+                for (i = 1; i <= 7; i++) {
+                    res += a + i.toString() + b + i.toString() + c;
+                }
+            } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
+                var i;
+                for (i = slideIndex - 3; i <= slideIndex + 2; i++) {
+                    res += aRight + i.toString() + b + i.toString() + c;
+                }
+                // make the last number fade in on arrow click.  The rest just move without fade.
+                res += aFadeRight + (slideIndex + 3).toString() + b + (slideIndex + 3).toString() + c;
+            } else if (slideIndex > numFigures - 3) {
+                var i;
+                for (i = numFigures - 6; i <= numFigures; i++) {
+                    res += a + i.toString() + b + i.toString() + c;
+                }
             }
-            // make the last number fade in on arrow click.  The rest just move without fade.
-            res += aFadeRight + (slideIndex + 3).toString() + b + (slideIndex + 3).toString() + c;
-        } else if (direction === -1) {
-            // make the first number fade in on arrow click.  The rest just move without fade.
-            res += aFadeLeft + (slideIndex - 3).toString() + b + (slideIndex - 3).toString() + c;
-            for (i = slideIndex - 2; i <= slideIndex + 3; i++) {
-                res += aLeft + i.toString() + b + i.toString() + c;
+            break;
+        case -1:
+            if (slideIndex <= 3) {
+                var i;
+                for (i = 1; i <= 7; i++) {
+                    res += a + i.toString() + b + i.toString() + c;
+                }
+            } else if (slideIndex >= 4 && slideIndex < numFigures - 3) {
+                var i;
+                // make the first number fade in on arrow click.  The rest just move without fade.
+                res += aFadeLeft + (slideIndex - 3).toString() + b + (slideIndex - 3).toString() + c;
+                for (i = slideIndex - 2; i <= slideIndex + 3; i++) {
+                    res += aLeft + i.toString() + b + i.toString() + c;
+                }
+            } else if (slideIndex >= numFigures - 3) {
+                var i;
+                for (i = numFigures - 6; i <= numFigures; i++) {
+                    res += a + i.toString() + b + i.toString() + c;
+                }
             }
-        }
-    } else if (slideIndex > numFigures - 3) {
-        var i;
-        for (i = numFigures - 6; i <= numFigures; i++) {
-            res += a + i.toString() + b + i.toString() + c;
-        }
     }
     document.getElementById("imageNav").innerHTML = leftArrow + res + rightArrow;
     // add blue hover CSS after animation completes.  Otherwise will be blue during animation.
