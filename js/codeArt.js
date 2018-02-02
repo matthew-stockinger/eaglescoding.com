@@ -58,7 +58,7 @@ if (numFigures === 1) {
 } else if (numFigures >= 8) {
     var navType = "numNav";
 }
-displayNav(navType);
+// displayNav(navType);  // moved this call into the updateDot and updateNums functions.
 showDivs(slideIndex);
 
 function plusDivs(n) {
@@ -95,6 +95,7 @@ function showDivs(n) {
 }
 
 function updateDots(n) {
+    displayDotNav();
     var dots = document.getElementsByClassName("navdots");
     var i;
     for (i = 0; i < dots.length; i++) {
@@ -124,18 +125,18 @@ function updateNums() {
 }
 
 /******* Functions for generating navigation under the slideshow  ************* */
-function displayNav(navType) {
-    switch(navType) {
-        case "noNav":
-            break;
-        case "dotNav":
-            displayDotNav();
-            break;
-        case "numNav":
-            displayNumNav();
-            break;
-    }
-}
+// function displayNav(navType) {
+//     switch(navType) {
+//         case "noNav":
+//             break;
+//         case "dotNav":
+//             displayDotNav();
+//             break;
+//         case "numNav":
+//             displayNumNav();
+//             break;
+//     }
+// }
 
 function displayDotNav() {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';

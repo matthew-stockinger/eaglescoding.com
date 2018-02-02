@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <!-- To do
     -animate numnav.
-        -clicking numbers always animates from same direction.
-        -from load, click #5 and last number doesn't highlight blue.
+        -clicking number in first or last 3 doesn't animate.
+        -currently, displayNumNav decides when to animate.  Instead, break this into different functions.
+        -one will generate nums without animation.
+        -one will generate with right animation.
+        -one will generate with left animation.
+        -Then move logic for choosing which to call into currentDiv and plusDivs.
+        -double-check: clicking currently active number shouldn't animate.
     -Make first production page.  Merge branches.  Publish.
     -recreate with art generation videos.
     -Make sure codeart sidenav transfers to main index.
@@ -12,15 +17,6 @@
         -use event handlers to make it autohide.
     -rewrite with PHP.
 -->
-
-<!-- Layout notes/desires
-    narrow header bar with hamburger menu on phones.
-    white background to unify with rest of site.
-    on big screens, always visible site navbar.  
-        image content centered horizontally and vertically in space to the right.
-    on tiny screens (e.g. Nokia Lumia) find a way to squeeze all this in.
--->
-
 
 <html lang="en-US">
 <head>
@@ -128,18 +124,7 @@
         </figure>
     </div>
     <!-- nav created dynamically in codeArt.js -->
-    <nav id="imageNav" class="w3-center w3-xxlarge w3-text-black">
-        <!-- example dot nav static code here -->
-        <!-- <span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>
-        <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(1)"></span>
-        <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(2)"></span>
-        <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(3)"></span>
-        <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(4)"></span>
-        <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(5)"></span>
-        <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(6)"></span>
-        <span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(7)"></span>
-        <span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span> -->
-    </nav>
+    <nav id="imageNav" class="w3-center w3-xxlarge w3-text-black"></nav>
 </main>
 
 <script src="js/codeArt.js">
