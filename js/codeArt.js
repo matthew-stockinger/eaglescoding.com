@@ -67,6 +67,8 @@ function plusDivs(n) {
 }
 
 function currentDiv(n) {
+    if (n < slideIndex) { direction = -1; }
+    else if (n > slideIndex) { direction = 1; } 
     showDivs(slideIndex = n);
 }
 
