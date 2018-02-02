@@ -68,15 +68,33 @@ img {
     to { right:0; opacity:1; }
 }
 
-/* .num-fade-animate-right:hover {color:#2196F3} */
+.num-animate-left{
+    position: relative;
+    -webkit-animation: animateShortLeft 0.3s;
+    animation: animateShortLeft 0.3s
+}
+@-webkit-keyframes animateShortLeft {
+    from { right: 30px } 
+    to { right: 0 }
+}
+@keyframes animateShortLeft {
+    from { right:30px } 
+    to { right:0 }
+}
 
-.num-animate-left{position:relative;-webkit-animation:animateShortLeft 0.3s;animation:animateShortLeft 0.3s}
-@-webkit-keyframes animateShortLeft{from{right:30px} to{right:0}}
-@keyframes animateShortLeft{from{right:30px} to{right:0}}
-
-.num-fade-animate-left{position:relative;-webkit-animation:animateFadeShortLeft 0.3s;animation:animateFadeShortLeft 0.3s}
-@-webkit-keyframes animateFadeShortLeft{from{right:30px;opacity:0} to{right:0;opacity:1}}
-@keyframes animateFadeShortLeft{from{right:30px;opacity:0} to{right:0;opacity:1}}
+.num-fade-animate-left {
+    position: relative;
+    -webkit-animation: animateFadeShortLeft 0.3s;
+    animation: animateFadeShortLeft 0.3s
+}
+@-webkit-keyframes animateFadeShortLeft {
+    from { right:30px; opacity:0 } 
+    to { right:0; opacity:1 }
+}
+@keyframes animateFadeShortLeft {
+    from { right:30px; opacity:0 } 
+    to { right:0; opacity:1 }
+}
 
 .mySlides {
     display: none;
