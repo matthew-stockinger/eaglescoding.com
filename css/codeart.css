@@ -46,11 +46,11 @@ img {
     animation: animateShortRight 0.3s
 }
 @-webkit-keyframes animateShortRight {
-    from { right:-30px; } 
+    from { right:-36px; } 
     to { right:0; }
 }
 @keyframes animateShortRight {
-    from { right:-30px; } 
+    from { right:-36px; } 
     to { right:0; }
 }
 
@@ -60,11 +60,11 @@ img {
     animation: animateShortFadeRight 0.3s;
 }
 @-webkit-keyframes animateShortFadeRight {
-    from { right:-30px; opacity:0; }
+    from { right:-36px; opacity:0; }
     to { right:0; opacity:1; }
 }
 @keyframes animateShortFadeRight {
-    from { right:-30px; opacity:0; }
+    from { right:-36px; opacity:0; }
     to { right:0; opacity:1; }
 }
 
@@ -74,11 +74,11 @@ img {
     animation: animateShortLeft 0.3s
 }
 @-webkit-keyframes animateShortLeft {
-    from { right: 30px } 
+    from { right: 36px } 
     to { right: 0 }
 }
 @keyframes animateShortLeft {
-    from { right:30px } 
+    from { right: 36px } 
     to { right:0 }
 }
 
@@ -88,11 +88,11 @@ img {
     animation: animateFadeShortLeft 0.3s
 }
 @-webkit-keyframes animateFadeShortLeft {
-    from { right:30px; opacity:0 } 
+    from { right:36px; opacity:0 } 
     to { right:0; opacity:1 }
 }
 @keyframes animateFadeShortLeft {
-    from { right:30px; opacity:0 } 
+    from { right:36px; opacity:0 } 
     to { right:0; opacity:1 }
 }
 
