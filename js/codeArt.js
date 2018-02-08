@@ -1,4 +1,4 @@
-// Hamburger/side menu
+/******************  Hamburger/side menu ********************* */
 function openMainNav() {
     var mySideNav = document.getElementById("mySideNav");
     mySideNav.style.display = "flex";
@@ -47,7 +47,8 @@ function highlightMe(elt) {
     elt.className = elt.className.replace(" w3-black", " w3-gray");
 }
 
-/*********** Slideshow Updating Functions **************** */
+
+/* ********** Slideshow Updating Functions **************** */
 var slideIndex = 1;
 var direction = 0;
 var numFigures = document.getElementsByTagName("figure").length;
@@ -58,20 +59,26 @@ if (numFigures === 1) {
 } else if (numFigures >= 8) {
     var navType = "numNav";
 }
-// displayNav(navType);  // moved this call into the updateDot and updateNums functions.
 showDivs(slideIndex);
+displayNav(navType);
+updateHighlights(navType);
 
 function plusDivs(n) {
     direction = n;
     showDivs(slideIndex += n);
+    displayNav(navType);
+    updateHighlights(navType);
 }
 
 function currentDiv(n) {
     if (n < slideIndex) { direction = -1; }
     else if (n > slideIndex) { direction = 1; } 
     showDivs(slideIndex = n);
+    displayNav(navType);
+    updateHighlights(navType);
 }
 
+/* ************ Show the appropriate image & caption ******************** */
 function showDivs(n) {
     // update the figure and caption.
     var i;
@@ -82,61 +89,21 @@ function showDivs(n) {
         x[i].style.display = "none";  
     }
     x[slideIndex-1].style.display = "block";
+}
 
-    // call update of dots or numNav
+/* ****** Generate and appropriately animate dot or number list  ************* */
+function displayNav(navType) {
     switch(navType) {
-        case "noNav": break;
+        case "noNav":
+            break;
         case "dotNav":
-            updateDots(n);
+            displayDotNav();
             break;
         case "numNav":
-            updateNums();
+            displayNumNav();
+            break;
     }
 }
-
-function updateDots(n) {
-    displayDotNav();
-    var dots = document.getElementsByClassName("navdots");
-    var i;
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" w3-black", "");
-    }
-    dots[slideIndex - 1].className += " w3-black";
-}
-
-function updateNums() {
-    // generate and display number list.  Handles wrapping and scrolling scenarios.
-    displayNumNav();
-    var navnumElements = document.getElementsByClassName("navnums");
-    
-    // remove blue from numbers.
-    for (i = 0; i < 7; i++) {
-        navnumElements[i].className = navnumElements[i].className.replace(" w3-text-blue", "");
-    }
-    
-    // add blue to active number.
-    if (slideIndex <= 4) {
-        navnumElements[slideIndex - 1].className += " w3-text-blue";
-    } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
-        navnumElements[3].className += " w3-text-blue";
-    } else if (slideIndex > numFigures - 3) {
-        navnumElements[6 + slideIndex - numFigures].className += " w3-text-blue";
-    }
-}
-
-/******* Functions for generating navigation under the slideshow  ************* */
-// function displayNav(navType) {
-//     switch(navType) {
-//         case "noNav":
-//             break;
-//         case "dotNav":
-//             displayDotNav();
-//             break;
-//         case "numNav":
-//             displayNumNav();
-//             break;
-//     }
-// }
 
 function displayDotNav() {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
@@ -151,6 +118,7 @@ function displayDotNav() {
     document.getElementById("imageNav").innerHTML = leftArrow + navDots + rightArrow;
 }
 
+// type parameter decides whether to generate static, left-, or right-animated numNav.
 function displayNumNav() {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
     var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
@@ -221,3 +189,48 @@ function displayNumNav() {
         }
     }, 300);
 }
+
+/********************* Change the highlight color of the dots/numbers **************** */
+function updateHighlights(navType) {
+    switch(navType) {
+        case "noNav":
+            break;
+        case "dotNav":
+            updateDots();
+            break;
+        case "numNav":
+            updateNums();
+            break;
+    }
+}
+
+function updateDots(n) {
+    // delete: displayDotNav();
+    var dots = document.getElementsByClassName("navdots");
+    var i;
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-black", "");
+    }
+    dots[slideIndex - 1].className += " w3-black";
+}
+
+function updateNums() {
+    // generate and display number list.  Handles wrapping and scrolling scenarios.
+    // delete: displayNumNav();
+    var navnumElements = document.getElementsByClassName("navnums");
+    
+    // remove blue from numbers.
+    for (i = 0; i < 7; i++) {
+        navnumElements[i].className = navnumElements[i].className.replace(" w3-text-blue", "");
+    }
+    
+    // add blue to active number.
+    if (slideIndex <= 4) {
+        navnumElements[slideIndex - 1].className += " w3-text-blue";
+    } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
+        navnumElements[3].className += " w3-text-blue";
+    } else if (slideIndex > numFigures - 3) {
+        navnumElements[6 + slideIndex - numFigures].className += " w3-text-blue";
+    }
+}
+
