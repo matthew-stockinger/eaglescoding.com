@@ -48,9 +48,8 @@ function highlightMe(elt) {
 }
 
 
-/* ********** Slideshow Updating Functions **************** */
+/* ********** Slideshow Main **************** */
 var slideIndex = 1;
-var direction = 0;
 var numFigures = document.getElementsByTagName("figure").length;
 if (numFigures === 1) {
     var navType = "noNav";
@@ -60,22 +59,55 @@ if (numFigures === 1) {
     var navType = "numNav";
 }
 showDivs(slideIndex);
-displayNav(navType);
+displayNav(navType, 0, false);
 updateHighlights(navType);
 
 function plusDivs(n) {
-    direction = n;
     showDivs(slideIndex += n);
-    displayNav(navType);
+    if (n === 1) {
+        if (slideIndex <= 4 || slideIndex > numFigures - 3) {
+            displayNav(navType, n, false);
+        } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
+            displayNav(navType, n, true);
+        }
+    } else if (n === -1) {
+        if (slideIndex <= 3 || slideIndex >= numFigures - 3) {
+            displayNav(navType, n, false);
+        } else if (slideIndex >= 4 && slideIndex < numFigures - 3) {
+            displayNav(navType, n, true);
+        }
+    }
     updateHighlights(navType);
 }
 
 function currentDiv(n) {
-    if (n < slideIndex) { direction = -1; }
-    else if (n > slideIndex) { direction = 1; } 
-    showDivs(slideIndex = n);
-    displayNav(navType);
+    // Need to check if new center number will be different than old center number.
+    // If so, then animate.
+    if (slideIndex > 4 && n < slideIndex && n < numFigures - 3) {
+        // animate left
+        slideIndex = n;
+        displayNav(navType, -1, true);
+    } else if (slideIndex < numFigures - 3 && n > slideIndex && n > 4) {
+        // animate right
+        slideIndex = n;
+        displayNav(navType, 1, true);
+    } else {
+        // static
+        slideIndex = n;
+        displayNav(navType, 0, false);
+    }
+    showDivs(n);
     updateHighlights(navType);
+    // if (n < slideIndex) { 
+    //     slideIndex = n;
+    //     displayNav(navType, -1, false); 
+    // } else if (n > slideIndex) { 
+    //     slideIndex = n;
+    //     displayNav(navType, 1, false); 
+    // } else if (n === slideIndex) { 
+    //     slideIndex = n;
+    //     displayNav(navType, 0, false); 
+    // }
 }
 
 /* ************ Show the appropriate image & caption ******************** */
@@ -92,7 +124,7 @@ function showDivs(n) {
 }
 
 /* ****** Generate and appropriately animate dot or number list  ************* */
-function displayNav(navType) {
+function displayNav(navType, direction, animated) {
     switch(navType) {
         case "noNav":
             break;
@@ -100,7 +132,7 @@ function displayNav(navType) {
             displayDotNav();
             break;
         case "numNav":
-            displayNumNav();
+            displayNumNav(direction, animated);
             break;
     }
 }
@@ -118,8 +150,8 @@ function displayDotNav() {
     document.getElementById("imageNav").innerHTML = leftArrow + navDots + rightArrow;
 }
 
-// type parameter decides whether to generate static, left-, or right-animated numNav.
-function displayNumNav() {
+// direction is -1, 0, or 1.  animated is bool.
+function displayNumNav(direction, animated) {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
     var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
     var a = '<span class="navnums w3-xlarge w3-hover-text-blue" onclick="currentDiv(';
@@ -130,51 +162,73 @@ function displayNumNav() {
     var b = ')">'
     var c = '</span>';
     var res = "";
-    // the direction of scrolling affects the numbers upon which animation should run.
-    switch (direction) {
-        case 0:
-        case 1:
-            if (slideIndex <= 4) {
-                var i;
-                for (i = 1; i <= 7; i++) {
-                    res += a + i.toString() + b + i.toString() + c;
+    /**** All the logic below decides what numbers to generate, whether to animate, and in which direction. */
+    /**** A string of HTML is generated based on these decisions. */
+    if (animated === true) {
+        if (direction === -1) {
+            // animated left
+            var i;
+            // generate the appropriate number list HTML
+            if (slideIndex < 4) {
+                // make the first number fade in on arrow click.  The rest just move without fade.
+                res += aFadeLeft + "1" + b + "1" + c;
+                for (i = 2; i <= 7; i++) {
+                    res += aLeft + i.toString() + b + i.toString() + c;
                 }
-            } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
-                var i;
-                for (i = slideIndex - 3; i <= slideIndex + 2; i++) {
-                    res += aRight + i.toString() + b + i.toString() + c;
-                }
-                // make the last number fade in on arrow click.  The rest just move without fade.
-                res += aFadeRight + (slideIndex + 3).toString() + b + (slideIndex + 3).toString() + c;
-            } else if (slideIndex > numFigures - 3) {
-                var i;
-                for (i = numFigures - 6; i <= numFigures; i++) {
-                    res += a + i.toString() + b + i.toString() + c;
-                }
-            }
-            break;
-        case -1:
-            if (slideIndex <= 3) {
-                var i;
-                for (i = 1; i <= 7; i++) {
-                    res += a + i.toString() + b + i.toString() + c;
-                }
-            } else if (slideIndex >= 4 && slideIndex < numFigures - 3) {
-                var i;
+            } else {
                 // make the first number fade in on arrow click.  The rest just move without fade.
                 res += aFadeLeft + (slideIndex - 3).toString() + b + (slideIndex - 3).toString() + c;
                 for (i = slideIndex - 2; i <= slideIndex + 3; i++) {
                     res += aLeft + i.toString() + b + i.toString() + c;
                 }
-            } else if (slideIndex >= numFigures - 3) {
-                var i;
-                for (i = numFigures - 6; i <= numFigures; i++) {
-                    res += a + i.toString() + b + i.toString() + c;
-                }
             }
+        } else if (direction === 1) {
+            // animated right
+            var i;
+            // generate the appropriate number list HTML
+            if (slideIndex > numFigures - 3) {
+                for (i = numFigures - 6; i <= numFigures - 1; i++) {
+                    res += aRight + i.toString() + b + i.toString() + c;
+                }
+                // make the last number fade in on arrow click.  The rest just move without fade.
+                res += aFadeRight + numFigures.toString() + b + numFigures.toString() + c;
+            } else {
+                for (i = slideIndex - 3; i <= slideIndex + 2; i++) {
+                    res += aRight + i.toString() + b + i.toString() + c;
+                }
+                // make the last number fade in on arrow click.  The rest just move without fade.
+                res += aFadeRight + (slideIndex + 3).toString() + b + (slideIndex + 3).toString() + c;
+            }
+        } else if (direction === 0) {
+            // error handling: no direction animated
+            animated = false;
+        } else { 
+            alert("Invalid direction value.  Please email matthew.stockinger@isd742.org.");
+        }
+    } else if (animated === false) {
+        if (slideIndex <= 4) {
+            // static far left
+            var i;
+            for (i = 1; i <= 7; i++) {
+                res += a + i.toString() + b + i.toString() + c;
+            }
+        } else if (slideIndex >= numFigures - 3) {
+            // static far right
+            var i;
+            for (i = numFigures - 6; i <= numFigures; i++) {
+                res += a + i.toString() + b + i.toString() + c;
+            }
+        } else {
+            // static middle
+            var i;
+            for (i = slideIndex - 3; i <= slideIndex + 3; i++) {
+                res += a + i.toString() + b + i.toString() + c;
+            }
+        }
     }
+
     document.getElementById("imageNav").innerHTML = leftArrow + res + rightArrow;
-    // add blue hover CSS after animation completes.  Otherwise will be blue during animation.
+    // add blue hover CSS after animation completes, in 0.3s.  Otherwise will be blue during animation.
     // Only an issue for the far right or left number.
     setTimeout(function() {
         var x = document.getElementsByClassName("navnums");
@@ -214,9 +268,8 @@ function updateDots(n) {
     dots[slideIndex - 1].className += " w3-black";
 }
 
+// handles number highlighting.
 function updateNums() {
-    // generate and display number list.  Handles wrapping and scrolling scenarios.
-    // delete: displayNumNav();
     var navnumElements = document.getElementsByClassName("navnums");
     
     // remove blue from numbers.
