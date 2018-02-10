@@ -98,16 +98,6 @@ function currentDiv(n) {
     }
     showDivs(n);
     updateHighlights(navType);
-    // if (n < slideIndex) { 
-    //     slideIndex = n;
-    //     displayNav(navType, -1, false); 
-    // } else if (n > slideIndex) { 
-    //     slideIndex = n;
-    //     displayNav(navType, 1, false); 
-    // } else if (n === slideIndex) { 
-    //     slideIndex = n;
-    //     displayNav(navType, 0, false); 
-    // }
 }
 
 /* ************ Show the appropriate image & caption ******************** */
@@ -154,10 +144,10 @@ function displayDotNav() {
 function displayNumNav(direction, animated) {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
     var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
-    var a = '<span class="navnums w3-xlarge w3-hover-text-blue" onclick="currentDiv(';
-    var aRight = '<span class="navnums w3-xlarge w3-hover-text-blue num-animate-right" onclick="currentDiv(';
+    var a = '<span class="navnums w3-xlarge" onclick="currentDiv(';
+    var aRight = '<span class="navnums w3-xlarge num-animate-right" onclick="currentDiv(';
     var aFadeRight = '<span class="navnums w3-xlarge num-fade-animate-right" onclick="currentDiv(';
-    var aLeft = '<span class="navnums w3-xlarge w3-hover-text-blue num-animate-left" onclick="currentDiv(';
+    var aLeft = '<span class="navnums w3-xlarge num-animate-left" onclick="currentDiv(';
     var aFadeLeft = '<span class="navnums w3-xlarge num-fade-animate-left" onclick="currentDiv(';
     var b = ')">'
     var c = '</span>';
@@ -232,13 +222,10 @@ function displayNumNav(direction, animated) {
     // Only an issue for the far right or left number.
     setTimeout(function() {
         var x = document.getElementsByClassName("navnums");
-        if (direction === 1) {
-            if (x[6].className.indexOf("w3-hover-text-blue") === -1) {
-                x[6].className += " w3-hover-text-blue";
-            }
-        } else if (direction === -1) {
-            if (x[0].className.indexOf("w3-hover-text-blue") === -1) {
-                x[0].className += " w3-hover-text-blue";
+        var i;
+        for (i = 0; i < 7; i++) {
+            if (x[i].className.indexOf("w3-hover-text-blue") === -1) {
+                x[i].className += " w3-hover-text-blue";
             }
         }
     }, 300);
