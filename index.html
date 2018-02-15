@@ -10,11 +10,8 @@
 3.0   add phone width responsiveness.
 4.0   rewrite with w3.css.
 
-12.11.2017: added function to index.js to toggle top image art display.
 To do:
--create art display carousel.
--make toggle fade in.
--add link to extras in google doc.
+-fix styling issues on main nav in index.html.    
 -alter hamburger menu, so that choosing an option automatically closes it.
 
 -->
@@ -33,8 +30,8 @@ To do:
 <body>
 
 <!-- w3-collapse = phone hamburger menu.  flexcontainer centers vertically on screen. -->
-<nav class="w3-sidenav w3-collapse w3-animate-left w3-padding flexcontainer" id="mySidenav">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large w3-hide-large">Close &times;</a>
+<nav id="mySideNav" class="w3-sidenav w3-collapse w3-padding flexcontainer">
+    <a href="javascript:void(0)" onclick="closeMainNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
     <div class="w3-black w3-margin">
         <a href="http://eaglescoding.com" class="w3-biryani">APOLLO CODING CLASS</a>
     </div>
@@ -45,8 +42,18 @@ To do:
         <a href="http://eaglescoding.com/students/student_pages.php" class="w3-biryani">Student Web Pages<br><br></a>
     </div>
     <div class="w3-black w3-margin">
-        <!-- <a href="https://docs.google.com/document/d/1vKCEiX8_v1ddkuj7ESkJER_Td3g5LwW0JrJtyiqIlpY/edit?usp=sharing" class="w3-biryani" target="_blank" onclick="toggleArt();">Student Code Art<br><br></a> -->
-        <a href="#" class="w3-biryani" onclick="toggleArt();">Student Code Art<br><br></a>
+        <a href="javascript:void(0)" onclick="openCodeArtNav()" class="w3-biryani">Student Code Art<br><br></a>
+    </div>
+</nav>
+
+<!-- original: <nav id="codeArtNav" class="w3-sidenav w3-collapse w3-animate-right w3-padding flexcontainer"> -->
+<nav id="codeArtNav" class="w3-sidenav w3-padding flexcontainer">
+    <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
+    <a href="javascript:void(0)" onclick="backToMainNav()" class="w3-button w3-white w3-large w3-padding">
+        &#10094; Back
+    </a>
+    <div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">
+        <a href="codeart/2017fall/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
     </div>
 </nav>
 
@@ -55,7 +62,7 @@ To do:
 <main class="w3-main" style="margin-left:239px;">
     <!-- hamburger menu icon -->
     <header class="w3-container w3-black">
-        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</span>
+        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openCodeArtNav()">&#9776;</span>
     </header>
 
     <!-- The top image -->
