@@ -274,3 +274,23 @@ function updateNums() {
     }
 }
 
+/* ************************** keyboard interaction ******************* */
+window.addEventListener("keydown", function(event) {
+    if (event.defaultPrevented) {
+        return; // Do nothing if the event was already processed
+    }
+
+    switch (event.key) {
+        case "ArrowRight":
+            plusDivs(1);
+            break;
+        case "ArrowLeft":
+            plusDivs(-1);
+            break;
+        default:
+            return; // Quit when any other key is pressed.
+    }
+
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+}, true);
