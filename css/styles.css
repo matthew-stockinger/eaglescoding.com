@@ -1,3 +1,7 @@
+/* main {
+    margin-left: 239px;
+} */
+
 .w3-biryani {
     line-height: 22.5px;
     text-transform: uppercase;
@@ -21,19 +25,6 @@
     }
 }
 
-.flexcontainer {
-    /* extra garbage here for old browser compatibility. */
-    /* centers the sidenav vertically on the screen. */
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-}
-
 /* hack I found to make YouTube videos scale with the window */
 .video-container {
     position: relative;
@@ -49,4 +40,37 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/**************************** sidenav *******************************/
+#mySideNav {
+    width: 239px;
+}
+
+#codeArtNav {
+    width: 239px;
+    display: none;
+}
+
+#codeArtNav div {
+    width: 175px;
+}
+
+.flexcontainer {
+    /* extra garbage here for old browser compatibility. */
+    /* centers the sidenav vertically on the screen. */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 487px) {
+    #picDiv {
+        margin-top: 16px;
+    }
 }

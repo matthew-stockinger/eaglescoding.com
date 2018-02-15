@@ -1,0 +1,181 @@
+/* pics */
+#picDiv {
+    max-width: 360px;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    height: 45px;
+}
+
+img {
+    border: 1px solid black;
+    width: 100%;
+}
+
+/*********************** image nav underneath pics. **************************/
+#imageNav {
+    width: 100%;
+    cursor: default;
+}
+
+.navarrow {
+    padding: 0px 4px 4px 4px;
+    /* padding: 0px 8px 7px 8px; for Macbook? */
+}
+
+.navdots {
+    margin: 0px 6px 5px 6px;
+}
+
+.navnums {
+    display: inline-block;
+    width: 32px;
+    position: relative;
+    bottom: 3px;
+    margin: 0px 2px;
+}
+
+.num-animate-right {
+    position:relative;
+    -webkit-animation: animateShortRight 0.3s;
+    animation: animateShortRight 0.3s
+}
+@-webkit-keyframes animateShortRight {
+    from { right:-36px; } 
+    to { right:0; }
+}
+@keyframes animateShortRight {
+    from { right:-36px; } 
+    to { right:0; }
+}
+
+.num-fade-animate-right {
+    position: relative;
+    -webkit-animation: animateShortFadeRight 0.3s;
+    animation: animateShortFadeRight 0.3s;
+}
+@-webkit-keyframes animateShortFadeRight {
+    from { right:-36px; opacity:0; }
+    to { right:0; opacity:1; }
+}
+@keyframes animateShortFadeRight {
+    from { right:-36px; opacity:0; }
+    to { right:0; opacity:1; }
+}
+
+.num-animate-left{
+    position: relative;
+    -webkit-animation: animateShortLeft 0.3s;
+    animation: animateShortLeft 0.3s
+}
+@-webkit-keyframes animateShortLeft {
+    from { right: 36px } 
+    to { right: 0 }
+}
+@keyframes animateShortLeft {
+    from { right: 36px } 
+    to { right:0 }
+}
+
+.num-fade-animate-left {
+    position: relative;
+    -webkit-animation: animateFadeShortLeft 0.3s;
+    animation: animateFadeShortLeft 0.3s
+}
+@-webkit-keyframes animateFadeShortLeft {
+    from { right:36px; opacity:0 } 
+    to { right:0; opacity:1 }
+}
+@keyframes animateFadeShortLeft {
+    from { right:36px; opacity:0 } 
+    to { right:0; opacity:1 }
+}
+
+.mySlides {
+    display: none;
+}
+
+.w3-left, .w3-right, .w3-badge {
+    cursor:default
+}
+
+.w3-badge {
+    height:13px;
+    width:13px;
+    padding:0}
+
+#text {
+    cursor: pointer;  /* keeps pointer cursor between navdots. */
+}
+
+/* unselectable used to prevent ugly text selection of < and > on slideshow controls. */
+.unselectable {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+/*********************** fonts ******************************/
+.w3-biryani {
+    line-height: 22.5px;
+    text-transform: uppercase;
+    font-family: "Biryani", sans-serif;
+    font-size: 22.5px;
+    font-weight: 800;
+}
+
+.w3-biryani-title {
+    text-transform: uppercase;
+    font-family: "Biryani", sans-serif;
+    font-size: 2.8em;
+    font-weight: 800;
+    width: 80%;
+}
+
+/**************************** sidenav *******************************/
+#mySideNav {
+    width: 239px;
+}
+
+#codeArtNav {
+    width: 239px;
+    display: none;
+}
+
+#codeArtNav div {
+    width: 175px;
+}
+
+.flexcontainer {
+    /* extra garbage here for old browser compatibility. */
+    /* centers the sidenav vertically on the screen. */
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/* On very narrow screens, prevents header from growing larger than the laptop image.
+@media screen and (max-width: 486px) {
+    .w3-biryani-title {
+        font-size: 1.6em;
+    }
+}
+*/
+
+@media screen and (min-width: 487px) {
+    #picDiv {
+        margin-top: 16px;
+    }
+}
+
