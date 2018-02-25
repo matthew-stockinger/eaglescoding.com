@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <!-- To do
-    -rewrite with PHP.
-        -both index.php and codeart.php need sidenav to link to codeart.php.
-        -put a codeart.php into each trimester's folder.
-        -future: can a php file be loaded with a passed-in argument?
-            could use this to generate page from appropriate subfolder.
-        
-    -recreate with art generation videos.
+    -add art generation videos.
     -put imagenav over the top of the images.
         -make a background bar to contain it.
         -use event handlers to make it autohide.
@@ -66,7 +60,7 @@
                     <a href="codeart/2017fall/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
                 </div> */
                 $res = '<div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">';
-                $res .= '<a href="../' . $item . '/codeart_' . $item . '.html" class="w3-biryani"><br>';
+                $res .= '<a href="../' . $item . '/codeart.php" class="w3-biryani"><br>';
                 $res .= ucfirst($season) . " " . $year . '<br><br></a></div>';
                 echo $res;
             }

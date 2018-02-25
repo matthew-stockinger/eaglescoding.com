@@ -12,7 +12,6 @@
 
 To Do:
 -Put image nav over top of images.  Use mouseover effects.
--Write PHP version.
 -Unify the site to same theme.
 -get rid of google fonts.
 -host YouTube videos locally.
@@ -72,7 +71,7 @@ To Do:
                     <a href="codeart/2017fall/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
                 </div> */
                 $res = '<div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">';
-                $res .= '<a href="codeart/' . $item . '/codeart_' . $item . '.html" class="w3-biryani"><br>';
+                $res .= '<a href="codeart/' . $item . '/codeart.php" class="w3-biryani"><br>';
                 $res .= ucfirst($season) . " " . $year . '<br><br></a></div>';
                 echo $res;
             }
