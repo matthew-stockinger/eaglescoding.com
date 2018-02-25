@@ -49,15 +49,35 @@ To Do:
     </div>
 </nav>
 
-<!-- original: <nav id="codeArtNav" class="w3-sidenav w3-collapse w3-animate-right w3-padding flexcontainer"> -->
 <nav id="codeArtNav" class="w3-sidenav w3-padding flexcontainer">
     <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
     <a href="javascript:void(0)" onclick="backToMainNav()" class="w3-button w3-white w3-large w3-padding">
         &#10094; Back
     </a>
-    <div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">
-        <a href="codeart/2017fall/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
-    </div>
+    <!-- php generate codeArt sidenav from directories present. -->
+    <?php
+        $ls = scandir("./codeart/");
+        foreach ($ls as $item) {
+            // if it's ./ or ../ or cgi-bin, ignore it.
+            if ($item === "." or $item === ".." or $item === "cgi-bin") continue;
+            // if it's a named directory, create a link on the page.
+            if (is_dir("./codeart/" . $item)) {
+                // parse the directory name.  Format is e.g. 2017fall.  
+                // Want this to become a string, "Fall 2017"
+                $year = substr($item,0,4);
+                $season = substr($item,4);
+                // then echo div and <a> to add that item to sidenav.
+                /* example: 
+                <div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">
+                    <a href="codeart/2017fall/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
+                </div> */
+                $res = '<div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">';
+                $res .= '<a href="codeart/' . $item . '/codeart_' . $item . '.html" class="w3-biryani"><br>';
+                $res .= ucfirst($season) . " " . $year . '<br><br></a></div>';
+                echo $res;
+            }
+        }
+    ?>
 </nav>
 
 <!-- w3-main container needed for hamburger menu -->

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<! --  This is the php version.  Reads directory list on the server to generate the student page link list. -->
+<!-- This is the php version.  Reads directory list on the server to generate the student page link list. -->
 <html lang="en-US">
   <head>
     <title>Apollo Coding Student Work</title>
     <link rel="stylesheet" href="student_pages.css">
     <meta charset="UTF-8">
-    <meta name="description" content="Student work on display.">
+    <meta name="description" content="Apollo coding class, student web pages.">
     <meta name="author" content="Matthew Stockinger">
   </head>
   <body>
