@@ -11,11 +11,14 @@
 4.0   rewrite with w3.css.
 
 To Do:
+-add videos to codeart pages.
+-publish winter 2017 submissions.
 -Put image nav over top of images.  Use mouseover effects.
 -Unify the site to same theme.
 -get rid of google fonts.
 -host YouTube videos locally.
 -swipe with CSS.  clickstops?  I forget what they're called.  CSS tricks.
+-AJAX the site.
 -->
 <html lang="en-US">
 <head>
