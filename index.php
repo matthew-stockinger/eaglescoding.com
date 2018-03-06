@@ -9,6 +9,7 @@
 2.4   rewrote navbar CSS with flexboxes.
 3.0   add phone width responsiveness.
 4.0   rewrite with w3.css.
+*********** test git change ************.
 
 To Do:
 -add videos to codeart pages.
