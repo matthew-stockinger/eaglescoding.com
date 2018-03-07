@@ -9,7 +9,6 @@
 2.4   rewrote navbar CSS with flexboxes.
 3.0   add phone width responsiveness.
 4.0   rewrite with w3.css.
-*********** test git change ************.
 
 To Do:
 -add videos to codeart pages.
@@ -19,6 +18,7 @@ To Do:
 -get rid of google fonts.
 -host YouTube videos locally.
 -swipe with CSS.  clickstops?  I forget what they're called.  CSS tricks.
+    https://css-tricks.com/the-javascript-behind-touch-friendly-sliders/
 -AJAX the site.
 -->
 <html lang="en-US">
