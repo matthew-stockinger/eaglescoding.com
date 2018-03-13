@@ -82,16 +82,16 @@
             $ls = scandir("./");
             foreach ($ls as $item) {
                 // if it's ./ or ../, ignore it.
-                if ($item === "." or $item === "..") continue;
-                
-                // find the jpegs and generate <figure> elements.
-                /* example:
-                    <figure class="mySlides">
-                        <img src="Hinda_Mohamed,Abdiowasoho_Mahamed.jpg">
-                        <figcaption>Hinda Mohamed, Abdiowasoho Mohamed</figcaption>
-                    </figure>
-                */
-                if (strtolower(substr($item, -3)) === "jpg" or strtolower(substr($item, -4)) === "jpeg") {
+                if ($item === "." or $item === "..") {
+                    continue;
+                } elseif (strtolower(substr($item, -3)) === "jpg" or strtolower(substr($item, -4)) === "jpeg") {
+                    // this part finds the jpegs and generate <figure> elements.
+                    /* example:
+                        <figure class="mySlides">
+                            <img src="Hinda_Mohamed,Abdiowasoho_Mahamed.jpg">
+                            <figcaption>Hinda Mohamed, Abdiowasoho Mohamed</figcaption>
+                        </figure>
+                    */
                     // create array of contributor names.
                     $res = '<figure class="mySlides">';
                     $res .= '<img src="' . $item . '">';
@@ -112,6 +112,8 @@
                     }
                     $res .= '</figcaption></figure>';
                     echo $res;
+                } elseif (strtolower(substr($item, -3)) === "mp4") {
+                    // this part detects movie files and adds them to the slideshow.
                 }
             }
         ?>
