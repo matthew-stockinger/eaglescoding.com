@@ -12,7 +12,7 @@ figcaption {
     height: 45px;
 }
 
-img {
+img, video {
     border: 1px solid black;
     width: 100%;
 }

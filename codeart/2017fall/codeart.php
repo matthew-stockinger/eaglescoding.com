@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- To do
     -add art generation videos.
+        -shoot rectangular videos and add to folder.
     -put imagenav over the top of the images.
         -make a background bar to contain it.
         -use event handlers to make it autohide.
@@ -114,6 +115,38 @@
                     echo $res;
                 } elseif (strtolower(substr($item, -3)) === "mp4") {
                     // this part detects movie files and adds them to the slideshow.
+                    /* example:
+                        <figure class="mySlides">
+                            <video src="Hinda_Mohamed,Abdiowasoho_Mahamed.mp4" autoplay>
+                            Sorry, your browser doesn't support embedded mp4 videos, but
+                            you can download it <a href="Hinda_Mohamed,Abdiowasoho_Mahamed.mp4">here</a>.
+                            </video>
+                            <figcaption>Hinda Mohamed, Abdiowasoho Mohamed</figcaption>
+                        </figure>
+                    */
+                    // create array of contributor names.
+                    $res = '<figure class="mySlides">';
+                    $res .= '<video src="' . $item . '" controls>';
+                    $res .= 'Sorry, your browser doesn\'t support embedded mp4 videos, ' . 
+                        'but you can download it <a href="' . $item . '">here</a>.';
+                    $res .= '</video>';
+                    $res .= '<figcaption>';
+                    /* here, parse the filename to create the caption, which is a list of student contributors
+                        to the image. */
+                    // remove file extension from filename string.
+                    $item = str_replace(array(".mp4"), "", $item);
+                    // create an array of the student names and add them to $res
+                    $fullNames = explode(",", $item);
+                    if (count($fullNames) === 1) {
+                        $res .= str_replace("_", " ", $fullNames[0]);
+                    } else {
+                        foreach ($fullNames as $name) {
+                            $res .= str_replace("_", " ", $name) . ", ";
+                        }
+                        $res = substr($res, 0, -2); // remove the final ", "
+                    }
+                    $res .= '</figcaption></figure>';
+                    echo $res;
                 }
             }
         ?>
