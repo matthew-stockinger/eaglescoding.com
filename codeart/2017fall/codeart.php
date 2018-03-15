@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <!-- To do
-    -add art generation videos.
-        -shoot rectangular videos and add to folder.
     -put imagenav over the top of the images.
         -make a background bar to contain it.
         -use event handlers to make it autohide.
+    -Write CSS so that aspect ratio and max-sizes are constrained.
+        -Don't want to have to worry about resizing images and videos, or
+         reducing quality by displaying browser-enlarged images.
 -->
 
 <html lang="en-US">
@@ -98,7 +99,7 @@
                     $res .= '<img src="' . $item . '">';
                     $res .= '<figcaption>';
                     /* here, parse the filename to create the caption, which is a list of student contributors
-                        to the image. */
+                        to the image. Expected format: Jane_Smith,John_Smith.jpg */
                     // remove file extension from filename string.
                     $item = str_replace(array(".jpg", ".jpeg"), "", $item);
                     // create an array of the student names and add them to $res
@@ -132,7 +133,7 @@
                     $res .= '</video>';
                     $res .= '<figcaption>';
                     /* here, parse the filename to create the caption, which is a list of student contributors
-                        to the image. */
+                        to the image. Expected format: Jane_Smith,John_Smith.mp4 */
                     // remove file extension from filename string.
                     $item = str_replace(array(".mp4"), "", $item);
                     // create an array of the student names and add them to $res
