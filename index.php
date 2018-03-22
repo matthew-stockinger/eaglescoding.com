@@ -11,16 +11,13 @@
 4.0   rewrite with w3.css.
 
 To Do:
--Merge current branch and create a new one.
--put code-art.php and code-art-nav.php in root directory.
-    -use a variable to determine which files to display?
-    -perhaps a URL ?folder sort of thing?
+fix-filename-dashes
 -Cleanup
     -filenames change to dashes.
     -?? folders: images, styles, scripts.
     -?? style.css
     -?? main.js
--add videos to codeart pages.
+
 -publish winter 2017 submissions.
 -Put image nav over top of images.  Use mouseover effects.
 -Unify the site to same theme.
@@ -68,29 +65,7 @@ To Do:
     </a>
     <!-- php generate codeArt sidenav from directories present. -->
     <?php
-        $ls = scandir("./code-art/");
-        foreach ($ls as $item) {
-            // if it's ./ or ../ or cgi-bin, ignore it.
-            if ($item === "." or $item === ".." or $item === "cgi-bin") continue;
-            // if it's a named directory, create a link on the page.
-            if (is_dir("./code-art/" . $item)) {
-                // parse the directory name.  Format is e.g. 2017_fall_ or 2017_fall_JavaScript.
-                // Want this to become a string, "Fall 2017 JavaScript"
-                $arr = explode("_", $item);
-                $year = $arr[0];
-                $season = $arr[1];
-                $lang = $arr[2];
-                // then echo div and <a> to add that item to sidenav.
-                /* example: 
-                <div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">
-                    <a href="codeart/2017_fall_/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
-                </div> */
-                $res = '<div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">';
-                $res .= '<a href="code-art/' . $item . '/code-art.php" class="w3-biryani"><br>';
-                $res .= ucfirst($season) . " " . $year . '<br>' . $lang . '<br></a></div>';
-                echo $res;
-            }
-        }
+        require 'code-art-nav.php';
     ?>
 </nav>
 
