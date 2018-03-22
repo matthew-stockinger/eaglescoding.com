@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Art - Fall 2017</title>
     <link rel="stylesheet" href="../../css/w3.css">
-    <link rel="stylesheet" href="../../css/codeart.css" />
+    <link rel="stylesheet" href="../../css/code-art.css" />
     <link href='https://fonts.googleapis.com/css?family=Biryani:800' 
         rel='stylesheet' type='text/css'>
 </head>
@@ -62,7 +62,7 @@
                     <a href="codeart/2017fall/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
                 </div> */
                 $res = '<div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">';
-                $res .= '<a href="../' . $item . '/codeart.php" class="w3-biryani"><br>';
+                $res .= '<a href="../' . $item . '/code-art.php" class="w3-biryani"><br>';
                 $res .= ucfirst($season) . " " . $year . '<br><br></a></div>';
                 echo $res;
             }
@@ -157,7 +157,7 @@
     <nav id="imageNav" class="w3-center w3-xxlarge w3-text-black"></nav>
 </main>
 
-<script src="../../js/codeArt.js">
+<script src="../../js/code-art.js">
 </script>
 
 </body>
