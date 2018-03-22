@@ -11,6 +11,11 @@
 4.0   rewrite with w3.css.
 
 To Do:
+-Cleanup
+    -filenames change to dashes.
+    -?? folders: images, styles, scripts.
+    -?? style.css
+    -?? main.js
 -add videos to codeart pages.
 -publish winter 2017 submissions.
 -Put image nav over top of images.  Use mouseover effects.
@@ -23,7 +28,7 @@ To Do:
 -->
 <html lang="en-US">
 <head>
-<meta charset="UTF-8" />
+<meta charset="utf-8">
 <meta name="description" content="Home of Apollo coding class">
 <meta name="author" content="Matthew Stockinger" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,13 +44,13 @@ To Do:
 <nav id="mySideNav" class="w3-sidenav w3-collapse w3-padding flexcontainer">
     <a href="javascript:void(0)" onclick="closeMainNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
     <div class="w3-black w3-margin">
-        <a href="http://eaglescoding.com" class="w3-biryani">APOLLO CODING CLASS</a>
+        <a href="#" class="w3-biryani">APOLLO CODING CLASS</a>
     </div>
     <div class="w3-black w3-margin">
-        <a href="http://eaglescoding.com/makey/makey.html" class="w3-biryani" target="_blank">Makey Makey!<br><br></a>
+        <a href="./makey/makey.html" class="w3-biryani" target="_blank">Makey Makey!<br><br></a>
     </div>
     <div class="w3-black w3-margin">
-        <a href="http://eaglescoding.com/students/student_pages.php" class="w3-biryani">Student Web Pages<br><br></a>
+        <a href="./students/student-pages.php" class="w3-biryani">Student Web Pages<br><br></a>
     </div>
     <div class="w3-black w3-margin">
         <a href="javascript:void(0)" onclick="openCodeArtNav()" class="w3-biryani">Student Code Art<br><br></a>
@@ -59,24 +64,26 @@ To Do:
     </a>
     <!-- php generate codeArt sidenav from directories present. -->
     <?php
-        $ls = scandir("./codeart/");
+        $ls = scandir("./code-art/");
         foreach ($ls as $item) {
             // if it's ./ or ../ or cgi-bin, ignore it.
             if ($item === "." or $item === ".." or $item === "cgi-bin") continue;
             // if it's a named directory, create a link on the page.
-            if (is_dir("./codeart/" . $item)) {
-                // parse the directory name.  Format is e.g. 2017fall.  
-                // Want this to become a string, "Fall 2017"
-                $year = substr($item,0,4);
-                $season = substr($item,4);
+            if (is_dir("./code-art/" . $item)) {
+                // parse the directory name.  Format is e.g. 2017_fall_ or 2017_fall_JavaScript.
+                // Want this to become a string, "Fall 2017 JavaScript"
+                $arr = explode("_", $item);
+                $year = $arr[0];
+                $season = $arr[1];
+                $lang = $arr[2];
                 // then echo div and <a> to add that item to sidenav.
                 /* example: 
                 <div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">
-                    <a href="codeart/2017fall/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
+                    <a href="codeart/2017_fall_/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
                 </div> */
                 $res = '<div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">';
-                $res .= '<a href="codeart/' . $item . '/codeart.php" class="w3-biryani"><br>';
-                $res .= ucfirst($season) . " " . $year . '<br><br></a></div>';
+                $res .= '<a href="code-art/' . $item . '/code-art.php" class="w3-biryani"><br>';
+                $res .= ucfirst($season) . " " . $year . '<br>' . $lang . '<br></a></div>';
                 echo $res;
             }
         }
