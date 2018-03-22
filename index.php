@@ -13,7 +13,6 @@
 To Do:
 -Cleanup
     -filenames change to dashes.
-    -?? folders: images, styles, scripts.
     -?? style.css
     -?? main.js
 -add videos to codeart pages.
