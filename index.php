@@ -11,6 +11,10 @@
 4.0   rewrite with w3.css.
 
 To Do:
+-Merge current branch and create a new one.
+-put code-art.php and code-art-nav.php in root directory.
+    -use a variable to determine which files to display?
+    -perhaps a URL ?folder sort of thing?
 -Cleanup
     -filenames change to dashes.
     -?? folders: images, styles, scripts.
