@@ -11,13 +11,6 @@
 4.0   rewrite with w3.css.
 
 To Do:
-fix-filename-dashes
--Cleanup
-    -filenames change to dashes.
-    -?? folders: images, styles, scripts.
-    -?? style.css
-    -?? main.js
-
 -publish winter 2017 submissions.
 -Put image nav over top of images.  Use mouseover effects.
 -Unify the site to same theme.
@@ -35,7 +28,7 @@ fix-filename-dashes
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apollo Coding</title>
 <link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="css/style.css" />
 <link href='https://fonts.googleapis.com/css?family=Biryani:800' rel='stylesheet' type='text/css'>
 </head>
 
@@ -101,7 +94,7 @@ fix-filename-dashes
     </section>
 </main>
 
-<script src="js/index.js">
+<script src="js/main.js">
 </script>
 
 </body>
