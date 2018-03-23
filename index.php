@@ -1,17 +1,6 @@
 ﻿<!DOCTYPE html>
-<!-- Version History
-1.0   functional side navbar.
-1.1   responsive navbar for tablet screens.
-2.0   add image to right of navbar.  
-2.1   add heading inside of image.
-2.2   add videos.
-2.3   restructure links and directories, add Google font Biryani
-2.4   rewrote navbar CSS with flexboxes.
-3.0   add phone width responsiveness.
-4.0   rewrite with w3.css.
-
+<!-- 
 To Do:
--Use a PHP require for main nav code.  Dump into a nav.php file.
 -Put image nav over top of images.  Use mouseover effects.
 -Unify the site to same theme.
 -get rid of google fonts.
