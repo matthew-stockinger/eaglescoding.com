@@ -42,7 +42,7 @@
         <a href="./makey/makey.html" class="w3-biryani" target="_blank">Makey Makey!<br><br></a>
     </div>
     <div class="w3-black w3-margin">
-        <a href="./students/student_pages.php" class="w3-biryani">Student Web Pages<br><br></a>
+        <a href="./students/student-pages.php" class="w3-biryani">Student Web Pages<br><br></a>
     </div>
     <div class="w3-black w3-margin">
         <a href="javascript:void(0)" onclick="openCodeArtNav()" class="w3-biryani">Student Code Art<br><br></a>

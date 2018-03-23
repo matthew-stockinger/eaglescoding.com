@@ -11,6 +11,7 @@
 4.0   rewrite with w3.css.
 
 To Do:
+-Use a PHP require for main nav code.  Dump into a nav.php file.
 -Put image nav over top of images.  Use mouseover effects.
 -Unify the site to same theme.
 -get rid of google fonts.
