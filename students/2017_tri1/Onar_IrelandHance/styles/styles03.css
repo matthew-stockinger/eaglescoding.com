@@ -1,0 +1,37 @@
+/*Purple, black*/
+
+body {
+    background-color:purple;
+}
+
+#a01:link { 
+    color:black;
+}
+
+#a01:visited {
+    color:black;
+}
+
+#a01:hover {
+    color:rgb(255,255,0);
+}
+
+#a01:active {
+    color:rgb(255,255,0);
+}
+
+#a02:link { 
+    color:black;
+}
+
+#a02:visited {
+    color:black;
+}
+
+#a02:hover {
+    color:rgb(210,210,0);
+}
+
+#a02:active {
+    color:rgb(210,210,0);
+}

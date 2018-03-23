@@ -1,0 +1,38 @@
+<html>
+
+  <head>
+    <!-- put your own title here -->
+    <title>A Public Menace</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+  
+    <h1></h1>
+    
+    <!-- edit the image and paragraph in this div to
+    make it your own.  Copy and paste more of these
+    divs below to make a longer comic strip. -->
+    <div>
+      <img src="comic square 1.jpeg">
+      
+    </div>
+      
+     <div>
+      <img src="Comic square 2.jpeg">
+      
+    </div>
+      
+       <div>
+      <img src="Comic Square 3.jpeg">
+      
+    </div>
+      
+       <div>
+      <img src="Comic square 4.jpeg"
+           style="width:200px;height:200px;">
+     
+    </div>
+  </body>
+
+</html>

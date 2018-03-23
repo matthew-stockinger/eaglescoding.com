@@ -1,0 +1,115 @@
+body {
+    background-color: whitesmoke;
+}
+h1.krhTop {
+    color: black;
+    letter-spacing: 6px;
+    font-family:  "Courier New", Courier, monospace;
+    background-color: gray;
+    outline-style: solid;
+    outline-color: gray;
+    outline-width:35px;
+    text-align: center;
+    font-size:300%;
+    margin-bottom: 35px;
+}
+a.home:link {
+    text-decoration: none;
+    color: black;
+}
+a.home:visited {
+    color: black;
+    text-decoration: none;
+}
+a.home:hover {
+    text-decoration: none
+}
+p.pageDir {
+    display:block;
+    width:98.75%;
+    font-family: "Courier New", Courier, monospace;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: red;
+    border-style: solid;
+    border-width: 6px;
+    border-color: red;
+    outline-style: solid;
+    outline-color: darkred;
+    outline-width: 9px;
+    padding-left: 4px;
+    margin-top: 0erpx;
+}
+img.searchIcon {
+    float:right;
+    margin-right: 10px;
+}
+h2.vehicleName {
+    font-family: "Verdana", Geneva, sans-serif;
+    text-align: center;
+    background-color: lightgray;
+    outline-style: solid;
+    outline-color: lightgray;
+    outline-width: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.airThumb {
+    float:right;
+    text-align: center;
+    font-family: "Verdana", Geneva, sans-serif;
+    font-size: 20px;
+    background-color: gainsboro;
+    border-style: solid;
+    border-color: gray;
+    border-width: 5px;
+    border-radius: 5px;
+}
+p.bodyText {
+    font-family: "Verdana", Geneva, sans-serif;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 16px;
+    text-indent: 40px;
+    width: 660px;
+}
+h2.panelText {
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 40px;
+    background-color: gainsboro;
+}
+td.tableL {
+    float: left;
+    text-align: left;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    padding-left: 40px;
+    background-color: gainsboro;
+}
+td.tableR {
+    float: right;
+    text-align: right;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    padding-right: 40px;
+    background-color: gainsboro;
+}
+td.tableR .hoverText {
+    visibility: hidden;
+    font-size: 21px;
+    background-color: darkred;
+    color: gainsboro;
+    text-align: left;
+    padding: 9px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    right: 12%;
+}
+td.tableR:hover .hoverText {
+    visibility: visible;
+    
+}

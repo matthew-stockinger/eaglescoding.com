@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- This is the php version.  Reads directory list on the server to generate the student page link list. -->
+<! --  This is the php version.  Reads directory list on the server to generate the student page link list. -->
 <html lang="en-US">
   <head>
     <title>Apollo Coding Student Work</title>
     <link rel="stylesheet" href="student_pages.css">
     <meta charset="UTF-8">
-    <meta name="description" content="Apollo coding class, student web pages.">
+    <meta name="description" content="Student work on display.">
     <meta name="author" content="Matthew Stockinger">
   </head>
   <body>
@@ -21,15 +21,15 @@
       <ul id="myUL">
       <!-- generates the list of names from the folders present with this file. -->
       <?php
-        $ls = scandir("./");
+        $ls = scandir("./2017_tri3_p1/");
         foreach ($ls as $item) {
           // if it's ./ or ../ or cgi-bin, ignore it.
           if ($item === "." or $item === ".." or $item === "cgi-bin") continue;
           // if it's a named directory, create a link on the page.
-          if (is_dir("./" . $item)) {
+          if (is_dir("./2017_tri3_p1/" . $item)) {
             $full_Name = $item;
             $fullName = str_replace("_", " ", $item);
-            echo '<li><a href="' . $full_Name . '/index.html" target="_blank">' . $fullName . '</a></li>';
+            echo '<li><a href="2017_tri3_p1/' . $full_Name . '/index.html" class="nameLink" target="_blank">' . $fullName . '</a></li>';
           }
         }
       ?>

@@ -1,0 +1,87 @@
+<!DOCTYPE>
+<html>
+<title>W3.CSS</title>
+    <meta name="viewport" 
+    content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style>
+        body,p,h1 {
+            font-family: Raleway;
+        }
+    </style>
+    
+    <body>
+        
+        <!-- header bar -->
+        <div class="w3-container w3-padding-16 w3-purple w3-center">
+            <h1 class="w3-purple" style="text-shadow:3px 3px 0 #444">Amber Moon's Photography</h1>
+        </div>
+        
+        <!-- navbar -->
+        <div class="w3-bar w3-purple">
+            <!-- visible on small screens -->
+            <a href="index.html" class="w3-bar-item w3-button w3-hide-medium w3-hide-large" style="width:88%;text-align:left;">Home</a>
+            <!-- visible on med and large screens -->
+            <a href="index.html" class="w3-bar-item w3-hover w3-button w3-hide-small">Home</a>
+            <a href="gallery.html" class="w3-bar-item w3-button w3-hide-small">Gallery</a>
+            <a href="about.html" class="w3-bar-item w3-button w3-hide-small">About</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+        </div>
+            
+        <div id="nav" class="w3-bar-block w3-purple w3-hide w3-hide-large w3-hide-medium">
+          <a href="gallery.html" class="w3-bar-item w3-button">Gallery</a>
+          <a href="about.html" class="w3-bar-item w3-button">About</a>
+        </div>
+        
+        
+        
+        <div class="w3-panel w3-padding-16 w3-center">
+          <p>This is a website where you will be able to see the photos I have taken in the past, and currently. I mainly focus on pictures of nature, express the feeling of the picture, and what the picture means to you and the photographer.</p>
+        </div>
+        
+        <div class="w3-center" >
+        <img src="DSC02157.jpg" alt="Leaf" style="width:80%">
+        </div>
+        
+        
+        <div class="w3-panel w3-padding-16 w3-center">
+            <p>This is a picture of a leaf that has a soft background and a strong highlight to some of the branches and of course the leaf. This is personally one of my favorite pictures. It has a "nature" feel to it, and it shows the importance of how nature and life can be so delicate, but yet so outstanding in its features.</p>
+        </div>
+        
+        <div class="w3-center">
+        <img src="DSC01963.jpg" alt="Fire" style="width:80%">
+        </div>
+        
+        <div class="w3-panel w3-padding-16 w3-center">
+            <p>This is also another one of my favorite pictures. It shows the detail of the flames and especially the wood and the hook in the middle of the fire. It reminds me of rage, anger, and fear itself that is trying to be tamed by its ruler... the Fire Iron, or in this case, yourself. </p>
+        </div>
+        
+        <div class="w3-center">
+        <img src="DSC01749.jpg" alt="Flower" style="width:80%">
+        </div>
+        
+        <div class="w3-panel w3-padding w3-center">
+          <p>This is a flower that has been highlighted out of the background so that it can stand out more in the shot. The background is more soft and out of focus so that the flower is the main attention-getter.</p>
+        </div>
+        
+        <div class="w3-container w3-purple w3-center">
+            <p>By: Amber Moon / E-mail : sc979908@apps.isd742.org / Amber Moon's Photography 2017&#169;</p>
+        </div>
+        
+        <script>
+        function myFunction() {
+            var x = document.getElementById("nav");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+        </script>
+    </body>
+</html>
+        
+        
+        
+        
