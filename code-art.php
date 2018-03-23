@@ -95,10 +95,10 @@
                     // create an array of the student names and add them to $res
                     $fullNames = explode(",", $item);
                     if (count($fullNames) === 1) {
-                        $res .= str_replace("_", " ", $fullNames[0]);
+                        $res .= str_replace("-", " ", $fullNames[0]);
                     } else {
                         foreach ($fullNames as $name) {
-                            $res .= str_replace("_", " ", $name) . ", ";
+                            $res .= str_replace("-", " ", $name) . ", ";
                         }
                         $res = substr($res, 0, -2); // remove the final ", "
                     }
@@ -129,10 +129,10 @@
                     // create an array of the student names and add them to $res
                     $fullNames = explode(",", $item);
                     if (count($fullNames) === 1) {
-                        $res .= str_replace("_", " ", $fullNames[0]);
+                        $res .= str_replace("-", " ", $fullNames[0]);
                     } else {
                         foreach ($fullNames as $name) {
-                            $res .= str_replace("_", " ", $name) . ", ";
+                            $res .= str_replace("-", " ", $name) . ", ";
                         }
                         $res = substr($res, 0, -2); // remove the final ", "
                     }
