@@ -6,6 +6,7 @@
     -Write CSS so that aspect ratio and max-sizes are constrained.
         -Don't want to have to worry about resizing images and videos, or
          reducing quality by displaying browser-enlarged images.
+    -Fix video size issue.
 -->
 
 <html lang="en-US">

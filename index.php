@@ -19,6 +19,7 @@ To Do:
 -swipe with CSS.  clickstops?  I forget what they're called.  CSS tricks.
     https://css-tricks.com/the-javascript-behind-touch-friendly-sliders/
 -AJAX the site.
+-fix ugly display of code-art-nav 2-line items.  e.g. 2017 winter JavaScript
 -->
 <html lang="en-US">
 <head>
