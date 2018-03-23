@@ -11,7 +11,6 @@
 4.0   rewrite with w3.css.
 
 To Do:
--publish winter 2017 submissions.
 -Put image nav over top of images.  Use mouseover effects.
 -Unify the site to same theme.
 -get rid of google fonts.
