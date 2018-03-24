@@ -4,6 +4,7 @@
         -tweak timing of animation and initial delay.
         -find way to make fadeOut only run once on generation of imageNav.
         -put a delay on mouseout, with clear timeout on mouseover.
+        -area under caption counts as part of element.  Undesirable.
 
     -Write CSS so that aspect ratio and max-sizes are constrained.
         -Don't want to have to worry about resizing images and videos, or
@@ -148,7 +149,7 @@
             }
             ?>
         <!-- image nav created dynamically in codeArt.js -->
-        <nav id="imageNav" class="w3-center w3-xxlarge w3-translucent-gray imgPositioned fadeIn"></nav>
+        <nav id="imageNav" class="w3-center w3-xxlarge w3-black imgPositioned fadeIn"></nav>
     </div>
     
 </main>

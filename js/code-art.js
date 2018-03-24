@@ -145,9 +145,9 @@ function displayNav(navType, direction, animated) {
 }
 
 function displayDotNav() {
-    var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
-    var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
-    var navDotA = '<span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(';
+    var leftArrow = '<span class="w3-hover-white w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
+    var rightArrow = '<span class="w3-hover-white w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
+    var navDotA = '<span class="w3-badge navdots w3-border w3-border-white w3-transparent w3-hover-white" onclick="currentDiv(';
     var navDotB = ')"></span>';
     var navDots = '';
     var i;
@@ -159,8 +159,8 @@ function displayDotNav() {
 
 // direction is -1, 0, or 1.  animated is bool.
 function displayNumNav(direction, animated) {
-    var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
-    var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
+    var leftArrow = '<span class="w3-hover-white w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
+    var rightArrow = '<span class="w3-hover-white w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
     var a = '<span class="navnums w3-xlarge" onclick="currentDiv(';
     var aRight = '<span class="navnums w3-xlarge num-animate-right" onclick="currentDiv(';
     var aFadeRight = '<span class="navnums w3-xlarge num-fade-animate-right" onclick="currentDiv(';
