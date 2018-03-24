@@ -17,10 +17,46 @@ img, video {
     width: 100%;
 }
 
+/*********************** container element ***********************************/
+.positioned { position: relative; }
+
 /*********************** image nav underneath pics. **************************/
 #imageNav {
-    width: 100%;
+    width: 94%;
     cursor: default;
+    position: relative;
+    padding: 0px 16px 3px 16px;
+    margin: auto;
+}
+.imgPositioned { bottom: 112px; }
+.vidPositioned { bottom: 157px; }
+
+.fadeIn {
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fadeOut {
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
 .navarrow {

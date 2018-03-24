@@ -49,6 +49,7 @@ function highlightMe(elt) {
 
 
 /* ********** Slideshow Main **************** */
+var imageNav = document.getElementById("imageNav");
 var slideIndex = 1;
 var numFigures = document.getElementsByTagName("figure").length;
 if (numFigures === 1) {
@@ -58,10 +59,11 @@ if (numFigures === 1) {
 } else if (numFigures >= 8) {
     var navType = "numNav";
 }
-showDivs(slideIndex);
-displayNav(navType, 0, false);
-updateHighlights(navType);
+showDivs(slideIndex); // display block for active image, display none for others
+displayNav(navType, 0, false); // generate the navigation elements.  handle css animation.
+updateHighlights(navType); // highlight active number/dot.  unhighlight others.
 
+// handles left and right arrows
 function plusDivs(n) {
     showDivs(slideIndex += n);
     if (n === 1) {
@@ -80,6 +82,7 @@ function plusDivs(n) {
     updateHighlights(navType);
 }
 
+// if user clicks an image number directly.
 function currentDiv(n) {
     // Need to check if new center number will be different than old center number.
     // If so, then animate.
@@ -111,6 +114,7 @@ function showDivs(n) {
         x[i].style.display = "none";  
     }
     x[slideIndex-1].style.display = "block";
+
 }
 
 /* ****** Generate and appropriately animate dot or number list  ************* */
@@ -125,6 +129,19 @@ function displayNav(navType, direction, animated) {
             displayNumNav(direction, animated);
             break;
     }
+
+    // this code positions the numNav or dotNav over the image or video.
+    // videos have controls, so positioning is higher than for images.
+    var x = document.getElementsByClassName("mySlides");
+    if (x[slideIndex - 1].firstElementChild.tagName === 'IMG') {
+        imageNav.className = imageNav.className.replace("vidPositioned", "imgPositioned");
+    } else if (x[slideIndex - 1].firstElementChild.tagName === 'VIDEO') {
+        imageNav.className = imageNav.className.replace("imgPositioned", "vidPositioned");    
+    }
+
+    // fade out the imageNav after 3 seconds.
+    // event handlers for mouseenter and mouseleave are elsewhere, below.
+    setTimeout(fadeOut, 2000);
 }
 
 function displayDotNav() {
@@ -137,7 +154,7 @@ function displayDotNav() {
     for (i = 1; i <= numFigures; i++) {
         navDots += navDotA + i + navDotB;
     }
-    document.getElementById("imageNav").innerHTML = leftArrow + navDots + rightArrow;
+    imageNav.innerHTML = leftArrow + navDots + rightArrow;
 }
 
 // direction is -1, 0, or 1.  animated is bool.
@@ -217,7 +234,7 @@ function displayNumNav(direction, animated) {
         }
     }
 
-    document.getElementById("imageNav").innerHTML = leftArrow + res + rightArrow;
+    imageNav.innerHTML = leftArrow + res + rightArrow;
     // add blue hover CSS after animation completes, in 0.3s.  Otherwise will be blue during animation.
     // Only an issue for the far right or left number.
     setTimeout(function() {
@@ -272,6 +289,22 @@ function updateNums() {
     } else if (slideIndex > numFigures - 3) {
         navnumElements[6 + slideIndex - numFigures].className += " w3-text-blue";
     }
+}
+
+/*****************autohide / hover effects for imageNav*************** */
+document.getElementById("picDiv").addEventListener("mouseout", fadeOut);
+document.getElementById("picDiv").addEventListener("mouseover", fadeIn);
+
+function fadeOut() {
+    // trigger CSS here, perhaps, by adding className.
+    console.log("fadeOut() running");
+    imageNav.className = imageNav.className.replace("fadeIn", "fadeOut");
+}
+
+function fadeIn() {
+    // trigger CSS animation here, by adding className.
+    console.log("fadeIn() running");
+    imageNav.className = imageNav.className.replace("fadeOut", "fadeIn");
 }
 
 /* ************************** keyboard interaction ******************* */

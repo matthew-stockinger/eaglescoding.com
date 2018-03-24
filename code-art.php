@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <!-- To do
     -put imagenav over the top of the images.
-        -make a background bar to contain it.
-        -use event handlers to make it autohide.
+        -tweak timing of animation and initial delay.
+        -find way to make fadeOut only run once on generation of imageNav.
+        -put a delay on mouseout, with clear timeout on mouseover.
+
     -Write CSS so that aspect ratio and max-sizes are constrained.
         -Don't want to have to worry about resizing images and videos, or
          reducing quality by displaying browser-enlarged images.
@@ -49,7 +51,7 @@
 </nav>
 
 <!-- wrapper for page content. Helper class for hamburger menu. -->
-<main class="w3-main">
+<main class="w3-main positioned">
     <!-- hamburger icon header bar -->
     <header class="w3-container w3-black">
         <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openCodeArtNav()">&#9776;</span>
@@ -67,17 +69,17 @@
                 } elseif (strtolower(substr($item, -3)) === "jpg" or strtolower(substr($item, -4)) === "jpeg") {
                     // this part finds the jpegs and generate <figure> elements.
                     /* example:
-                        <figure class="mySlides">
-                            <img src="Hinda_Mohamed,Abdiowasoho_Mahamed.jpg">
-                            <figcaption>Hinda Mohamed, Abdiowasoho Mohamed</figcaption>
-                        </figure>
+                    <figure class="mySlides">
+                    <img src="Hinda_Mohamed,Abdiowasoho_Mahamed.jpg">
+                    <figcaption>Hinda Mohamed, Abdiowasoho Mohamed</figcaption>
+                    </figure>
                     */
                     // create array of contributor names.
                     $res = '<figure class="mySlides">';
                     $res .= '<img src="./code-art/' . $_GET['folder'] . '/' . $item . '">';
                     $res .= '<figcaption>';
                     /* here, parse the filename to create the caption, which is a list of student contributors
-                        to the image. Expected format: Jane_Smith,John_Smith.jpg */
+                    to the image. Expected format: Jane_Smith,John_Smith.jpg */
                     // remove file extension from filename string.
                     $item = str_replace(array(".jpg", ".jpeg"), "", $item);
                     // create an array of the student names and add them to $res
@@ -145,10 +147,10 @@
                 }
             }
             ?>
+        <!-- image nav created dynamically in codeArt.js -->
+        <nav id="imageNav" class="w3-center w3-xxlarge w3-translucent-gray imgPositioned fadeIn"></nav>
     </div>
     
-    <!-- image nav created dynamically in codeArt.js -->
-    <nav id="imageNav" class="w3-center w3-xxlarge w3-text-black"></nav>
 </main>
 
 <script src="./js/code-art.js">
