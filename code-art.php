@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <!-- To do
     -put imagenav over the top of the images.
-        -tweak timing of animation and initial delay.
-        -find way to make fadeOut only run once on generation of imageNav.
-        -put a delay on mouseout, with clear timeout on mouseover.
+        -autohide imageNav.  Doesn't work yet. 
+        -touch pic should show imageNav.  Also doesn't seem to work yet.
         -area under caption counts as part of element.  Undesirable.
-
+        -imageNav jumps up on videos.  annoying.
     -Write CSS so that aspect ratio and max-sizes are constrained.
         -Don't want to have to worry about resizing images and videos, or
          reducing quality by displaying browser-enlarged images.
-    -Fix video size issue.
 -->
 
 <html lang="en-US">
@@ -149,7 +147,7 @@
             }
             ?>
         <!-- image nav created dynamically in codeArt.js -->
-        <nav id="imageNav" class="w3-center w3-xxlarge w3-black imgPositioned fadeIn"></nav>
+        <nav id="imageNav" class="w3-center w3-xxlarge w3-black imgPositioned"></nav>
     </div>
     
 </main>

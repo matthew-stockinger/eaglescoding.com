@@ -139,9 +139,9 @@ function displayNav(navType, direction, animated) {
         imageNav.className = imageNav.className.replace("imgPositioned", "vidPositioned");    
     }
 
-    // fade out the imageNav after 3 seconds.
+    // fade out the imageNav a few seconds after no mouse movement.
     // event handlers for mouseenter and mouseleave are elsewhere, below.
-    setTimeout(fadeOut, 2000);
+    // setTimeout(fadeOut, 2000);
 }
 
 function displayDotNav() {
@@ -292,19 +292,32 @@ function updateNums() {
 }
 
 /*****************autohide / hover effects for imageNav*************** */
-document.getElementById("picDiv").addEventListener("mouseout", fadeOut);
-document.getElementById("picDiv").addEventListener("mouseover", fadeIn);
+var picDiv = document.getElementById("picDiv");
+picDiv.onload = function() { console.log("picDiv loaded"); delayedFadeOut(2000); };
+picDiv.addEventListener("mouseleave", function() { delayedFadeOut(800); });
+picDiv.addEventListener("mouseover", fadeIn);
+picDiv.addEventListener("mousedown", fadeIn); // for touch
+
+function delayedFadeOut(delay) {
+    timeoutID = setTimeout(fadeOut, delay);
+}
 
 function fadeOut() {
-    // trigger CSS here, perhaps, by adding className.
-    console.log("fadeOut() running");
-    imageNav.className = imageNav.className.replace("fadeIn", "fadeOut");
+    if (imageNav.className.indexOf('fadeIn') !== -1) {
+        imageNav.className = imageNav.className.replace("fadeIn", "fadeOut");
+    } else {
+        imageNav.className += " fadeOut";
+    }
 }
 
 function fadeIn() {
-    // trigger CSS animation here, by adding className.
-    console.log("fadeIn() running");
-    imageNav.className = imageNav.className.replace("fadeOut", "fadeIn");
+    if (typeof timeoutID === 'number') {
+        clearTimeout(timeoutID);
+        timeoutID = undefined;
+    }
+    if (imageNav.className.indexOf('fadeOut') !== -1) {
+        imageNav.className = imageNav.className.replace("fadeOut", "fadeIn");
+    } 
 }
 
 /* ************************** keyboard interaction ******************* */
