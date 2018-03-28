@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <!-- To do
     -put imagenav over the top of the images.
-        -autohide imageNav.  Doesn't work yet. 
-        -touch pic should show imageNav.  Also doesn't seem to work yet.
-        -area under caption counts as part of element.  Undesirable.
+        -add swipe slider.
+        -make nav disappear immediately on video play.
+        -area under caption counts as part of element.  
+         Undesirable for mousing, but good for touch on videos.
         -imageNav jumps up on videos.  annoying.
+        -dotNav highlighting isn't working.  Black dots?
     -Write CSS so that aspect ratio and max-sizes are constrained.
         -Don't want to have to worry about resizing images and videos, or
          reducing quality by displaying browser-enlarged images.

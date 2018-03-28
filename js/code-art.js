@@ -293,10 +293,15 @@ function updateNums() {
 
 /*****************autohide / hover effects for imageNav*************** */
 var picDiv = document.getElementById("picDiv");
-picDiv.onload = function() { console.log("picDiv loaded"); delayedFadeOut(2000); };
+window.onload = function() { setTimeout(function() { delayedFadeOut(1000) }) };
 picDiv.addEventListener("mouseleave", function() { delayedFadeOut(800); });
 picDiv.addEventListener("mouseover", fadeIn);
-picDiv.addEventListener("mousedown", fadeIn); // for touch
+picDiv.addEventListener("mousedown", touchFadeIn); // touch makes nav reappear for a time.
+
+function touchFadeIn() {
+    fadeIn();
+    delayedFadeOut(3000);
+}
 
 function delayedFadeOut(delay) {
     timeoutID = setTimeout(fadeOut, delay);
