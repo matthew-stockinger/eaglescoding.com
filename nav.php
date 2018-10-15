@@ -6,7 +6,7 @@ echo '<nav id="mySideNav" class="w3-sidenav w3-collapse w3-padding flexcontainer
         <a href="./index.php" class="w3-biryani">APOLLO CODING CLASS</a>
     </div>
     <div class="w3-black w3-margin">
-        <a href="./makey/makey.html" class="w3-biryani" target="_blank">Makey Makey!<br><br></a>
+        <a href="./makey.php" class="w3-biryani">Makey Makey!<br><br></a>
     </div>
     <div class="w3-black w3-margin">
         <a href="./students/student-pages.php" class="w3-biryani">Student Web Pages<br><br></a>
