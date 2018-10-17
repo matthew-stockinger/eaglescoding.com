@@ -21,7 +21,7 @@
             $year = $arr[0];
             $season = $arr[1];
             if ($arr[2]) { $lang = $arr[2]; } else { $lang = ''; }
-            echo 'JS Art - ' . ucfirst($season) . ' ' . $year . ' ' . $lang;
+            echo ucfirst($season) . ' ' . $year . ' ' . $lang;
         ?>
     </title>
     <link rel="stylesheet" href="./css/w3.css">

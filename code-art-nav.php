@@ -13,7 +13,11 @@
             $arr = explode("-", $item);
             $year = $arr[0];
             $season = $arr[1];
-            if ($arr[2]) { $lang = $arr[2]; }
+            if ($arr[2]) {
+                $lang = $arr[2];
+            } else {
+                $lang = '';
+            }
             // then echo div and <a> to add that item to sidenav.
             /* example: 
             <div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">
