@@ -1,0 +1,62 @@
+/* This CSS goes along with the inline-block way of displaying the student links. */
+/* Use a different stylesheet for W3.css? */
+
+/* Add:
+1. a transition, so that color change on links isn't sudden.
+2. a shadow on a:hover.
+3. a JS search bar, from w3 example.
+*/
+
+body {
+  padding: 0;
+  margin: 1em;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: darkred;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  width: 10em;
+  height: 4em;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;  
+  margin: 1em;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 1.2em;
+  border: 1px solid gray;
+  border-radius: 2px;
+  background-color: black;
+}
+
+li > a {
+  text-decoration: none;
+  display: block;
+  height: 89%;
+  padding: 0.5em 0.5em 0em 0.5em;
+  color: white;
+  border-radius: 2px;
+}
+
+li > a:hover {
+/*  background-color: rgb(10,10,10);*/
+  color: white;
+  border-radius: 2px;
+/*  my shadow */
+  box-shadow: 4px 8px 15px rgb(43, 42, 56);
+/*  w3schools card shadow */
+/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}

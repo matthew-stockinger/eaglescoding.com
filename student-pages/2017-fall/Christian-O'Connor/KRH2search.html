@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KRH » Search</title>
+    <link rel="stylesheet" type="text/css" href="KRH2search.css">
+    </head>
+
+<body>
+    <h1 class="krhTop">
+        <a class="home" href="KRH2index.html">Kwik  Reference  Handbook</a>
+    </h1>
+    
+    <p class="pageTitle">KRH » Home » Search
+        <input type="search" id="vehiclePage" onkeyup="search()">
+    </p>   
+    
+    <ul id="myUL">
+        <li><a href="Aeris3.html">Aeris 3A</a></li>
+        <li><a href="Aeris4.html">Aeris 4A</a></li>
+        <li><a href="Albatross.html">Albatross 3</a></li>
+        <li><a href="AeroEqqus.html">AeroEqqus</a></li>
+    </ul>
+    
+    
+    <script>
+function search() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('vehiclePage');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+    </body>
+
+
+</html>

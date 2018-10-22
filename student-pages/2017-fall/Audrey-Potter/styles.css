@@ -1,0 +1,25 @@
+h1 {
+    color: darkblue;
+}
+
+h2{
+    font-size:30px;
+}
+
+h3{
+    font-size:30px;
+}
+
+p {
+    color:blue;
+    font-size:25px;
+    font-family:cursive;
+    border-style:solid;
+    border-color:azure;
+}
+
+body{
+    background-color:aqua;
+    text-align:center;
+    border-top-style:dashed;
+}

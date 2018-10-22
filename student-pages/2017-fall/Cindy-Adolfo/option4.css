@@ -1,0 +1,27 @@
+body {
+    background-color: crimson;
+}
+
+h1 {
+    color: aliceblue;
+    margin-left: 290px;
+    font-family: fantasy;
+    font-size: 500%;
+}
+
+h2 {
+    color: white;
+    margin-left: 450px;
+    font-family: cursive;
+}
+
+h3 {
+    color: white;
+    margin-left: 450px;
+    font-family: cursive;
+}
+
+p {
+    font-family: fantasy
+     
+}

@@ -1,0 +1,89 @@
+body {
+    background-color: whitesmoke;
+}
+.uppyBits {
+    font-family: "Tahoma", Geneva, sans-serif;
+    background-color: mediumspringgreen;
+    padding: 1px 1px;
+    outline-style: solid;
+    outline-width: 7px;
+    outline-color: mediumspringgreen;
+}
+a.back:link {
+    color:black;
+    text-decoration: none;
+}
+a.back:hover {
+    color:black;
+    text-decoration: underline;
+}
+a.back:visited {
+    color:black;
+    text-decoration: underline;
+}
+h2.name {
+    font-family: "Tahoma",  Geneva, sans-serif;
+    background-color: whitesmoke;
+    padding: 5px 5px;
+    position: relative;
+    display: inline-block;
+    min-width: 230px;
+}
+.projects {
+    font-family: "Tahoma",  Geneva, sans-serif;
+    background-color: lightslategrey;
+    padding: 7px 7px;
+    position: relative;
+    display: inline-block;
+    font-size: 0.65em;
+    min-width: 221px;
+    border-style: solid;
+    border-color: lightslategrey;
+    border-width:0px;
+    border-radius: 5px;
+    visibility: hidden;
+}
+h2.name:hover .projects {
+    display: block;
+    visibility: visible;
+}
+a.projects:link {
+    text-decoration: none;
+    color: #262626;
+}
+a.projects:visited {
+    text-decoration: none;
+    color: #0d0d0d
+}
+h2.name .projects:hover {
+    text-decoration: none;
+    background-color: lightsteelblue;
+    visibility: visible;
+    min-width: 200px;
+    padding-left: 17px;
+}
+h2.name:hover {
+    background-color: lightslategrey;
+    border-style: solid;
+    border-color: lightslategrey;
+    border-width:0px;
+    border-radius: 5px;
+}
+.cleverName {
+    min-width: 120px;
+}
+a.projects .pr1-img {
+    visibility: hidden;
+    width: 171px;
+    position: absolute;
+    z-index: 1;
+    padding: 10px 10px;
+    top: -5px;
+    left: 105%;
+}
+a.projects:hover .pr1-img {
+    visibility: visible;
+}
+a.projects .pr1-img:hover {
+    visibility: hidden;
+}

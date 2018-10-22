@@ -1,0 +1,20 @@
+body{
+  background-color:darkslategray;
+  font-family:fantasy;
+  text-align:justify;
+}
+
+h1{
+  color:black;
+  font-size:45px;
+}
+
+h2{
+  color:black;
+  font-size:40px;
+}
+
+p{
+  color:darkgray;
+  font-size:20px
+}
