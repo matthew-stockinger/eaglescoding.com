@@ -1,8 +1,13 @@
 ﻿<!DOCTYPE html>
 <!-- 
 To Do:
--Put image nav over top of images.  Use mouseover effects.
+-bug: not present in production copy.  From makey, clicking student code-art doesn't load code-art-nav.
 -Unify the site to same theme.
+-Refactor:
+    -use id's and classes for CSS, rel attributes for JS?  example: rel="js-whatever"  Kyle Simpson thing.
+    -all CSS animations: can use a transition instead of CSS animation.
+    -make index.php the wireframe.  Put all content in separate files and load with ajax requests.
+-Put image nav over top of images.  Use mouseover effects.
 -get rid of google fonts.
 -host YouTube videos locally.
 -swipe with CSS.  clickstops?  I forget what they're called.  CSS tricks.
