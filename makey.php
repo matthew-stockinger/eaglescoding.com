@@ -18,7 +18,18 @@
   <!-- main sidenav -->
   <?php
     require './nav.php';
-?>
+  ?>
+
+  <nav id="codeArtNav" class="w3-sidenav w3-padding flexcontainer">
+    <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
+    <a href="javascript:void(0)" onclick="backToMainNav()" class="w3-button w3-white w3-large w3-padding">
+      &#10094; Back
+    </a>
+    <!-- php generate codeArt sidenav from directories present. -->
+    <?php
+        require 'code-art-nav.php';
+    ?>
+  </nav>
 
   <!-- w3-main container needed for hamburger menu -->
   <!-- wraps around all of page content -->
@@ -32,7 +43,7 @@
     <!--    <div class="w3-container w3-white w3-card">-->
 
     <header>
-      <h1 class="w3-center w3-card-4 w3-black">The 2017 Apollo Coding<br>Innovation Grant</h1>
+      <h1 id="top" class="w3-center w3-card-4 w3-black">The 2017 Apollo Coding<br>Innovation Grant</h1>
 
       <h2 class="w3-center">Creating Human Interfaces<br>With Makey Makey</h2>
 
