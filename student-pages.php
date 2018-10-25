@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <!--
-  Fix directory references in code.
-  Then add php to generate nav and subnav
--->
-  <head>
-    <title>Apollo Coding Student Work</title>
-    <link rel="stylesheet" href="css/student_pages.css">
-    <meta charset="UTF-8">
-    <meta name="description" content="Student work on display.">
-    <meta name="author" content="Matthew Stockinger">
-  </head>
-  <body>
-
-<!--
-    <h2>
-      <a id="backLink" href="http://eaglescoding.com">eaglescoding.com</a>
-    </h2>
+  Refactor JS folder into nav.js module
 -->
 
-    <div id="studentLinkList">
-      <input type="text" size="40" placeholder="Search for names..." id="myInput" onkeyup="filterFunction()" autofocus>
-      
-      <ul id="myUL">
+<head>
+  <title>Apollo Coding Student Work</title>
+  <link rel="stylesheet" href="css/student-pages.css">
+  <meta charset="UTF-8">
+  <meta name="description" content="Student work on display.">
+  <meta name="author" content="Matthew Stockinger">
+</head>
+
+<body>
+
+  <!-- main sidenav -->
+  <?php
+    require './nav.php';
+  ?>
+
+<main class="w3-main" style="margin-left:239px;">
+  <!-- hamburger menu icon -->
+  <header class="w3-container w3-black">
+      <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
+  </header>
+  
+  <div id="studentLinkList">
+    <input type="text" size="40" placeholder="Search for names..." id="myInput" onkeyup="filterFunction()" autofocus>
+
+    <ul id="myUL">
       <!-- generates the list of names from the folders present with this file. -->
       <?php
-        $ls = scandir("./students/2017_tri3_p1/");
+        $ls = scandir("./student-pages/2017_tri3_p1/");
         foreach ($ls as $item) {
           // if it's ./ or ../ or cgi-bin, ignore it.
           if ($item === "." or $item === ".." or $item === "cgi-bin") continue;
@@ -37,27 +43,31 @@
           }
         }
       ?>
-      </ul>
-    </div>
-    
-    <!-- the filtering field on top of the names list -->
-    <script>
-      function filterFunction() {
-          var input, filter, ul, li, a, i;
-          input = document.getElementById("myInput");
-          filter = input.value.toUpperCase();
-          ul = document.getElementById("myUL");
-          li = ul.getElementsByTagName("li");
-          for (i = 0; i < li.length; i++) {
-              if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
-                  li[i].style.display = "";
-              } else {
-                  li[i].style.display = "none";
-              }
-          }
-      }
-    </script>
-    
+    </ul>
+  </div>
+</main>
 
-  </body>
+<script src="js/nav.js"></script>
+<!-- the filtering field on top of the names list -->
+<script>
+  function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+      if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+
+</script>
+
+
+</body>
+
 </html>

@@ -43,24 +43,26 @@
 }
 
 /**************************** sidenav *******************************/
-#mySideNav {
+#mainNav {
     width: 239px;
 }
 
-#codeArtNav {
+.subNav {
     width: 239px;
     display: none;
 }
 
-#codeArtNav div {
+.subNav div {
     width: 175px;
 }
 
 .flexcontainer {
     /* extra garbage here for old browser compatibility. */
     /* centers the sidenav vertically on the screen. */
+/*
     display: -webkit-flex;
     display: flex;
+*/
     -webkit-flex-direction: column;
     flex-direction: column;
     -webkit-justify-content: center;

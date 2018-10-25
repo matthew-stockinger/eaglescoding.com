@@ -1,6 +1,13 @@
 ﻿<!DOCTYPE html>
 <!-- 
 To Do:
+-for feat-studentSiteNav
+--student-pages.php needs to get folder= variable to display properly.
+--clicking a code-art sub-link breaks the nav formatting.
+--possibly a variable collision problem?
+--rewrite JS files with module pattern.
+
+
 -Put image nav over top of images.  Use mouseover effects.
 -Unify the site to same theme.
 -get rid of google fonts.
@@ -24,21 +31,11 @@ To Do:
 
 <body>
 
-<!-- main sidenav -->
+<!-- sidenav -->
 <?php
     require './nav.php';
 ?>
 
-<nav id="codeArtNav" class="w3-sidenav w3-padding flexcontainer">
-    <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
-    <a href="javascript:void(0)" onclick="backToMainNav()" class="w3-button w3-white w3-large w3-padding">
-        &#10094; Back
-    </a>
-    <!-- php generate codeArt sidenav from directories present. -->
-    <?php
-        require 'code-art-nav.php';
-    ?>
-</nav>
 
 <!-- w3-main container needed for hamburger menu -->
 <!-- wraps around all of page content -->
@@ -72,7 +69,7 @@ To Do:
     </section>
 </main>
 
-<script src="js/main.js">
+<script src="js/nav.js">
 </script>
 
 </body>
