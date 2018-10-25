@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
 <!-- 
 To Do:
--bug: not present in production copy.  From makey, clicking student code-art doesn't load code-art-nav.
 -Unify the site to same theme.
 -Refactor:
     -use id's and classes for CSS, rel attributes for JS?  example: rel="js-whatever"  Kyle Simpson thing.
