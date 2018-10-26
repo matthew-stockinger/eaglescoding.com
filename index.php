@@ -1,8 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- 
 To Do:
 -hamburger wrapper code should be in nav.php somehow?
 -rewrite JS files with module pattern.
+-Refactor:
+    -use id's and classes for CSS, rel attributes for JS?  example: rel="js-whatever"  Kyle Simpson thing.
+    -all CSS animations: can use a transition instead of CSS animation.
+    -make index.php the wireframe.  Put all content in separate files and load with ajax requests.
 
 -Put image nav over top of images.  Use mouseover effects.
 -get rid of google fonts.
