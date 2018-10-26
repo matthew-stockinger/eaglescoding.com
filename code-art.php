@@ -41,9 +41,7 @@
 <!-- wrapper for page content. Helper class for hamburger menu. -->
 <main class="w3-main">
     <!-- hamburger icon header bar -->
-    <header class="w3-container w3-black">
-        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
-    </header>
+    <?php require './nav-hamburger.php'; ?>
     
     <div id="picDiv" class="w3-content">
         <!-- images here should preferably have an aspect ratio of 0.71 

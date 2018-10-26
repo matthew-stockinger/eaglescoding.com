@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <!-- 
 To Do:
--hamburger wrapper code should be in nav.php somehow?
--rewrite JS files with module pattern.
 -Refactor:
-    -use id's and classes for CSS, rel attributes for JS?  example: rel="js-whatever"  Kyle Simpson thing.
-    -all CSS animations: can use a transition instead of CSS animation.
-    -make index.php the wireframe.  Put all content in separate files and load with ajax requests.
+  -use id's and classes for CSS, rel attributes for JS?  example: rel="js-whatever"  Kyle Simpson thing.
+  -rewrite JS files with module pattern.
+  -all CSS animations: can use a transition instead of CSS animation.
+  -make index.php the wireframe.  Put all content in separate files and load with ajax requests.
 
 -Put image nav over top of images.  Use mouseover effects.
 -get rid of google fonts.
@@ -31,24 +30,21 @@ To Do:
 <body>
 
 <!-- sidenav -->
-<?php
-    require './nav.php';
-?>
+<?php require './nav.php'; ?>
 
 
 <!-- w3-main container needed for hamburger menu -->
 <!-- wraps around all of page content -->
 <main class="w3-main" style="margin-left:239px;">
-    <!-- hamburger menu icon -->
-    <header class="w3-container w3-black">
-        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
-    </header>
+
+    <!-- hamburger icon header -->
+    <?php require './nav-hamburger.php'; ?>
 
     <!-- The top image -->
-    <header id="topImg" class="w3-display-container w3-container w3-margin-top">
+    <section id="topImg" class="w3-display-container w3-container w3-margin-top">
         <img src="img/index/laptop2.jpg" alt="MacBook" style="width: 100%">
         <div class="w3-display-middle w3-black w3-biryani-title w3-padding">ANYONE CAN LEARN TO CODE</div>
-    </header>
+    </section>
     
     <!-- The student code art carousel -->
     <!-- Shows up on click of student art in navbar -->

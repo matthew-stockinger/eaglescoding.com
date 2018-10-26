@@ -31,10 +31,9 @@
 ?>
 
 <main class="w3-main" style="margin-left:239px;">
-  <!-- hamburger menu icon -->
-  <header class="w3-container w3-black">
-      <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
-  </header>
+
+  <!-- hamburger icon header -->
+  <?php require './nav-hamburger.php'; ?>
   
   <div id="studentLinkList">
     <input type="text" size="40" placeholder="Search for names..." id="myInput" onkeyup="filterFunction()" autofocus>

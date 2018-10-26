@@ -23,10 +23,9 @@
   <!-- w3-main container needed for hamburger menu -->
   <!-- wraps around all of page content -->
   <main id="top" class="w3-main" style="margin-left:239px;">
+
     <!-- hamburger menu icon -->
-    <header class="w3-container w3-black">
-      <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
-    </header>
+    <?php require './nav-hamburger.php'; ?>
 
     <!-- centered white content card -->
     <!--    <div class="w3-container w3-white w3-card">-->
