@@ -22,7 +22,7 @@
 
   <!-- w3-main container needed for hamburger menu -->
   <!-- wraps around all of page content -->
-  <main class="w3-main" style="margin-left:239px;">
+  <main id="top" class="w3-main" style="margin-left:239px;">
     <!-- hamburger menu icon -->
     <header class="w3-container w3-black">
       <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
@@ -32,7 +32,7 @@
     <!--    <div class="w3-container w3-white w3-card">-->
 
     <header>
-      <h1 id="top" class="w3-center w3-card-4 w3-black">The 2017 Apollo Coding<br>Innovation Grant</h1>
+      <h1 class="w3-center w3-card-4 w3-black">The 2017 Apollo Coding<br>Innovation Grant</h1>
 
       <h2 class="w3-center">Creating Human Interfaces<br>With Makey Makey</h2>
 

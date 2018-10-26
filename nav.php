@@ -40,10 +40,10 @@ function scanSubDir($subDirName) {
             }
             // then echo div and <a> to add that item to sidenav.
             /* example: 
-            <div class="codeArtNavDivs w3-margin w3-black" onclick="highlightMe(this)">
+            <div class="codeArtNavDivs w3-margin w3-black">
                 <a href="codeart/2017_fall_/codeart_2017fall.html" class="w3-biryani"><br>Fall 2017<br><br></a>
             </div> */
-            $res = '<div class="w3-margin w3-black" onclick="highlightMe(this)">';
+            $res = '<div class="w3-margin w3-black">';
             $res .= '<a href="' . $subDirName . '.php?folder=' . $item . '" class="w3-biryani"><br>';
             $res .= ucfirst($season) . " " . $year . '<br>' . $lang . '<br></a></div>';
             $subDirDivs .= $res;

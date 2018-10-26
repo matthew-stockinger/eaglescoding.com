@@ -47,14 +47,6 @@
         mainNav.style.display = "flex";
     }
 
-    function highlightMe(elt) {
-        var subNavDivs = document.getElementsByClassName("subNavDivs");
-        var i;
-        for (i = 0; i < subNavDivs.length; i++) {
-            subNavDivs[i].className = subNavDivs[i].className.replace(" w3-gray", " w3-black");
-        }
-        elt.className = elt.className.replace(" w3-black", " w3-gray");
-    }
 
 //    var publicAPI = {
 //        openMainNav: openMainNav,

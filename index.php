@@ -2,9 +2,7 @@
 <!-- 
 To Do:
 -for feat-studentSiteNav
---student-pages.php needs to get folder= variable to display properly.
---clicking a code-art sub-link breaks the nav formatting.
---possibly a variable collision problem?
+--hamburger wrapper code should be in nav.php somehow?
 --rewrite JS files with module pattern.
 
 

@@ -25,6 +25,7 @@
         ?>
     </title>
     <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/code-art.css">
     <link href='https://fonts.googleapis.com/css?family=Biryani:800' 
         rel='stylesheet' type='text/css'>
@@ -41,7 +42,7 @@
 <main class="w3-main">
     <!-- hamburger icon header bar -->
     <header class="w3-container w3-black">
-        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openCodeArtNav()">&#9776;</span>
+        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
     </header>
     
     <div id="picDiv" class="w3-content">
