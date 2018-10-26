@@ -43,16 +43,16 @@
 }
 
 /**************************** sidenav *******************************/
-#mainNav {
+.mainNav {
     width: 239px;
 }
 
-.subNav {
+.sub-nav {
     width: 239px;
     display: none;
 }
 
-.subNav div {
+.sub-nav div {
     width: 175px;
 }
 
@@ -72,7 +72,7 @@
 }
 
 @media screen and (min-width: 487px) {
-    #picDiv {
+    .pic-div {
         margin-top: 16px;
     }
 }

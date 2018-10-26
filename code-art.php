@@ -43,7 +43,7 @@
     <!-- hamburger icon header bar -->
     <?php require './nav-hamburger.php'; ?>
     
-    <div id="picDiv" class="w3-content">
+    <div class="w3-content pic-div">
         <!-- images here should preferably have an aspect ratio of 0.71 
         That's 317 x 446 -->
         <?php
@@ -55,13 +55,13 @@
                 } elseif (strtolower(substr($item, -3)) === "jpg" or strtolower(substr($item, -4)) === "jpeg") {
                     // this part finds the jpegs and generate <figure> elements.
                     /* example:
-                        <figure class="mySlides">
+                        <figure class="slides">
                             <img src="Hinda_Mohamed,Abdiowasoho_Mahamed.jpg">
                             <figcaption>Hinda Mohamed, Abdiowasoho Mohamed</figcaption>
                         </figure>
                     */
                     // create array of contributor names.
-                    $res = '<figure class="mySlides">';
+                    $res = '<figure rel="js-slides" class="slides">';
                     $res .= '<img src="./code-art/' . $_GET['folder'] . '/' . $item . '">';
                     $res .= '<figcaption>';
                     /* here, parse the filename to create the caption, which is a list of student contributors
@@ -91,7 +91,7 @@
                 } elseif (strtolower(substr($item, -3)) === "mp4") {
                     // this part detects movie files and adds them to the slideshow.
                     /* example:
-                    <figure class="mySlides">
+                    <figure class="slides">
                     <video src="Hinda_Mohamed,Abdiowasoho_Mahamed.mp4" autoplay>
                     Sorry, your browser doesn't support embedded mp4 videos, but
                     you can download it <a href="Hinda_Mohamed,Abdiowasoho_Mahamed.mp4">here</a>.
@@ -100,7 +100,7 @@
                     </figure>
                     */
                     // create array of contributor names.
-                    $res = '<figure class="mySlides">';
+                    $res = '<figure rel="js-slides" class="slides">';
                     $res .= '<video src="./code-art/' . $_GET['folder'] . '/' . $item . '" controls>';
                     $res .= 'Sorry, your browser doesn\'t support embedded mp4 videos, ' . 
                     'but you can download it <a href="' . $item . '">here</a>.';
@@ -136,7 +136,7 @@
     </div>
     
     <!-- image nav created dynamically in codeArt.js -->
-    <nav id="imageNav" class="w3-center w3-xxlarge w3-text-black"></nav>
+    <nav rel="js-imageNav" class="w3-center w3-xxlarge w3-text-black image-nav"></nav>
 </main>
 
 <script src="./js/nav.js"></script>

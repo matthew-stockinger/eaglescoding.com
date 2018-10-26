@@ -1,6 +1,6 @@
 /* ********** Slideshow Main **************** */
 var slideIndex = 1;
-var numFigures = document.getElementsByTagName("figure").length;
+var numFigures = document.querySelectorAll("figure").length;
 if (numFigures === 1) {
     var navType = "noNav";
 } else if (numFigures > 1 && numFigures <= 7) {
@@ -54,7 +54,7 @@ function currentDiv(n) {
 function showDivs(n) {
     // update the figure and caption.
     var i;
-    var x = document.getElementsByClassName("mySlides");
+    var x = document.querySelectorAll("[rel='js-slides']");
     if (n > x.length) {slideIndex = 1}    
     if (n < 1) {slideIndex = x.length}
     for (i = 0; i < x.length; i++) {
@@ -80,25 +80,25 @@ function displayNav(navType, direction, animated) {
 function displayDotNav() {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
     var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
-    var navDotA = '<span class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(';
+    var navDotA = '<span rel="js-navdots" class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv(';
     var navDotB = ')"></span>';
     var navDots = '';
     var i;
     for (i = 1; i <= numFigures; i++) {
         navDots += navDotA + i + navDotB;
     }
-    document.getElementById("imageNav").innerHTML = leftArrow + navDots + rightArrow;
+    document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + navDots + rightArrow;
 }
 
 // direction is -1, 0, or 1.  animated is bool.
 function displayNumNav(direction, animated) {
     var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
     var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
-    var a = '<span class="navnums w3-xlarge" onclick="currentDiv(';
-    var aRight = '<span class="navnums w3-xlarge num-animate-right" onclick="currentDiv(';
-    var aFadeRight = '<span class="navnums w3-xlarge num-fade-animate-right" onclick="currentDiv(';
-    var aLeft = '<span class="navnums w3-xlarge num-animate-left" onclick="currentDiv(';
-    var aFadeLeft = '<span class="navnums w3-xlarge num-fade-animate-left" onclick="currentDiv(';
+    var a = '<span rel="js-navnums" class="navnums w3-xlarge" onclick="currentDiv(';
+    var aRight = '<span rel="js-navnums" class="navnums w3-xlarge num-animate-right" onclick="currentDiv(';
+    var aFadeRight = '<span rel="js-navnums" class="navnums w3-xlarge num-fade-animate-right" onclick="currentDiv(';
+    var aLeft = '<span rel="js-navnums" class="navnums w3-xlarge num-animate-left" onclick="currentDiv(';
+    var aFadeLeft = '<span rel="js-navnums" class="navnums w3-xlarge num-fade-animate-left" onclick="currentDiv(';
     var b = ')">'
     var c = '</span>';
     var res = "";
@@ -167,11 +167,11 @@ function displayNumNav(direction, animated) {
         }
     }
 
-    document.getElementById("imageNav").innerHTML = leftArrow + res + rightArrow;
+    document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + res + rightArrow;
     // add blue hover CSS after animation completes, in 0.3s.  Otherwise will be blue during animation.
     // Only an issue for the far right or left number.
     setTimeout(function() {
-        var x = document.getElementsByClassName("navnums");
+        var x = document.querySelectorAll("[rel='js-navnums']");
         var i;
         for (i = 0; i < 7; i++) {
             if (x[i].className.indexOf("w3-hover-text-blue") === -1) {
@@ -197,7 +197,7 @@ function updateHighlights(navType) {
 
 function updateDots(n) {
     // delete: displayDotNav();
-    var dots = document.getElementsByClassName("navdots");
+    var dots = document.querySelectorAll("[rel='js-navdots']");
     var i;
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" w3-black", "");
@@ -207,7 +207,7 @@ function updateDots(n) {
 
 // handles number highlighting.
 function updateNums() {
-    var navnumElements = document.getElementsByClassName("navnums");
+    var navnumElements = document.querySelectorAll("[rel='js-navnums']");
     
     // remove blue from numbers.
     for (i = 0; i < 7; i++) {

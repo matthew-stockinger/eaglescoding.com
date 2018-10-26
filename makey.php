@@ -61,9 +61,9 @@
 
       <div class="w3-card-4 w3-border w3-border-dark-grey w3-margin-bottom">
         <div class="w3-display-container">
-          <img src="makey/2017MakeyHighlightPhotos/artist1.JPG" class="slides1" style="width:100%" alt="art pad 1">
-          <img src="makey/2017MakeyHighlightPhotos/artist2.JPG" class="slides1" style="width:100%" alt="art pad 2">
-          <img src="makey/2017MakeyHighlightPhotos/artist3.JPG" class="slides1" style="width:100%" alt="art pad 3">
+          <img src="makey/2017MakeyHighlightPhotos/artist1.JPG" rel="js-slides1" style="width:100%" alt="art pad 1">
+          <img src="makey/2017MakeyHighlightPhotos/artist2.JPG" rel="js-slides1" style="width:100%" alt="art pad 2">
+          <img src="makey/2017MakeyHighlightPhotos/artist3.JPG" rel="js-slides1" style="width:100%" alt="art pad 3">
           <button class="w3-button w3-black w3-display-left" onclick="slideChange(1, -1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="slideChange(1, 1)">&#10095;</button>
         </div>
@@ -74,8 +74,8 @@
 
       <div class="w3-card-4 w3-border w3-border-dark-grey w3-margin-bottom">
         <div class="w3-display-container">
-          <img src="makey/2017MakeyHighlightPhotos/brenan1.JPG" class="slides2" style="width:100%" alt="jump controller 1">
-          <img src="makey/2017MakeyHighlightPhotos/brenan2.JPG" class="slides2" style="width:100%" alt="jump controller 2">
+          <img src="makey/2017MakeyHighlightPhotos/brenan1.JPG" rel="js-slides2" style="width:100%" alt="jump controller 1">
+          <img src="makey/2017MakeyHighlightPhotos/brenan2.JPG" rel="js-slides2" style="width:100%" alt="jump controller 2">
           <button class="w3-button w3-black w3-display-left" onclick="slideChange(2, -1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="slideChange(2, 1)">&#10095;</button>
         </div>
@@ -93,8 +93,8 @@
 
       <div class="w3-card-4 w3-border w3-border-dark-grey w3-margin-bottom">
         <div class="w3-display-container">
-          <img src="makey/2017MakeyHighlightPhotos/flappy1.JPG" class="slides3" style="width:100%" alt="flappy bird 1">
-          <img src="makey/2017MakeyHighlightPhotos/flappy2.JPG" class="slides3" style="width:100%" alt="flappy bird 2">
+          <img src="makey/2017MakeyHighlightPhotos/flappy1.JPG" rel="js-slides3" style="width:100%" alt="flappy bird 1">
+          <img src="makey/2017MakeyHighlightPhotos/flappy2.JPG" rel="js-slides3" style="width:100%" alt="flappy bird 2">
           <button class="w3-button w3-black w3-display-left" onclick="slideChange(3, -1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="slideChange(3, 1)">&#10095;</button>
         </div>
@@ -105,9 +105,9 @@
 
       <div class="w3-card-4 w3-border w3-border-dark-grey w3-margin-bottom">
         <div class="w3-display-container">
-          <img src="makey/2017MakeyHighlightPhotos/Jakob1.JPG" class="slides4" style="width:100%" alt="augmentative communication 1">
-          <img src="makey/2017MakeyHighlightPhotos/Jakob2.JPG" class="slides4" style="width:100%" alt="augmentative communication 2">
-          <img src="makey/2017MakeyHighlightPhotos/Jakob3.JPG" class="slides4" style="width:100%" alt="augmentative communication 3">
+          <img src="makey/2017MakeyHighlightPhotos/Jakob1.JPG" rel="js-slides4" style="width:100%" alt="augmentative communication 1">
+          <img src="makey/2017MakeyHighlightPhotos/Jakob2.JPG" rel="js-slides4" style="width:100%" alt="augmentative communication 2">
+          <img src="makey/2017MakeyHighlightPhotos/Jakob3.JPG" rel="js-slides4" style="width:100%" alt="augmentative communication 3">
           <button class="w3-button w3-black w3-display-left" onclick="slideChange(4, -1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="slideChange(4, 1)">&#10095;</button>
         </div>
@@ -118,8 +118,8 @@
 
       <div class="w3-card-4 w3-border w3-border-dark-grey w3-margin-bottom">
         <div class="w3-display-container">
-          <img src="makey/2017MakeyHighlightPhotos/Kole1.JPG" class="slides5" style="width:100%" alt="sword and shield 1">
-          <img src="makey/2017MakeyHighlightPhotos/Kole2.JPG" class="slides5" style="width:100%" alt="sword and shield 2">
+          <img src="makey/2017MakeyHighlightPhotos/Kole1.JPG" rel="js-slides5" style="width:100%" alt="sword and shield 1">
+          <img src="makey/2017MakeyHighlightPhotos/Kole2.JPG" rel="js-slides5" style="width:100%" alt="sword and shield 2">
           <button class="w3-button w3-black w3-display-left" onclick="slideChange(5, -1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="slideChange(5, 1)">&#10095;</button>
         </div>
@@ -130,9 +130,9 @@
 
       <div class="w3-card-4 w3-border w3-border-dark-grey w3-margin-bottom">
         <div class="w3-display-container">
-          <img src="makey/2017MakeyHighlightPhotos/misa1.JPG" class="slides6" style="width:100%" alt="zoom controller 1">
-          <img src="makey/2017MakeyHighlightPhotos/misa2.JPG" class="slides6" style="width:100%" alt="zoom controller 2">
-          <img src="makey/2017MakeyHighlightPhotos/misa3.JPG" class="slides6" style="width:100%" alt="zoom controller 3">
+          <img src="makey/2017MakeyHighlightPhotos/misa1.JPG" rel="js-slides6" style="width:100%" alt="zoom controller 1">
+          <img src="makey/2017MakeyHighlightPhotos/misa2.JPG" rel="js-slides6" style="width:100%" alt="zoom controller 2">
+          <img src="makey/2017MakeyHighlightPhotos/misa3.JPG" rel="js-slides6" style="width:100%" alt="zoom controller 3">
           <button class="w3-button w3-black w3-display-left" onclick="slideChange(6, -1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="slideChange(6, 1)">&#10095;</button>
         </div>
@@ -143,11 +143,11 @@
 
       <div class="w3-card-4 w3-border w3-border-dark-grey w3-margin-bottom">
         <div class="w3-display-container">
-          <img src="makey/2017MakeyHighlightPhotos/piano1.JPG" class="slides7" style="width:100%" alt="floor piano 1">
-          <img src="makey/2017MakeyHighlightPhotos/piano2.JPG" class="slides7" style="width:100%" alt="floor piano 2">
-          <img src="makey/2017MakeyHighlightPhotos/piano3.JPG" class="slides7" style="width:100%" alt="floor piano 3">
-          <img src="makey/2017MakeyHighlightPhotos/piano4.JPG" class="slides7" style="width:100%" alt="floor piano 4">
-          <img src="makey/2017MakeyHighlightPhotos/piano5.JPG" class="slides7" style="width:100%" alt="floor piano 5">
+          <img src="makey/2017MakeyHighlightPhotos/piano1.JPG" rel="js-slides7" style="width:100%" alt="floor piano 1">
+          <img src="makey/2017MakeyHighlightPhotos/piano2.JPG" rel="js-slides7" style="width:100%" alt="floor piano 2">
+          <img src="makey/2017MakeyHighlightPhotos/piano3.JPG" rel="js-slides7" style="width:100%" alt="floor piano 3">
+          <img src="makey/2017MakeyHighlightPhotos/piano4.JPG" rel="js-slides7" style="width:100%" alt="floor piano 4">
+          <img src="makey/2017MakeyHighlightPhotos/piano5.JPG" rel="js-slides7" style="width:100%" alt="floor piano 5">
           <button class="w3-button w3-black w3-display-left" onclick="slideChange(7, -1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="slideChange(7, 1)">&#10095;</button>
         </div>
@@ -158,9 +158,9 @@
 
       <div class="w3-card-4 w3-border w3-border-dark-grey w3-margin-bottom">
         <div class="w3-display-container">
-          <img src="makey/2017MakeyHighlightPhotos/Tetris1.JPG" class="slides8" style="width:100%" alt="foot tetris 1">
-          <img src="makey/2017MakeyHighlightPhotos/Tetris2.JPG" class="slides8" style="width:100%" alt="foot tetris 2">
-          <img src="makey/2017MakeyHighlightPhotos/Tetris3.JPG" class="slides8" style="width:100%" alt="foot tetris 3">
+          <img src="makey/2017MakeyHighlightPhotos/Tetris1.JPG" rel="js-slides8" style="width:100%" alt="foot tetris 1">
+          <img src="makey/2017MakeyHighlightPhotos/Tetris2.JPG" rel="js-slides8" style="width:100%" alt="foot tetris 2">
+          <img src="makey/2017MakeyHighlightPhotos/Tetris3.JPG" rel="js-slides8" style="width:100%" alt="foot tetris 3">
           <button class="w3-button w3-black w3-display-left" onclick="slideChange(8, -1)">&#10094;</button>
           <button class="w3-button w3-black w3-display-right" onclick="slideChange(8, 1)">&#10095;</button>
         </div>
@@ -190,34 +190,29 @@
     var slideIndex = [1, 1, 1, 1, 1, 1, 1, 1];
     // must loop as many times as there are slideshows on the page.
     for (var j = 1; j <= 8; j++) {
-      //    console.log("top of script.  loop j = ", j);
-      //    console.log("calling showDivs(" + j + "," + slideIndex[j-1]);
       showDivs(j, slideIndex[j - 1] + ")");
     }
 
-    // whichSlideshow allows this one function to work
+    // slideshowNum allows this one function to work
     // for multiple different slideshows on the same page.
-    function slideChange(whichSlideshow, n) {
-      showDivs(whichSlideshow, slideIndex[whichSlideshow - 1] += n);
+    function slideChange(slideshowNum, n) {
+      showDivs(slideshowNum, slideIndex[slideshowNum - 1] += n);
     }
 
-    function showDivs(whichSlideshow, n) {
+    function showDivs(slideshowNum, n) {
       var i;
-      var whichClassName = "slides" + whichSlideshow;
-      //    console.log("In showDivs.");
-      //    console.log("whichClassName assigned to " + whichClassName);
-      var images = document.getElementsByClassName(whichClassName);
-      //    console.log("x assigned to " + images);
+      var whichSlideshow = "js-slides" + slideshowNum;
+      var images = document.querySelectorAll("[rel='" + whichSlideshow + "']");
       if (n > images.length) {
-        slideIndex[whichSlideshow - 1] = 1
+        slideIndex[slideshowNum - 1] = 1
       }
       if (n < 1) {
-        slideIndex[whichSlideshow - 1] = images.length
+        slideIndex[slideshowNum - 1] = images.length
       }
       for (i = 0; i < images.length; i++) {
         images[i].style.display = "none";
       }
-      images[slideIndex[whichSlideshow - 1] - 1].style.display = "block";
+      images[slideIndex[slideshowNum - 1] - 1].style.display = "block";
     }
 
   </script>

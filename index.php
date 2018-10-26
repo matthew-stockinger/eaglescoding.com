@@ -2,7 +2,6 @@
 <!-- 
 To Do:
 -Refactor:
-  -use id's and classes for CSS, rel attributes for JS?  example: rel="js-whatever"  Kyle Simpson thing.
   -rewrite JS files with module pattern.
   -all CSS animations: can use a transition instead of CSS animation.
   -make index.php the wireframe.  Put all content in separate files and load with ajax requests.
@@ -41,14 +40,14 @@ To Do:
     <?php require './nav-hamburger.php'; ?>
 
     <!-- The top image -->
-    <section id="topImg" class="w3-display-container w3-container w3-margin-top">
+    <section class="w3-display-container w3-container w3-margin-top">
         <img src="img/index/laptop2.jpg" alt="MacBook" style="width: 100%">
         <div class="w3-display-middle w3-black w3-biryani-title w3-padding">ANYONE CAN LEARN TO CODE</div>
     </section>
     
     <!-- The student code art carousel -->
     <!-- Shows up on click of student art in navbar -->
-    <section id="topArt" class="w3-display-container w3-container w3-margin-top w3-hide">
+    <section class="w3-display-container w3-container w3-margin-top w3-hide">
         <img src="img/index/laptop2.jpg" alt="MacBook" style="width: 100%">
         <div class="w3-display-middle w3-black w3-biryani-title w3-padding">Carousel Test</div>
     </section>

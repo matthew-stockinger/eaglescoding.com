@@ -35,10 +35,10 @@
   <!-- hamburger icon header -->
   <?php require './nav-hamburger.php'; ?>
   
-  <div id="studentLinkList">
-    <input type="text" size="40" placeholder="Search for names..." id="myInput" onkeyup="filterFunction()" autofocus>
+  <div>
+    <input type="text" size="40" placeholder="Search for names..." rel="js-nameInput" onkeyup="filterFunction()" autofocus>
 
-    <ul id="myUL">
+    <ul rel="js-namesUL">
       <!-- generates the list of names from the folders present with this file. -->
       <?php
         $classFolder = "./student-pages/" . $_GET['folder'];
@@ -63,11 +63,11 @@
 <!-- the filtering field on top of the names list -->
 <script>
   function filterFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
+    var input, filter, ul, li, i;
+    input = document.querySelector("[rel='js-nameInput']");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
+    ul = document.querySelector("[rel='js-namesUL']");
+    li = ul.querySelectorAll("li");
     for (i = 0; i < li.length; i++) {
       if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
         li[i].style.display = "";

@@ -1,5 +1,5 @@
 /* pics */
-#picDiv {
+.pic-div {
     max-width: 360px;
 }
 
@@ -18,7 +18,7 @@ img, video {
 }
 
 /*********************** image nav underneath pics. **************************/
-#imageNav {
+.image-nav {
     width: 100%;
     cursor: default;
 }
@@ -96,7 +96,7 @@ img, video {
     to { right:0; opacity:1 }
 }
 
-.mySlides {
+.slides {
     display: none;
 }
 
