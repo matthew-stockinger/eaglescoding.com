@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!-- 
 To Do:
+-Upload latest changes to hostgator.
 -Refactor:
   -rewrite JS files with module pattern.
   -all CSS animations: can use a transition instead of CSS animation.
