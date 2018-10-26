@@ -1,18 +1,15 @@
 ﻿<!DOCTYPE html>
 <!-- 
 To Do:
--for feat-studentSiteNav
---hamburger wrapper code should be in nav.php somehow?
---rewrite JS files with module pattern.
-
+-hamburger wrapper code should be in nav.php somehow?
+-rewrite JS files with module pattern.
 
 -Put image nav over top of images.  Use mouseover effects.
--Unify the site to same theme.
 -get rid of google fonts.
 -host YouTube videos locally.
 -swipe with CSS.  clickstops?  I forget what they're called.  CSS tricks.
     https://css-tricks.com/the-javascript-behind-touch-friendly-sliders/
--AJAX the site.
+-AJAX the site?
 -fix ugly display of code-art-nav 2-line items.  e.g. 2017 winter JavaScript
 -->
 <html lang="en-US">
