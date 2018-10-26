@@ -25,6 +25,7 @@
         ?>
     </title>
     <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/code-art.css">
     <link href='https://fonts.googleapis.com/css?family=Biryani:800' 
         rel='stylesheet' type='text/css'>
@@ -32,27 +33,16 @@
 
 <body>
 
-<!-- main sidenav -->
+<!-- sidenav -->
 <?php
     require './nav.php';
 ?>
-
-<nav id="codeArtNav" class="w3-sidenav w3-padding flexcontainer">
-    <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
-    <a href="javascript:void(0)" onclick="backToMainNav()" class="w3-button w3-white w3-large w3-padding">
-        &#10094; Back
-    </a>
-    <!-- php generate codeArt sidenav from directories present. -->
-    <?php
-        require 'code-art-nav.php';
-    ?>
-</nav>
 
 <!-- wrapper for page content. Helper class for hamburger menu. -->
 <main class="w3-main">
     <!-- hamburger icon header bar -->
     <header class="w3-container w3-black">
-        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openCodeArtNav()">&#9776;</span>
+        <span class="w3-opennav w3-xlarge w3-hide-large" onclick="openMainNav()">&#9776;</span>
     </header>
     
     <div id="picDiv" class="w3-content">
@@ -151,8 +141,8 @@
     <nav id="imageNav" class="w3-center w3-xxlarge w3-text-black"></nav>
 </main>
 
-<script src="./js/code-art.js">
-</script>
+<script src="./js/nav.js"></script>
+<script src="./js/code-art.js"></script>
 
 </body>
 </html>

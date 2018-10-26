@@ -1,17 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- 
 To Do:
--Unify the site to same theme.
+-hamburger wrapper code should be in nav.php somehow?
+-rewrite JS files with module pattern.
 -Refactor:
     -use id's and classes for CSS, rel attributes for JS?  example: rel="js-whatever"  Kyle Simpson thing.
     -all CSS animations: can use a transition instead of CSS animation.
     -make index.php the wireframe.  Put all content in separate files and load with ajax requests.
+
 -Put image nav over top of images.  Use mouseover effects.
 -get rid of google fonts.
 -host YouTube videos locally.
 -swipe with CSS.  clickstops?  I forget what they're called.  CSS tricks.
     https://css-tricks.com/the-javascript-behind-touch-friendly-sliders/
--AJAX the site.
+-AJAX the site?
 -fix ugly display of code-art-nav 2-line items.  e.g. 2017 winter JavaScript
 -->
 <html lang="en-US">
@@ -28,21 +30,11 @@ To Do:
 
 <body>
 
-<!-- main sidenav -->
+<!-- sidenav -->
 <?php
     require './nav.php';
 ?>
 
-<nav id="codeArtNav" class="w3-sidenav w3-padding flexcontainer">
-    <a href="javascript:void(0)" onclick="closeCodeArtNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
-    <a href="javascript:void(0)" onclick="backToMainNav()" class="w3-button w3-white w3-large w3-padding">
-        &#10094; Back
-    </a>
-    <!-- php generate codeArt sidenav from directories present. -->
-    <?php
-        require 'code-art-nav.php';
-    ?>
-</nav>
 
 <!-- w3-main container needed for hamburger menu -->
 <!-- wraps around all of page content -->
@@ -76,7 +68,7 @@ To Do:
     </section>
 </main>
 
-<script src="js/main.js">
+<script src="js/nav.js">
 </script>
 
 </body>
