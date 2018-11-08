@@ -22,9 +22,7 @@ function init() {
 
 // dispatches appropriate slideshow number, slide index, and direction to showDivs.
 function slideChange(evt) {
-    // get slideshowNum from evt target.
     var slideshowNum = evt.target.getAttribute("rel").charAt(9);
-    // get direction from evt target.  Either 1 or -1.
     var direction = evt.target.getAttribute("rel").charAt(11);
     if (direction === "l") {
         direction = -1;
