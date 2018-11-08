@@ -3,7 +3,7 @@
  * Handles main sidenav for the site.
  */
 
-//var Nav = (function () {
+var Nav = (function () {
 
     function openMainNav() {
         var mainNav = document.querySelector("[rel='js-mainNav']");
@@ -48,10 +48,10 @@
     }
 
 
-//    var publicAPI = {
-//        openMainNav: openMainNav,
-//        closeMainNav: closeMainNav
-//    }
-//    return publicAPI;
-//
-//})();
+   var publicAPI = {
+       openMainNav: openMainNav,
+       closeMainNav: closeMainNav
+   }
+   return publicAPI;
+
+})();

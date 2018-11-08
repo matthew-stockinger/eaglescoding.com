@@ -64,8 +64,8 @@
           <img src="makey/2017MakeyHighlightPhotos/artist1.JPG" rel="js-slides1" style="width:100%" alt="art pad 1">
           <img src="makey/2017MakeyHighlightPhotos/artist2.JPG" rel="js-slides1" style="width:100%" alt="art pad 2">
           <img src="makey/2017MakeyHighlightPhotos/artist3.JPG" rel="js-slides1" style="width:100%" alt="art pad 3">
-          <button class="w3-button w3-black w3-display-left" onclick="slideChange(1, -1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="slideChange(1, 1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" rel="js-slides1-l">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" rel="js-slides1-r">&#10095;</button>
         </div>
         <p class="w3-container">
           This is another art-driven project that simplifies the user experience. Instead of dealing with a mouse or a touchpad, this device simply uses the touch-sensitive stars to control movement and clicks.
@@ -76,8 +76,8 @@
         <div class="w3-display-container">
           <img src="makey/2017MakeyHighlightPhotos/brenan1.JPG" rel="js-slides2" style="width:100%" alt="jump controller 1">
           <img src="makey/2017MakeyHighlightPhotos/brenan2.JPG" rel="js-slides2" style="width:100%" alt="jump controller 2">
-          <button class="w3-button w3-black w3-display-left" onclick="slideChange(2, -1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="slideChange(2, 1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" rel="js-slides2-l">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" rel="js-slides2-r">&#10095;</button>
         </div>
         <p class="w3-container">
           Many games require players to run and jump through obstacle-filled worlds. Players using this controller have to jump in real life to make the character on the screen jump.
@@ -95,8 +95,8 @@
         <div class="w3-display-container">
           <img src="makey/2017MakeyHighlightPhotos/flappy1.JPG" rel="js-slides3" style="width:100%" alt="flappy bird 1">
           <img src="makey/2017MakeyHighlightPhotos/flappy2.JPG" rel="js-slides3" style="width:100%" alt="flappy bird 2">
-          <button class="w3-button w3-black w3-display-left" onclick="slideChange(3, -1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="slideChange(3, 1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" rel="js-slides3-l">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" rel="js-slides3-r">&#10095;</button>
         </div>
         <p class="w3-container">
           Here is another example of a jump or foot-based controller. The idea here is to require jumps or foot stomps to control Flappy Bird.
@@ -108,8 +108,8 @@
           <img src="makey/2017MakeyHighlightPhotos/Jakob1.JPG" rel="js-slides4" style="width:100%" alt="augmentative communication 1">
           <img src="makey/2017MakeyHighlightPhotos/Jakob2.JPG" rel="js-slides4" style="width:100%" alt="augmentative communication 2">
           <img src="makey/2017MakeyHighlightPhotos/Jakob3.JPG" rel="js-slides4" style="width:100%" alt="augmentative communication 3">
-          <button class="w3-button w3-black w3-display-left" onclick="slideChange(4, -1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="slideChange(4, 1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" rel="js-slides4-l">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" rel="js-slides4-r">&#10095;</button>
         </div>
         <p class="w3-container">
           Using only a clothing box, this student created an augmentative communication device with six different custom messages. Each of the six inputs can be programmed to say anything that is desired.
@@ -120,8 +120,8 @@
         <div class="w3-display-container">
           <img src="makey/2017MakeyHighlightPhotos/Kole1.JPG" rel="js-slides5" style="width:100%" alt="sword and shield 1">
           <img src="makey/2017MakeyHighlightPhotos/Kole2.JPG" rel="js-slides5" style="width:100%" alt="sword and shield 2">
-          <button class="w3-button w3-black w3-display-left" onclick="slideChange(5, -1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="slideChange(5, 1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" rel="js-slides5-l">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" rel="js-slides5-r">&#10095;</button>
         </div>
         <p class="w3-container">
           The Legend of Zelda was a seminal video game release in the 1980's. It remains one of the most popular video game franchises in the world. This device is a sword and shield that are used to play the game. To swing the sword in the game, swing the sword in real life.
@@ -133,8 +133,8 @@
           <img src="makey/2017MakeyHighlightPhotos/misa1.JPG" rel="js-slides6" style="width:100%" alt="zoom controller 1">
           <img src="makey/2017MakeyHighlightPhotos/misa2.JPG" rel="js-slides6" style="width:100%" alt="zoom controller 2">
           <img src="makey/2017MakeyHighlightPhotos/misa3.JPG" rel="js-slides6" style="width:100%" alt="zoom controller 3">
-          <button class="w3-button w3-black w3-display-left" onclick="slideChange(6, -1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="slideChange(6, 1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" rel="js-slides6-l">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" rel="js-slides6-r">&#10095;</button>
         </div>
         <p class="w3-container">
           Apple computers come with built-in magnification software for visually impaired people. While this is an excellent tool, a visually impaired person might have difficulty getting it activated, because they can't adequately see the keyboard or the screen before it's on. This device provides large, shiny, touch controls for the magnification functions of the MacBook.
@@ -148,8 +148,8 @@
           <img src="makey/2017MakeyHighlightPhotos/piano3.JPG" rel="js-slides7" style="width:100%" alt="floor piano 3">
           <img src="makey/2017MakeyHighlightPhotos/piano4.JPG" rel="js-slides7" style="width:100%" alt="floor piano 4">
           <img src="makey/2017MakeyHighlightPhotos/piano5.JPG" rel="js-slides7" style="width:100%" alt="floor piano 5">
-          <button class="w3-button w3-black w3-display-left" onclick="slideChange(7, -1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="slideChange(7, 1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" rel="js-slides7-l">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" rel="js-slides7-r">&#10095;</button>
         </div>
         <p class="w3-container">
           A floor piano made of kids' letter tiles!
@@ -161,8 +161,8 @@
           <img src="makey/2017MakeyHighlightPhotos/Tetris1.JPG" rel="js-slides8" style="width:100%" alt="foot tetris 1">
           <img src="makey/2017MakeyHighlightPhotos/Tetris2.JPG" rel="js-slides8" style="width:100%" alt="foot tetris 2">
           <img src="makey/2017MakeyHighlightPhotos/Tetris3.JPG" rel="js-slides8" style="width:100%" alt="foot tetris 3">
-          <button class="w3-button w3-black w3-display-left" onclick="slideChange(8, -1)">&#10094;</button>
-          <button class="w3-button w3-black w3-display-right" onclick="slideChange(8, 1)">&#10095;</button>
+          <button class="w3-button w3-black w3-display-left" rel="js-slides8-l">&#10094;</button>
+          <button class="w3-button w3-black w3-display-right" rel="js-slides8-r">&#10095;</button>
         </div>
         <p class="w3-container">
           Foot-controlled Tetris!
@@ -185,37 +185,7 @@
 
   <script src="./js/nav.js"></script>
   <!-- makey slideshows. -->
-  <script>
-    // array should have length = no. of slideshows on page.
-    var slideIndex = [1, 1, 1, 1, 1, 1, 1, 1];
-    // must loop as many times as there are slideshows on the page.
-    for (var j = 1; j <= 8; j++) {
-      showDivs(j, slideIndex[j - 1] + ")");
-    }
-
-    // slideshowNum allows this one function to work
-    // for multiple different slideshows on the same page.
-    function slideChange(slideshowNum, n) {
-      showDivs(slideshowNum, slideIndex[slideshowNum - 1] += n);
-    }
-
-    function showDivs(slideshowNum, n) {
-      var i;
-      var whichSlideshow = "js-slides" + slideshowNum;
-      var images = document.querySelectorAll("[rel='" + whichSlideshow + "']");
-      if (n > images.length) {
-        slideIndex[slideshowNum - 1] = 1
-      }
-      if (n < 1) {
-        slideIndex[slideshowNum - 1] = images.length
-      }
-      for (i = 0; i < images.length; i++) {
-        images[i].style.display = "none";
-      }
-      images[slideIndex[slideshowNum - 1] - 1].style.display = "block";
-    }
-
-  </script>
+  <script src="./js/makey.js"></script>
 
 </body>
 

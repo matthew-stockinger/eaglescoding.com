@@ -2,6 +2,7 @@
 <!-- 
 To Do:
 -Refactor:
+  -attach event handlers in JS modules.
   -rewrite JS files with module pattern.
   -all CSS animations: can use a transition instead of CSS animation.
   -make index.php the wireframe.  Put all content in separate files and load with ajax requests.
