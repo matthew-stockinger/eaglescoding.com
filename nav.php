@@ -2,7 +2,7 @@
 // *************** main nav ******************
 // w3-collapse = phone hamburger menu.  flexcontainer centers vertically on screen.
 echo '<nav rel="js-mainNav" class="w3-sidenav w3-collapse w3-padding flexcontainer mainNav">
-    <a href="javascript:void(0)" onclick="closeMainNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
+    <a href="javascript:void(0)" rel="js-close-button" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
     <div class="w3-black w3-margin">
         <a href="./index.php" class="w3-biryani">APOLLO CODING CLASS</a>
     </div>
@@ -10,10 +10,10 @@ echo '<nav rel="js-mainNav" class="w3-sidenav w3-collapse w3-padding flexcontain
         <a href="./makey.php" class="w3-biryani">Makey Makey!<br><br></a>
     </div>
     <div class="w3-black w3-margin">
-        <a href="javascript:void(0)" onclick="openSubNav(0)" class="w3-biryani">Student Web Pages<br><br></a>
+        <a href="javascript:void(0)" rel="js-student-pages-button" class="w3-biryani">Student Web Pages<br><br></a>
     </div>
     <div class="w3-black w3-margin">
-        <a href="javascript:void(0)" onclick="openSubNav(1)" class="w3-biryani">Student Code Art<br><br></a>
+        <a href="javascript:void(0)" rel="js-code-art-button" class="w3-biryani">Student Code Art<br><br></a>
     </div>
 </nav>';
 
@@ -52,21 +52,22 @@ function scanSubDir($subDirName) {
     return $subDirDivs;
 }
 
+// student-pages subnav menu.
+echo '<nav rel="js-subNav" class="w3-sidenav w3-padding sub-nav flexcontainer">
+<a href="javascript:void(0)" rel="js-close-subnav-button" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
+<a href="javascript:void(0)" rel="js-back-button" class="w3-button w3-white w3-large w3-padding">
+&#10094; Back
+</a>';
+echo scanSubDir("code-art");
+echo "</nav>";
+
 // The initially hidden code-art subnav menu.
 echo '<nav rel="js-subNav" class="w3-sidenav w3-padding sub-nav flexcontainer">
-    <a href="javascript:void(0)" onclick="closeSubNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
-    <a href="javascript:void(0)" onclick="backToMainNav()" class="w3-button w3-white w3-large w3-padding">
+    <a href="javascript:void(0)" rel="js-close-subnav-button" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
+    <a href="javascript:void(0)" rel="js-back-button" class="w3-button w3-white w3-large w3-padding">
         &#10094; Back
     </a>';
 echo scanSubDir("student-pages");
 echo "</nav>";
 
-// student-pages subnav menu.
-echo '<nav rel="js-subNav" class="w3-sidenav w3-padding sub-nav flexcontainer">
-    <a href="javascript:void(0)" onclick="closeSubNav()" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
-    <a href="javascript:void(0)" onclick="backToMainNav()" class="w3-button w3-white w3-large w3-padding">
-        &#10094; Back
-    </a>';
-echo scanSubDir("code-art");
-echo "</nav>";
 ?>

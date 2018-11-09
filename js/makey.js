@@ -57,3 +57,5 @@ var Makey = (function() {
     return publicAPI;
     
 })();
+
+Makey.init();
