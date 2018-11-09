@@ -1,7 +1,4 @@
 /*** To do:
- * displayNumNav has problems.
- *  -check currentDiv to see if it's assigning correct slideIndex.
- *  -check formatting.  I redid the displayNumNav's HTML generation.
  * Fix or remove keyboard events.
  */
 
@@ -76,12 +73,9 @@ const CodeArt = (function() {
     }
 
     function displayDotNav() {
-        // var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
         var leftArrow = '<span rel="js-left-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10094;</span>';
-        // var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
         var rightArrow = '<span rel="js-right-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10095;</span>';
         var navDotA = '<span rel="js-navdots';
-        // var navDotB = '" class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv()"></span>';
         var navDotB = '" class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black"></span>';
         var navDots = '';
         var i;
@@ -94,8 +88,6 @@ const CodeArt = (function() {
 
     // direction is -1, 0, or 1.  animated is bool.
     function displayNumNav(direction, animated) {
-        // var leftArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(-1)">&#10094;</span>';
-        // var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
         var leftArrow = '<span rel="js-left-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10094;</span>';
         var rightArrow = '<span rel="js-right-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10095;</span>';
         var a1 = '<span rel="js-navnums';
@@ -295,7 +287,8 @@ const CodeArt = (function() {
 
     function whichNavItem(evt) {
         let attr = evt.target.getAttribute("rel");
-        return attr.charAt(attr.length - 1);
+        const re = /\d/;  // match first numerical digit.
+        return Number(attr.substring(attr.search(re))); // numerical digits at end of attribute.
     }
 
     const publicAPI = {
