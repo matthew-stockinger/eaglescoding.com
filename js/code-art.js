@@ -1,7 +1,8 @@
 /*** To do:
- * Rewrite currentDiv to be event-driven.
+ * displayNumNav has problems.
+ *  -check currentDiv to see if it's assigning correct slideIndex.
+ *  -check formatting.  I redid the displayNumNav's HTML generation.
  * Fix or remove keyboard events.
- * Keep going with onclick removals.
  */
 
 /* ********** Slideshow Main **************** */
@@ -47,56 +48,6 @@ const CodeArt = (function() {
         }, true);
     }
 
-    function dotListeners() {
-        document.querySelector("[rel='js-left-arrow']").addEventListener("click", plusDivs, false);
-        document.querySelector("[rel='js-right-arrow']").addEventListener("click", plusDivs, false);
-        const navDots = document.querySelectorAll("[rel^='js-navdots']")
-        for (let i = 0; i < navDots.length; i++) {
-            navDots[i].addEventListener("click", currentDiv, false);
-        }
-    }
-
-    function plusDivs(evt) {
-        // left arrow = -1.  right arrow = 1
-        const n = (evt.target.getAttribute("rel") === "js-left-arrow") ? -1 : 1;
-        showDivs(slideIndex += n);
-        if (n === 1) {
-            if (slideIndex <= 4 || slideIndex > numFigures - 3) {
-                displayNav(navType, n, false);
-            } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
-                displayNav(navType, n, true);
-            }
-        } else if (n === -1) {
-            if (slideIndex <= 3 || slideIndex >= numFigures - 3) {
-                displayNav(navType, n, false);
-            } else if (slideIndex >= 4 && slideIndex < numFigures - 3) {
-                displayNav(navType, n, true);
-            }
-        }
-        updateHighlights(navType);
-    }
-
-    function currentDiv(n) {
-
-        // Need to check if new center number will be different than old center number.
-        // If so, then animate.
-        if (slideIndex > 4 && n < slideIndex && n < numFigures - 3) {
-            // animate left
-            slideIndex = n;
-            displayNav(navType, -1, true);
-        } else if (slideIndex < numFigures - 3 && n > slideIndex && n > 4) {
-            // animate right
-            slideIndex = n;
-            displayNav(navType, 1, true);
-        } else {
-            // static
-            slideIndex = n;
-            displayNav(navType, 0, false);
-        }
-        showDivs(n);
-        updateHighlights(navType);
-    }
-
     /* ************ Show the appropriate image & caption ******************** */
     function showDivs(n) {
         // update the figure and caption.
@@ -109,7 +60,7 @@ const CodeArt = (function() {
         }
         x[slideIndex-1].style.display = "block";
     }
-
+    
     /* ****** Generate and appropriately animate dot or number list  ************* */
     function displayNav(navType, direction, animated) {
         switch(navType) {
@@ -130,7 +81,8 @@ const CodeArt = (function() {
         // var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
         var rightArrow = '<span rel="js-right-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10095;</span>';
         var navDotA = '<span rel="js-navdots';
-        var navDotB = '" class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv()"></span>';
+        // var navDotB = '" class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black" onclick="currentDiv()"></span>';
+        var navDotB = '" class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black"></span>';
         var navDots = '';
         var i;
         for (i = 1; i <= numFigures; i++) {
@@ -146,12 +98,16 @@ const CodeArt = (function() {
         // var rightArrow = '<span class="w3-hover-black w3-round unselectable navarrow" onclick="plusDivs(1)">&#10095;</span>';
         var leftArrow = '<span rel="js-left-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10094;</span>';
         var rightArrow = '<span rel="js-right-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10095;</span>';
-        var a = '<span rel="js-navnums" class="navnums w3-xlarge" onclick="currentDiv(';
-        var aRight = '<span rel="js-navnums" class="navnums w3-xlarge num-animate-right" onclick="currentDiv(';
-        var aFadeRight = '<span rel="js-navnums" class="navnums w3-xlarge num-fade-animate-right" onclick="currentDiv(';
-        var aLeft = '<span rel="js-navnums" class="navnums w3-xlarge num-animate-left" onclick="currentDiv(';
-        var aFadeLeft = '<span rel="js-navnums" class="navnums w3-xlarge num-fade-animate-left" onclick="currentDiv(';
-        var b = ')">'
+        var a1 = '<span rel="js-navnums';
+        var a2 = '" class="navnums w3-xlarge">';
+        var aRight1 = '<span rel="js-navnums';
+        var aRight2 = '" class="navnums w3-xlarge num-animate-right">';
+        var aFadeRight1 = '<span rel="js-navnums';
+        var aFadeRight2 = '" class="navnums w3-xlarge num-fade-animate-right">';
+        var aLeft1 = '<span rel="js-navnums';
+        var aLeft2 = '" class="navnums w3-xlarge num-animate-left">';
+        var aFadeLeft1 = '<span rel="js-navnums';
+        var aFadeLeft2 = '" class="navnums w3-xlarge num-fade-animate-left">';
         var c = '</span>';
         var res = "";
         /**** All the logic below decides what numbers to generate, whether to animate, and in which direction. */
@@ -163,15 +119,15 @@ const CodeArt = (function() {
                 // generate the appropriate number list HTML
                 if (slideIndex < 4) {
                     // make the first number fade in on arrow click.  The rest just move without fade.
-                    res += aFadeLeft + "1" + b + "1" + c;
+                    res += aFadeLeft1 + "1" + aFadeLeft2 + "1" + c;
                     for (i = 2; i <= 7; i++) {
-                        res += aLeft + i.toString() + b + i.toString() + c;
+                        res += aLeft1 + i + aLeft2 + i + c;
                     }
                 } else {
                     // make the first number fade in on arrow click.  The rest just move without fade.
-                    res += aFadeLeft + (slideIndex - 3).toString() + b + (slideIndex - 3).toString() + c;
+                    res += aFadeLeft1 + (slideIndex - 3).toString() + aFadeLeft2 + (slideIndex - 3).toString() + c;
                     for (i = slideIndex - 2; i <= slideIndex + 3; i++) {
-                        res += aLeft + i.toString() + b + i.toString() + c;
+                        res += aLeft1 + i + aLeft2 + i + c;
                     }
                 }
             } else if (direction === 1) {
@@ -180,16 +136,16 @@ const CodeArt = (function() {
                 // generate the appropriate number list HTML
                 if (slideIndex > numFigures - 3) {
                     for (i = numFigures - 6; i <= numFigures - 1; i++) {
-                        res += aRight + i.toString() + b + i.toString() + c;
+                        res += aRight1 + i + aRight2 + i + c;
                     }
                     // make the last number fade in on arrow click.  The rest just move without fade.
-                    res += aFadeRight + numFigures.toString() + b + numFigures.toString() + c;
+                    res += aFadeRight1 + numFigures + aFadeRight2 + numFigures + c;
                 } else {
                     for (i = slideIndex - 3; i <= slideIndex + 2; i++) {
-                        res += aRight + i.toString() + b + i.toString() + c;
+                        res += aRight1 + i + aRight2 + i + c;
                     }
                     // make the last number fade in on arrow click.  The rest just move without fade.
-                    res += aFadeRight + (slideIndex + 3).toString() + b + (slideIndex + 3).toString() + c;
+                    res += aFadeRight1 + (slideIndex + 3).toString() + aFadeRight2 + (slideIndex + 3).toString() + c;
                 }
             } else if (direction === 0) {
                 // error handling: no direction animated
@@ -202,19 +158,19 @@ const CodeArt = (function() {
                 // static far left
                 var i;
                 for (i = 1; i <= 7; i++) {
-                    res += a + i.toString() + b + i.toString() + c;
+                    res += a1 + i + a2 + i + c;
                 }
             } else if (slideIndex >= numFigures - 3) {
                 // static far right
                 var i;
                 for (i = numFigures - 6; i <= numFigures; i++) {
-                    res += a + i.toString() + b + i.toString() + c;
+                    res += a1 + i + a2 + i + c;
                 }
             } else {
                 // static middle
                 var i;
                 for (i = slideIndex - 3; i <= slideIndex + 3; i++) {
-                    res += a + i.toString() + b + i.toString() + c;
+                    res += a1 + i + a2 + i + c;
                 }
             }
         }
@@ -223,7 +179,7 @@ const CodeArt = (function() {
         // add blue hover CSS after animation completes, in 0.3s.  Otherwise will be blue during animation.
         // Only an issue for the far right or left number.
         setTimeout(function() {
-            var x = document.querySelectorAll("[rel='js-navnums']");
+            var x = document.querySelectorAll("[rel^='js-navnums']");
             var i;
             for (i = 0; i < 7; i++) {
                 if (x[i].className.indexOf("w3-hover-text-blue") === -1) {
@@ -231,6 +187,26 @@ const CodeArt = (function() {
                 }
             }
         }, 300);
+
+        numListeners();
+    }
+
+    function dotListeners() {
+        document.querySelector("[rel='js-left-arrow']").addEventListener("click", plusDivs, false);
+        document.querySelector("[rel='js-right-arrow']").addEventListener("click", plusDivs, false);
+        const navDots = document.querySelectorAll("[rel^='js-navdots']");
+        for (let i = 0; i < navDots.length; i++) {
+            navDots[i].addEventListener("click", currentDiv, false);
+        }
+    }
+    
+    function numListeners() {
+        document.querySelector("[rel='js-left-arrow']").addEventListener("click", plusDivs, false);
+        document.querySelector("[rel='js-right-arrow']").addEventListener("click", plusDivs, false);
+        const navNums = document.querySelectorAll("[rel^='js-navnums']");
+        for (let i = 0; i < navNums.length; i++) {
+            navNums[i].addEventListener("click", currentDiv, false);
+        }
     }
 
     /********************* Change the highlight color of the dots/numbers **************** */
@@ -258,7 +234,7 @@ const CodeArt = (function() {
 
     // handles number highlighting.
     function updateNums() {
-        var navnumElements = document.querySelectorAll("[rel='js-navnums']");
+        var navnumElements = document.querySelectorAll("[rel^='js-navnums']");
         
         // remove blue from numbers.
         for (i = 0; i < 7; i++) {
@@ -273,6 +249,53 @@ const CodeArt = (function() {
         } else if (slideIndex > numFigures - 3) {
             navnumElements[6 + slideIndex - numFigures].className += " w3-text-blue";
         }
+    }
+
+    /****************** Methods for changing slides ************************** */
+    function plusDivs(evt) {
+        // left arrow = -1.  right arrow = 1
+        const n = (evt.target.getAttribute("rel") === "js-left-arrow") ? -1 : 1;
+        showDivs(slideIndex += n);
+        if (n === 1) {
+            if (slideIndex <= 4 || slideIndex > numFigures - 3) {
+                displayNav(navType, n, false);
+            } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
+                displayNav(navType, n, true);
+            }
+        } else if (n === -1) {
+            if (slideIndex <= 3 || slideIndex >= numFigures - 3) {
+                displayNav(navType, n, false);
+            } else if (slideIndex >= 4 && slideIndex < numFigures - 3) {
+                displayNav(navType, n, true);
+            }
+        }
+        updateHighlights(navType);
+    }
+
+    function currentDiv(evt) {
+        let n = whichNavItem(evt);
+        // Need to check if new center number will be different than old center number.
+        // If so, then animate.
+        if (slideIndex > 4 && n < slideIndex && n < numFigures - 3) {
+            // animate left
+            slideIndex = n;
+            displayNav(navType, -1, true);
+        } else if (slideIndex < numFigures - 3 && n > slideIndex && n > 4) {
+            // animate right
+            slideIndex = n;
+            displayNav(navType, 1, true);
+        } else {
+            // static
+            slideIndex = n;
+            displayNav(navType, 0, false);
+        }
+        showDivs(n);
+        updateHighlights(navType);
+    }
+
+    function whichNavItem(evt) {
+        let attr = evt.target.getAttribute("rel");
+        return attr.charAt(attr.length - 1);
     }
 
     const publicAPI = {
