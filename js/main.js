@@ -1,4 +1,1 @@
-document.onload = function() {
-    Makey.init();
-    
-}
+Makey.init();
