@@ -28,13 +28,16 @@ const CodeArt = (function() {
             if (event.defaultPrevented) {
                 return; // Do nothing if the event was already processed
             }
+            
+            let leftArrowButton = document.querySelector("[rel='js-left-arrow']");
+            let rightArrowButton = document.querySelector("[rel='js-right-arrow']");
 
             switch (event.key) {
                 case "ArrowRight":
-                    plusDivs(1);
+                    rightArrowButton.click();
                     break;
                 case "ArrowLeft":
-                    plusDivs(-1);
+                    leftArrowButton.click();
                     break;
                 default:
                     return; // Quit when any other key is pressed.
