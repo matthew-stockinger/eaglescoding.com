@@ -3,7 +3,7 @@
  * Handles main sidenav for the site.
  */
 
-//var Nav = (function () {
+var Nav = (function() {
 
     function openMainNav() {
         var mainNav = document.querySelector("[rel='js-mainNav']");
@@ -17,10 +17,15 @@
         document.querySelector("[rel='js-mainNav']").style.display = "none";
     }
 
-    function openSubNav(subNavID) {
+    function openSubNav(evt) {
         var mainNav = document.querySelector("[rel='js-mainNav']");
         mainNav.className = mainNav.className.replace(" w3-collapse", "");
         mainNav.style.display = "none";
+
+        // pick which subNav to open (0 for student web pages or 1 for code art)
+        const cond = (evt.target.getAttribute("rel") === "js-student-pages-button");
+        const subNavID = cond ? 0 : 1;
+
         var subNav = document.querySelectorAll("[rel='js-subNav']")[subNavID];
         subNav.style.display = "flex";
         // need this if to get animation to run the first time user opens the submenu.
@@ -47,11 +52,30 @@
         mainNav.style.display = "flex";
     }
 
+    function init() {
+        const hamburgerButton = document.querySelector("[rel='js-hamburger-button']");
+        const closeButton = document.querySelector("[rel='js-close-button']");
+        const studentPagesButton = document.querySelector("[rel='js-student-pages-button']");
+        const codeArtButton = document.querySelector("[rel='js-code-art-button']");
+        const closeSubNavButtons = document.querySelectorAll("[rel='js-close-subnav-button']");
+        const backButtons = document.querySelectorAll("[rel='js-back-button']");
+        hamburgerButton.addEventListener("click", openMainNav, false);
+        closeButton.addEventListener("click", closeMainNav, false);
+        studentPagesButton.addEventListener("click", openSubNav, false);
+        codeArtButton.addEventListener("click", openSubNav, false);
+        for (let i = 0; i < closeSubNavButtons.length; i++) {
+            closeSubNavButtons[i].addEventListener("click", closeSubNav, false);
+        }
+        for (let i = 0; i < backButtons.length; i++) {
+            backButtons[i].addEventListener("click", backToMainNav, false);
+        }
+    }
 
-//    var publicAPI = {
-//        openMainNav: openMainNav,
-//        closeMainNav: closeMainNav
-//    }
-//    return publicAPI;
-//
-//})();
+    const publicAPI = {
+        init: init,
+    }
+    return publicAPI;
+
+})();
+
+Nav.init();

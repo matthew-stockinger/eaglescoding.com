@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!--
-  Refactor JS folder into nav.js module
--->
-
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Student work on display.">
@@ -76,10 +72,7 @@
       }
     }
   }
-
 </script>
 
-
 </body>
-
 </html>
