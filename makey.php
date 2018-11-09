@@ -186,7 +186,7 @@
   <script src="./js/nav.js"></script>
   <!-- makey slideshows. -->
   <script src="./js/makey.js"></script>
-
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

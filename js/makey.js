@@ -52,7 +52,7 @@ var Makey = (function() {
     }
 
     const publicAPI = {
-        init: init;
+        init: init
     };
     return publicAPI;
     
