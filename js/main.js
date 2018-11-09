@@ -1,2 +1,0 @@
-Nav.init();
-Makey.init();

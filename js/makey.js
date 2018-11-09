@@ -1,4 +1,4 @@
-var Makey = (function() {
+const Makey = (function() {
 
     // array should have length = no. of slideshows on page.
     var slideIndex = [1, 1, 1, 1, 1, 1, 1, 1];

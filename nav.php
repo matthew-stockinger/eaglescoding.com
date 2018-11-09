@@ -54,10 +54,10 @@ function scanSubDir($subDirName) {
 
 // student-pages subnav menu.
 echo '<nav rel="js-subNav" class="w3-sidenav w3-padding sub-nav flexcontainer">
-<a href="javascript:void(0)" rel="js-close-subnav-button" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
-<a href="javascript:void(0)" rel="js-back-button" class="w3-button w3-white w3-large w3-padding">
-&#10094; Back
-</a>';
+    <a href="javascript:void(0)" rel="js-close-subnav-button" class="w3-button w3-white w3-large w3-hide-large w3-padding">&times; Close</a>
+    <a href="javascript:void(0)" rel="js-back-button" class="w3-button w3-white w3-large w3-padding">
+    &#10094; Back
+    </a>';
 echo scanSubDir("code-art");
 echo "</nav>";
 
