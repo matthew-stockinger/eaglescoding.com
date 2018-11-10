@@ -27,9 +27,7 @@ const Nav = (function() {
     function openMainNav() {
         var mainNav = document.querySelector("[rel='js-mainNav']");
         mainNav.style.display = "flex";
-        if (mainNav.className.indexOf(" w3-animate-left") === -1) {
-            mainNav.className += " w3-animate-left";
-        }
+        mainNav.classList.add("w3-animate-left");
     }
 
     function closeMainNav() {
@@ -38,7 +36,7 @@ const Nav = (function() {
 
     function openSubNav(evt) {
         var mainNav = document.querySelector("[rel='js-mainNav']");
-        mainNav.className = mainNav.className.replace(" w3-collapse", "");
+        mainNav.classList.remove("w3-collapse");
         mainNav.style.display = "none";
 
         // pick which subNav to open (0 for code art or 1 for student pages)
@@ -47,11 +45,9 @@ const Nav = (function() {
 
         var subNav = document.querySelectorAll("[rel='js-subNav']")[subNavID];
         subNav.style.display = "flex";
-        // need this if to get animation to run the first time user opens the submenu.
+        // need this to get animation to run the first time user opens the submenu.
         // otherwise it'll just appear with no animation.
-        if (subNav.className.indexOf(" w3-animate-left") === -1) {
-            subNav.className += " w3-animate-left";
-        }
+        subNav.classList.add("w3-animate-left");
     }
 
     function closeSubNav() {
@@ -64,10 +60,8 @@ const Nav = (function() {
     function backToMainNav() {
         closeSubNav();
         var mainNav = document.querySelector("[rel='js-mainNav']");
-        mainNav.className += " w3-collapse";
-        if (mainNav.className.indexOf(" w3-animate-left") === -1) {
-            mainNav.className += " w3-animate-left";
-        }
+        mainNav.classList.add("w3-collapse");
+        mainNav.classList.add("w3-animate-left");
         mainNav.style.display = "flex";
     }
 

@@ -1,7 +1,3 @@
-/*** To do:
- * Fix or remove keyboard events.
- */
-
 /* ********** Slideshow Main **************** */
 const CodeArt = (function() {
     let slideIndex, numFigures, navType;
@@ -177,9 +173,7 @@ const CodeArt = (function() {
             var x = document.querySelectorAll("[rel^='js-navnums']");
             var i;
             for (i = 0; i < 7; i++) {
-                if (x[i].className.indexOf("w3-hover-text-blue") === -1) {
-                    x[i].className += " w3-hover-text-blue";
-                }
+                x[i].classList.add("w3-hover-text-blue");
             }
         }, 300);
 
@@ -222,9 +216,9 @@ const CodeArt = (function() {
         var dots = document.querySelectorAll("[rel^='js-navdots']");
         var i;
         for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" w3-black", "");
+            dots[i].classList.remove("w3-black");
         }
-        dots[slideIndex - 1].className += " w3-black";
+        dots[slideIndex - 1].classList.add("w3-black");
     }
 
     // handles number highlighting.
@@ -233,16 +227,16 @@ const CodeArt = (function() {
         
         // remove blue from numbers.
         for (i = 0; i < 7; i++) {
-            navnumElements[i].className = navnumElements[i].className.replace(" w3-text-blue", "");
+            navnumElements[i].classList.remove("w3-text-blue");
         }
         
         // add blue to active number.
         if (slideIndex <= 4) {
-            navnumElements[slideIndex - 1].className += " w3-text-blue";
+            navnumElements[slideIndex - 1].classList.add("w3-text-blue");
         } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
-            navnumElements[3].className += " w3-text-blue";
+            navnumElements[3].classList.add("w3-text-blue");
         } else if (slideIndex > numFigures - 3) {
-            navnumElements[6 + slideIndex - numFigures].className += " w3-text-blue";
+            navnumElements[6 + slideIndex - numFigures].classList.add("w3-text-blue");
         }
     }
 
