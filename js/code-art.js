@@ -74,6 +74,8 @@ const CodeArt = (function() {
     function displayDotNav() {
         var leftArrow = '<span rel="js-left-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10094;</span>';
         var rightArrow = '<span rel="js-right-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10095;</span>';
+        var navDotContainerA = '<span rel="js-navdot-container">';
+        var navDotContainerB = '</span>';
         var navDotA = '<span rel="js-navdots';
         var navDotB = '" class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black"></span>';
         var navDots = '';
@@ -81,7 +83,8 @@ const CodeArt = (function() {
         for (i = 1; i <= numFigures; i++) {
             navDots += navDotA + i + navDotB;
         }
-        document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + navDots + rightArrow;
+        document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + navDotContainerA + 
+            navDots + navDotContainerB + rightArrow;
         dotListeners();
     }
 
@@ -89,6 +92,8 @@ const CodeArt = (function() {
     function displayNumNav(direction, animated) {
         var leftArrow = '<span rel="js-left-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10094;</span>';
         var rightArrow = '<span rel="js-right-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10095;</span>';
+        var navnumContainer1 = '<span rel="js-navnum-container">';
+        var navnumContainer2 = '</span>';
         var a1 = '<span rel="js-navnums';
         var a2 = '" class="navnums w3-xlarge">';
         var aRight1 = '<span rel="js-navnums';
@@ -166,7 +171,8 @@ const CodeArt = (function() {
             }
         }
 
-        document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + res + rightArrow;
+        document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + navnumContainer1 + 
+            res + navnumContainer2 + rightArrow;
         // add blue hover CSS after animation completes, in 0.3s.  Otherwise will be blue during animation.
         // Only an issue for the far right or left number.
         setTimeout(function() {
@@ -183,19 +189,15 @@ const CodeArt = (function() {
     function dotListeners() {
         document.querySelector("[rel='js-left-arrow']").addEventListener("click", plusDivs, false);
         document.querySelector("[rel='js-right-arrow']").addEventListener("click", plusDivs, false);
-        const navDots = document.querySelectorAll("[rel^='js-navdots']");
-        for (let i = 0; i < navDots.length; i++) {
-            navDots[i].addEventListener("click", currentDiv, false);
-        }
+        // clicks on dots bubble up.
+        document.querySelector("[rel='js-navdot-container']").addEventListener("click", currentDiv);
     }
     
     function numListeners() {
         document.querySelector("[rel='js-left-arrow']").addEventListener("click", plusDivs, false);
         document.querySelector("[rel='js-right-arrow']").addEventListener("click", plusDivs, false);
-        const navNums = document.querySelectorAll("[rel^='js-navnums']");
-        for (let i = 0; i < navNums.length; i++) {
-            navNums[i].addEventListener("click", currentDiv, false);
-        }
+        // clicks on navnums bubble up.
+        document.querySelector("[rel='js-navnum-container']").addEventListener("click", currentDiv);
     }
 
     /********************* Change the highlight color of the dots/numbers **************** */
