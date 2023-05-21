@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- style sheet -->
+        <link rel="stylesheet" href="styles/styles02.css">
+        <!-- tabber name -->
+        <title>Find the button...</title>
+    <style>
+            div {
+                height: 10px;
+                width: 20px;
+                position: fixed;
+            }
+        </style>
+        
+    </head>
+    
+    <body>
+        <div id="randomButton">
+            <a id="a01" href="Puzzle%203%20(Lots%20of%20buttons).html">Find me</a>
+        </div>
+    
+        <script>
+            var x = Math.floor((Math.random() * window.innerWidth) + 1);
+            var y = Math.floor((Math.random() * window.innerHeight) + 1);
+            document.getElementById("randomButton").style.right = x.toString() + "px";
+            document.getElementById("randomButton").style.top = y.toString() + "px";
+        </script>
+    </body>
+</html>

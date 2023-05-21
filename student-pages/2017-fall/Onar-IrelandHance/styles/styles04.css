@@ -1,0 +1,30 @@
+/*Doors of Dorin*/
+
+body {
+    background-color:rgb(1, 0, 0);
+}
+
+#a01:link {
+    color:rgb(37, 157, 184);
+}
+
+#a01:visited {
+    color:rgb(37, 157, 184);
+}
+
+#a01:hover {
+    color:rgb(57, 177, 250);
+}
+
+#a01:active {
+    color:transparent;
+}
+
+#p01 {
+    width:100%; 
+    border-radius:2em 2em 0em 0em; 
+ 
+    background:linear-gradient(rgb(0,0,10), rgb(20,20,20)); 
+    font-family:'Calibri'; 
+    color:rgb(0,0,170);
+}

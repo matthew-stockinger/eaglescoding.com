@@ -1,0 +1,67 @@
+body {
+    background-color: whitesmoke;
+}
+h1.krhTop {
+    color: black;
+    letter-spacing: 6px;
+    font-family:  "Courier New", Courier, monospace;
+    background-color: gray;
+    outline-style: solid;
+    outline-color: gray;
+    outline-width:35px;
+    text-align: center;
+    font-size:300%;
+    margin-bottom: 35px;
+}
+a.home:link {
+    text-decoration: none;
+    color: black;
+}
+a.home:visited {
+    color: black;
+    text-decoration: none;
+}
+a.home:hover {
+    text-decoration: none
+}
+p.pageTitle {
+    display:block;
+    width:98.75%;
+    font-family: "Courier New", Courier, monospace;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: limegreen;
+    border-style: solid;
+    border-width: 6px;
+    border-color: limegreen;
+    outline-style: solid;
+    outline-color: lime;
+    outline-width: 9px;
+    padding-left: 4px;
+    margin-top: 0erpx;
+}
+
+
+img.searchIcon {
+    float:right;
+    margin-right: 10px;
+}
+p.bodyText {
+    font-family: "Verdana", Geneva, sans-serif;
+    padding-top: 10px;
+    padding-left: 30px;
+    font-size: 20px;
+
+}
+p.vehicleName {
+    font-family: "Verdana", Geneva, sans-serif;
+    text-align: center;
+    font-size:40px;
+    background-color: lightgray;
+    outline-style: solid;
+    outline-color: lightgray;
+    outline-width: 10px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}

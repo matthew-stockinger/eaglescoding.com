@@ -1,0 +1,56 @@
+body { background-color: papayawhip; }
+
+
+title {
+    text-align: center
+        font
+}
+
+
+h1 {
+    font-size: 125%;
+    font-family: verdana;
+    color: black;
+    text-align: center
+}
+
+
+h2 {
+    text-align: center
+
+
+}
+
+
+
+
+p {
+    font-family: courier
+    color: red;
+    text-align: center
+    
+}
+
+
+h2 { 
+    font-family: courier
+        color: red; 
+
+
+}
+
+
+img {
+    display: block;
+    margin: auto;
+    width: 40%;
+}
+
+
+div {
+    text-align: center   
+        
+            
+            
+    
+}

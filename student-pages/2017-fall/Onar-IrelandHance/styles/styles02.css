@@ -1,0 +1,21 @@
+/*Blue, Transparent*/
+
+body {
+    background-color:blue;
+}
+
+#a01:link { 
+    color:transparent;
+}
+
+#a01:visited {
+    color:transparent;
+}
+
+#a01:hover {
+    color:transparent;
+}
+
+#a01:active {
+    color:transparent;
+}
