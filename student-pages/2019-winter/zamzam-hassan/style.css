@@ -1,0 +1,9 @@
+main {
+	background-image: url(images/big%20picture.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+div.w3-third > div {
+	cursor: pointer;
+}

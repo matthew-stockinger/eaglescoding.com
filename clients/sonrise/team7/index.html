@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sonrise Avon Church</title>
+        <link rel="stylesheet" href="w3.css">
+    </head>
+    
+    <body>
+      
+    <div w3-container style="background:linear-gradient(#ffe3ba,#ffff95)">
+        <header class="w3-container">
+           <div class="w3-container">
+            <img src="CodingPictures/SonriseLogo.jpg" alt="Sonrise Logo">
+            </div>
+
+           
+            <nav>
+                <ul class="w3-navbar w3-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li class="w3-dropdown-hover"><a href="info.html">Info</a>
+                       <div class="w3-dropdown-content w3-card-8" style="right:16px">
+                            <a href="#map">Calender</a>
+                            <a href="#calender">Google Maps</a>
+                       </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="w3-heading w3-container">Welcome To SonRise Church</h1>
+    
+        <div class="w3-content w3-display-container">
+           <img class="mySlides " src="CodingPictures/FullSizeRender4.jpg" alt="Pastors" style="width:100%">
+           <img class="mySlides" src="CodingPictures/GroupPhoto.jpg" alt="Group Photo" style="width: 100%">
+           <img class="mySlides" src="CodingPictures/Crosses.jpg" alt="Crosses" style="width: 100%">
+            <img class="mySlides" src="CodingPictures/Celebration.jpg" alt="Celebration" style="width: 100%">
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+
+
+        </div>
+        <div class="w3-container w3-white" style="margin: 30px 30px 0px 30px; max-width:980px; margin: auto;">
+              <h1 class="w3-heading">Our Pastor</h1>
+                <p>
+                <img src="AboutThePastor/Jeff.jpg" style="width: 150px; float: left; margin-right: 16px;">
+                I’m Pastor Jeff. I was called to serve the congregation of SonRise Lutheran Church by God and the members of SonRise in late 2012 after having had a 25 year career in sales and management in the printing industry in St. Cloud. While still in theological study, I served for the first two years as vicar and was then installed as Pastor since 2015. I feel blessed and honored to serve God and this community each day and take delight in everything this work entails.
+I joined this new nearly-new church in Avon in 2006 after my wife Christine and I moved into this town with our two boys, two girls and two dogs. In these past ten years, the children have now grown and essentially moved on to schools and careers, but the little dogs are still with us. Christine is a kindergarten teacher in the Albany School District and we share wonderful stories of the great things that these kids are doing in school and the wonderful families that make up our community. This area around Avon is special and we love it here. 
+There is so much to be excited about and, as the psalmist said, “I take delight in the Lord.” Whether in a friendly worship service, bible study or at community service project, there is much good news to discuss, especially the gospel message of Jesus Christ. I look forward to spending time getting to know you and invite you to reach out to me. I’m always looking for another chance to smile and talk about the things that are important in your life.<br><br>
+ – Pastor Jeff
+<br>
+<br>            
+ If you have any questions about the service or anything about the church you can contact Jeff with from his phone (320) 761-0715 or with his email at jmanthe@clearwire.net
+                </p>
+        </div>
+        
+        <div class="w3-container w3-heading" style="margin: 30px 0px 0px 0px">
+            <p><a style="color:blue" href="https://www.esv.org/Genesis+1/">Read The Bible Online</a></p>
+        </div>
+    </div>   
+        
+        <footer class="w3-container w3-amber">
+            <p>501 County Rd. 9, Avon, MN 56310</p>
+            <p>(320) 761-0715</p>
+            <p> Website designed and created by the Apollo coding class. Copywrite  Sonrise Lutheran Church</p>
+        </footer>
+
+     <script>
+                   var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1} 
+            if (n < 1) {slideIndex = x.length} ;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; 
+            }
+            x[slideIndex-1].style.display = "block"; 
+        }
+        </script>
+    </body>
+</html>

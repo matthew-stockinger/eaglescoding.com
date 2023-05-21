@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Where To Learn</title>
+</head>
+
+
+<body id="body3">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;color:F18F01" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="myprojects.html" class="w3-bar-item w3-button">My Projects</a>
+        <a href="wheretolearn.html" class="w3-bar-item w3-button">Where to learn</a>
+        <a href="wheretobegin.html" class="w3-bar-item w3-button">Where to Begin</a>
+    </div>
+    <div id="main">
+        <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+            <button id="openNav" class="w3-button w3-black w3-xlarge w3-display-topleft" onclick="w3_open()">&#9776;</button>
+            <img src="images/computermusic.jpeg" alt="Computer" width="1200" height="500">
+            <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+                <h1 class="w3-xxlarge" id="imgtext3">Where to Learn</h1>
+            </div>
+        </header>
+        <div class="w3-container">
+            <h1 id="heading1">Learning Music Theory</h1>
+            <p>Learning every tiny detail of music theory sucks. There's so many rules on what you can and can't do. I remember watching youtube tutorial after youtube tutorial to try and understand it, and after searching for what felt like years, I have found the best free resource to learning music theory online.</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/MskuH3khxMA" frameborder="5" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Youtuber MusicTechHelpGuy created in my opinion, the best online series for music theory. He explains everything amazingly and teaches in a way that makes sense, and his 24 part series goes into depth explaining the details of music theory. I believe that it's the best way to learn, because it's free! But all jokes aside, MusicTechHelpGuy is super good at this stuff, so please stop by his channel and subscribe, the dude is super good at what he does.</p>
+            <h1 id="heading2">Now You Know How to Write Music... Now What?</h1>
+            <p>Well now you just have to write it out. There's about 20 million different ways(not really) to do it, but I would just stick to one or two ways to create your music. When I first started, I was writing my ideas into notation, but I've been experimenting with digitally produced music genres such as glitch hop, retrowave, and mid-tempo/dubstep. If you want more info on what program is best for creating music for you, check out my list of notation softwares and DAWs <a href="wheretobegin.html">here.</a></p>
+        </div>
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+
+    </script>
+</body>
+<div id="footer">
+    <footer>Created by Maura Rademacher</footer>
+</div>
+
+
+</html>

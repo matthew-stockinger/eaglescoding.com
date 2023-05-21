@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>Text-Based Slideshow Example</title>
+	<!--put this in your external CSS file for slideshow.-->
+	<style>
+		.mySlides {
+			display: none;
+		}
+
+	</style>
+</head>
+
+<body>
+	<h2 class="w3-center">Manual Slideshow</h2>
+
+	<!--slideshow container-->
+	<div class="w3-content w3-display-container" style="max-width:400px">
+		<!--slide 1-->
+		<div class="mySlides w3-container w3-card-4 w3-xxlarge w3-center w3-padding">
+			<quote>I love <br>this fence 1!</quote>
+		</div>
+		<!--slide 2-->
+		<div class="mySlides w3-container w3-card-4 w3-xxlarge w3-center w3-padding">
+			<quote>I love <br>this fence 2!</quote>
+		</div>
+		<!--slide 3-->
+		<div class="mySlides w3-container w3-card-4 w3-xxlarge w3-center w3-padding">
+			<quote>I love <br>this fence 3!</quote>
+		</div>
+		<!--the buttons-->
+		<button class="w3-button w3-hover-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-hover-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+
+	<!--put this in an external JS file for slideshow.-->
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = x.length
+			}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			x[slideIndex - 1].style.display = "block";
+		}
+
+	</script>
+</body>
+
+</html>

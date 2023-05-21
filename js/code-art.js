@@ -1,3 +1,7 @@
+/*** To do:
+ * Fix or remove keyboard events.
+ */
+
 /* ********** Slideshow Main **************** */
 const CodeArt = (function() {
     let slideIndex, numFigures, navType;
@@ -74,8 +78,6 @@ const CodeArt = (function() {
     function displayDotNav() {
         var leftArrow = '<span rel="js-left-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10094;</span>';
         var rightArrow = '<span rel="js-right-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10095;</span>';
-        var navDotContainerA = '<span rel="js-navdot-container">';
-        var navDotContainerB = '</span>';
         var navDotA = '<span rel="js-navdots';
         var navDotB = '" class="w3-badge navdots w3-border w3-border-black w3-transparent w3-hover-black"></span>';
         var navDots = '';
@@ -83,8 +85,7 @@ const CodeArt = (function() {
         for (i = 1; i <= numFigures; i++) {
             navDots += navDotA + i + navDotB;
         }
-        document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + navDotContainerA + 
-            navDots + navDotContainerB + rightArrow;
+        document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + navDots + rightArrow;
         dotListeners();
     }
 
@@ -92,8 +93,6 @@ const CodeArt = (function() {
     function displayNumNav(direction, animated) {
         var leftArrow = '<span rel="js-left-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10094;</span>';
         var rightArrow = '<span rel="js-right-arrow" class="w3-hover-black w3-round unselectable navarrow">&#10095;</span>';
-        var navnumContainer1 = '<span rel="js-navnum-container">';
-        var navnumContainer2 = '</span>';
         var a1 = '<span rel="js-navnums';
         var a2 = '" class="navnums w3-xlarge">';
         var aRight1 = '<span rel="js-navnums';
@@ -171,15 +170,16 @@ const CodeArt = (function() {
             }
         }
 
-        document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + navnumContainer1 + 
-            res + navnumContainer2 + rightArrow;
+        document.querySelector("[rel='js-imageNav']").innerHTML = leftArrow + res + rightArrow;
         // add blue hover CSS after animation completes, in 0.3s.  Otherwise will be blue during animation.
         // Only an issue for the far right or left number.
         setTimeout(function() {
             var x = document.querySelectorAll("[rel^='js-navnums']");
             var i;
             for (i = 0; i < 7; i++) {
-                x[i].classList.add("w3-hover-text-blue");
+                if (x[i].className.indexOf("w3-hover-text-blue") === -1) {
+                    x[i].className += " w3-hover-text-blue";
+                }
             }
         }, 300);
 
@@ -189,15 +189,19 @@ const CodeArt = (function() {
     function dotListeners() {
         document.querySelector("[rel='js-left-arrow']").addEventListener("click", plusDivs, false);
         document.querySelector("[rel='js-right-arrow']").addEventListener("click", plusDivs, false);
-        // clicks on dots bubble up.
-        document.querySelector("[rel='js-navdot-container']").addEventListener("click", currentDiv);
+        const navDots = document.querySelectorAll("[rel^='js-navdots']");
+        for (let i = 0; i < navDots.length; i++) {
+            navDots[i].addEventListener("click", currentDiv, false);
+        }
     }
     
     function numListeners() {
         document.querySelector("[rel='js-left-arrow']").addEventListener("click", plusDivs, false);
         document.querySelector("[rel='js-right-arrow']").addEventListener("click", plusDivs, false);
-        // clicks on navnums bubble up.
-        document.querySelector("[rel='js-navnum-container']").addEventListener("click", currentDiv);
+        const navNums = document.querySelectorAll("[rel^='js-navnums']");
+        for (let i = 0; i < navNums.length; i++) {
+            navNums[i].addEventListener("click", currentDiv, false);
+        }
     }
 
     /********************* Change the highlight color of the dots/numbers **************** */
@@ -218,9 +222,9 @@ const CodeArt = (function() {
         var dots = document.querySelectorAll("[rel^='js-navdots']");
         var i;
         for (i = 0; i < dots.length; i++) {
-            dots[i].classList.remove("w3-black");
+            dots[i].className = dots[i].className.replace(" w3-black", "");
         }
-        dots[slideIndex - 1].classList.add("w3-black");
+        dots[slideIndex - 1].className += " w3-black";
     }
 
     // handles number highlighting.
@@ -229,16 +233,16 @@ const CodeArt = (function() {
         
         // remove blue from numbers.
         for (i = 0; i < 7; i++) {
-            navnumElements[i].classList.remove("w3-text-blue");
+            navnumElements[i].className = navnumElements[i].className.replace(" w3-text-blue", "");
         }
         
         // add blue to active number.
         if (slideIndex <= 4) {
-            navnumElements[slideIndex - 1].classList.add("w3-text-blue");
+            navnumElements[slideIndex - 1].className += " w3-text-blue";
         } else if (slideIndex > 4 && slideIndex <= numFigures - 3) {
-            navnumElements[3].classList.add("w3-text-blue");
+            navnumElements[3].className += " w3-text-blue";
         } else if (slideIndex > numFigures - 3) {
-            navnumElements[6 + slideIndex - numFigures].classList.add("w3-text-blue");
+            navnumElements[6 + slideIndex - numFigures].className += " w3-text-blue";
         }
     }
 

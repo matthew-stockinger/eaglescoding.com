@@ -1,0 +1,27 @@
+body {
+  background-color: #1B2529;
+}
+
+header {
+  background-color: #4C506B;
+  border-bottom-color: #5e6896;
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  font-family: 'BenchNine', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  color: #5e6896;
+}
+
+p {
+  font-family: 'PT Sans', sans-serif;
+  color: #fEfEfE;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+

@@ -1,0 +1,23 @@
+.bg-blue {
+    background-color: #0000FF;
+}
+
+.text-blue {
+    color: #0000FF;
+}
+
+.red {
+    
+}
+
+.yellow {
+    
+}
+
+.zcool {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;  
+}
+div:hover {
+    color: red;
+
+}

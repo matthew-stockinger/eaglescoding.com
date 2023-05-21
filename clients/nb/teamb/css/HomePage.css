@@ -1,0 +1,152 @@
+/*
+Jacob Lauinger
+global
+*/
+body {
+    margin: 0px;
+    background-color: #505faa;
+    color: #ffffff;
+    font-family: Colab;
+}
+
+@font-face {
+    font-family: Nautik;
+    src: url("fonts/Nautik-light.otf")
+}
+
+@font-face {
+    font-family: Colab;
+    src: url("fonts/ColabLig.otf")
+}
+
+/*
+header
+*/
+header {
+    background-color: #b11f25;
+    color: #ffffff;
+    text-align: center;
+    font-family: Nautik;
+    margin: 0px;
+    padding-top: 5px;
+}
+.mainImage {
+    width: 10%;
+    min-width: 100px;
+    display: block;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+}
+.action {
+  font-size: 1.5em;
+  text-decoration:none;
+  color:#ffffff;
+  position:absolute;
+  right: 0px;
+  top: 0px;
+  background-color:#5e2db4;
+  padding: 5px;
+}
+@media only screen and (max-width:600px) {
+  .action {
+    font-size:1em;
+  }
+}
+/*navbar in header*/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #5e2db4;
+    text-align: center;
+    font-family: Colab;
+}
+
+.navItem {
+    color: #ffffff;
+    padding: 55px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.navItem:hover {
+    background-color: #b11f25;
+}
+@media only screen and (max-width: 600px) {
+    .nav {
+        justify-content: space-between;
+    }
+    .navItem {
+        padding: 5px;
+    }
+}
+/*
+body
+*/
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.column {
+    width: 30%;
+}
+/*
+    on phone
+*/
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+     .row {
+        flex: 33%;
+        flex-wrap: wrap;
+    }
+    .column {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+     .row {
+        flex: 33.33333%;
+        flex-direction: column;
+    }
+    .column {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+}
+.text {
+    padding: 5px;
+    padding-top: 10px;
+}
+
+/*footer*/
+footer {
+    display: block;
+    background-color: #5e2db4;
+    color: #ffffff;
+    margin: 0px;
+    bottom: 0px;
+    text-align: center;
+    font-family: Nautik;
+    padding:0.01em 16px;
+}

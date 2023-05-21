@@ -1,0 +1,161 @@
+/*****************************************************************************
+Organization:
+    First, global settings and utility classes.
+    Sections after that are organized from top to bottom, 
+			in order of appearance on the web page.
+*****************************************************************************/
+
+
+/* ****************************** Global ********************************** */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+    background-color: lightgreen;
+}
+
+/* set up for a 6-column grid layout */
+/* on phones and narrow screens, the multi-column layout 
+		becomes a 1-column scroller layout. */
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	grid-column-gap: 30px;
+}
+.span-2 {	grid-column: span 6; }
+.span-3 { grid-column: span 6; }
+.span-4 { grid-column: span 6; }
+.span-5 { grid-column: span 6; }
+.span-6 { grid-column: span 6; }
+@media only screen and (min-width: 750px) {
+	.span-2 {	grid-column: span 2; }
+	.span-3 { grid-column: span 3; }
+	.span-4 { grid-column: span 4; }
+	.span-5 { grid-column: span 5; }
+}
+
+h1,
+h2 {
+	font-family: 'PT Serif', serif;
+	font-weight: 400;
+}
+
+
+/**************************** utility classes ****************************/
+/** These are just for this demo.  Helps make the results more visible. **/
+.dark-gray {
+	background-color: lightgray;
+	color: black;
+}
+
+.gray {
+	background-color: lightgray;
+	color: black;
+}
+
+.light-gray {
+	background-color: lightgray;
+	color: black;
+}
+
+.round {
+    border-radius: 4px;
+}
+
+
+/******************************* Header *************************************/
+/* header text here */
+header {
+	padding: 30px;
+    background-color: #00872e;
+}
+
+header h1 {
+	font-size: 3rem;
+	line-height: 1.25;
+	text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+/* navbar stuff here */
+nav > ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+	list-style-type: none;
+	padding: 0;
+}
+
+nav li {
+    margin: 0.5rem;
+}
+
+nav a {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	text-align: center;
+	width: 120px;
+    height: 5.5rem;
+	padding: 14px 16px;
+	text-decoration: none;
+	color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    border: 2px solid black;
+    border-radius: 6px;
+	cursor: pointer;
+	transition: border 0.2s;
+}
+
+/******************************* Main Body ***********************************/
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+	line-height: 1.5;
+	text-align: justify;
+}
+
+/* for phones.  Brings text close to edges. */
+.content-wrap {
+	margin: 0 auto;
+	/* keep this greater than the default padding to allow div's to abutt each other. */
+	padding: 0px 10px;
+	overflow: auto;
+}
+/* for desktop: add some padding around edges */
+@media only screen and (min-width: 600px) {
+
+	.content-wrap {
+		/* This keeps the paragraphs from getting hella-wide on desktop screens. */
+		max-width: 900px;
+		margin: 0 auto;
+		/* keep this greater than the default padding to allow div's to abutt each other. */
+		padding: 50px;
+		overflow: auto;
+	}
+}
+
+
+/**************************************** Footer ***************************************/
+footer {
+	padding: 30px;
+    background-color: #00872e;
+    color: lightgray;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Nicholas -->
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="w3.css">
+        <title>SonriseAvon</title>
+        <style>
+            .w3-myfont {
+                font-family: "Comic Sans MS", cursive, sans-serif;
+            }
+        
+        
+        
+        
+        </style>
+       
+    </head>
+    
+    <body>
+        <div class="w3-light-blue w3-myfont">
+         <img class="w3-padding" src="customLogo.png" alt="Sonrise" style="width: 50%, height=">
+            
+        <ul class="w3-navbar w3-large w3-black w3-left-align">
+            <li class="w3-hide-large w3-hide-medium w3-black w3-opennav w3-right">
+            <a href="javascript:void(0);" onclick="myFunction()"> ☰ </a>
+            </li>
+            <li class="w3-hide-large w3-hide-medium"><a href="links.html"> Links </a></li>
+            <li class="w3-hide-small"><a href="index.html"> Home </a></li>
+            <li class="w3-hide-small"><a href="about.html"> About us / Directions </a></li>
+            <li class="w3-hide-small"><a href="calender.html"> Calendar </a></li>
+            <li class="w3-hide-small"><a href="newsletter.html"> Newsletter </a></li>            
+            <li class="w3-hide-small"><a href="visions.html"> Visions and Values </a></li>
+            <li class="w3-hide-small"><a href="what.html"> What We Believe </a></li>
+            <li class="w3-hide-small"><a href="links.html"> Links </a></li>
+            
+        
+
+  
+         </ul>
+
+        <div id="demo" class="w3-hide w3-hide-large w3-hide-medium">
+            <ul class="w3-navbar w3-left-align w3-large w3-black">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="about.html"> About Us / Directions </a></li>
+            <li><a href="calender.html"> Calendar </a></li>
+            <li><a href="newsletter.html"> Newsletter </a></li>
+            <li><a href="visions.html"> Vision and Values </a></li>
+            <li><a href="what.html"> What We Believe </a></li>
+            <li><a href="links.html"> Links </a></li>
+            </ul>
+        </div>
+            <script>
+function myFunction() {
+    var x = document.getElementById("demo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+        </div>
+<!-- Samuel -->
+        <div class="w3-container w3-text-blue" style="margin-bottom: 132px;">
+            <p><a href="https://www.esv.org/esv/browse/">Read The Bible Online</a></p>
+            <p><a href="http://www.lcms.org/pages/internal.asp?NavID=525">The Christain Cyclopedia</a></p>
+            <p><a href="http://www.lcms.org/pages/internal.asp?NavID=524">What About? Pamphlets</a></p>
+        </div>
+        
+        
+        <footer class="w3-light-blue w3-small w3-center" style="position: absolute; bottom:0; width: 100%;">
+            <p>501 County Rd. 9</p> 
+                <p>Avon, MN 56310</p>
+                <p>320.356.9220</p>
+                <p>Worship: Sunday 9am</p>
+        </footer>
+    </body>
+</html>

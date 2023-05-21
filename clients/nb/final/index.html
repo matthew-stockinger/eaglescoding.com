@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+  To Do:
+  
+  -See Wunderlist for next major steps.
+
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width height=device-height">
+  <link href="css/shared.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <title>North Berkeley Site</title>
+
+  <!-- Coded by Tucker -->
+</head>
+
+<body>
+  <!-- NAV  -->
+  <div class="nav_container ">
+    <div class="nav_block">
+      <img src="img/SymboMark_and_logo.png" alt="North Berkeley logo" id="nav_logo">
+
+      <div>
+        <a href="index.html" class="nav_side">Home</a>
+      </div>
+      <div>
+        <a href="about.html" class="nav_side">About</a>
+      </div>
+      <div>
+        <a href="contact.html" class="nav_side">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN SITE CODE IN HERE -->
+  <div id="main">
+    <h1 class="header"></h1>
+    <a class="header_link" href="contact.html"><strong>GET IN CONTACT</strong></a>
+
+    <div class="content-wrap grid-container navMobileContainer">
+      <!--row 1, 2 column-->
+      <div class="span-3 navMobileContainer">
+        <h3 class="monavleft"><a href="about.html">About</a></h3>
+      </div>
+      <div class="span-3 navMobileContainer">
+        <h2 class="monavmid">Home</h2>
+      </div>
+      <div class="span-3 navMobileContainer">
+        <h3 class="monavright"><a href="contact.html">Contact</a></h3>
+      </div>
+    </div>
+    <h1 class="home">Home</h1>
+
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 6</div>
+        <img src="img/first-img-2.jpg" alt="a man welding">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 6</div>
+        <img src="img/second-img-2.jpg" alt="a collapsed building">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 6</div>
+        <img src="img/third-img-2.2.jpg" alt="a wooden building being framed">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 6</div>
+        <img src="img/fourth-img-2.2.jpg" alt="a city bus, buried under a collapsed concrete building">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 6</div>
+        <img src="img/fifth-img-2.jpg" alt="two men constructing a steel support for a damaged building wall">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 6</div>
+        <img src="img/sixth-img-2.jpg" alt="an alley with a destroyed car, covered in rock and concrete">
+        <div class="text"></div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+    </div>
+    <!-- WORDS FOR SITE GO HERE -->
+
+    <footer id="footercontainer">
+      <div id="footer">
+        North Berkeley<br>Vancouver, Canada
+        <div class="fcolumn">
+          <p class="ftext"> MAILING ADDRESS<br>
+            203 - 289 Alexander Street<br>
+            Vancouver, BC V6A 4H6<br>
+            Canada</p>
+
+          <!-- <p class="ftext">SITE ADDRESS<br>
+            1930 Columbia Street<br>
+            Vancouver, BC V5Y 4A2<br>
+            Canada</p> -->
+
+          <p class="ftext"><br>OFF-SITE ADDRESS<br>
+            Nishi-ku, Fukuoka-shi<br>
+            Fukuoka-ken<br>
+            Japan</p>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+
+  <!-- FOOTER -->
+
+  <script src="js/script.js"></script>
+  <script src="js/BUTTONCODE.js"></script>
+</body>
+
+</html>

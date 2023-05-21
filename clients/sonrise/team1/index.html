@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Work needed list:
+2. Scale the google calendar with the window.
+3. Scale the google map.
+4. Fix card/visual issues on About Us.  Use smaller cards.  Just put main text in a w3-container.
+
+-->
+
+<html>
+<title>Sonrise Avon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+    <style>
+        .foot {
+            font-size: 10px
+        }
+    </style>
+<body style="background-color:white">
+    <header class="w3-container" style="background-color:rgba(205, 105, 239, 0.68) ">
+        <a href="index.html"><img src="customLogo.png" class="w3-margin w3-animate-opacity" alt="sonrise"></a>
+    </header>
+    <div>
+        <ul class="w3-navbar w3-card-8 w3-black w3-center">
+            <li><a class="w3-hover-purple" href="index.html">Home</a></li>
+            <li><a class="w3-hover-purple" href="schedule.html">Schedule</a></li>
+            <li><a class="w3-hover-purple" href="directions.html">Directions</a></li>
+            <li><a class="w3-hover-purple" href="aboutus.html">About Us</a></li>
+            <li><a class="w3-hover-purple" href="pastor.html">The Pastor</a></li>
+        </ul>
+    </div>
+    
+    <div class="w3-center w3-card-8"> 
+        <h1>Welcome</h1>
+    </div>
+    
+    <div class="w3-container w3-card-8">
+    <div class="w3-half">
+            <h2 class="w3-center"></h2>
+
+            <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides w3-animate-fading" src="IMG_20170219_090022050_HDR.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="IMG_20170219_090420756.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="FullSizeRender4.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="IMG_20170219_090506858_HDR.jpg" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="IMG_20170226_112827866_HDR.jpg" style="width:100%">
+            </div>
+
+            <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}    
+                    x[myIndex-1].style.display = "block";  
+                    setTimeout(carousel, 5000); // Change image every 2 seconds
+                }
+            </script>
+        </div>
+   
+
+        
+        <div class="w3-half">
+            <h2 class="w3-center"> Welcome to SonRise!</h2>
+            <p class="w3-margin">
+                Join us on Sunday for Worship at 9AM and after feel free to accompany us at 10:15AM for Sunday school. 
+            </p>
+            <p class="w3-margin">
+                Thanks for visiting our website!
+            </p>
+             <p class="w3-margin">
+                Please feel free to contact us with any questions via email or phone! We look forward to getting to know you!
+             </p>
+             <p class="w3-margin">
+                We are located just south of I-94 on County Rd. 9.
+             </p>
+        </div>
+        </div>
+    
+    <div class="w3-center w3-card-8">
+    <h3> What We Believe</h3>
+   <p>God is one God but three persons -- Father, Son (Jesus Christ) and Holy Spirit. </p>
+    <p>The Bible is God’s Word and is without error. </p>
+    <p>Faith is a gift from God that he gives to people through the Gospel and Holy Baptism. </p>
+    <p>Through God’s gift of faith in Jesus Christ, a person inherits eternal life (heaven). </p>
+    <p>God loves all people and wants to give them the gift of eternal life through faith in Jesus Christ. </p>
+    <p>God wants Christians to love others. </p>
+    <p>Jesus Christ wants His followers to tell all people God’s plan for salvation. </p>
+    <p>God hears and answers the prayers of people who have faith in Him. </p>
+       
+    </div>
+<div class="w3-container w3-black" style="position:fixed; bottom:0; width:100%;">
+  <p class="foot">Made by Brice Schaefer and Max Korte, Apollo High School St. Cloud Minnesota, all pictures taken by the people of SonRise Lutheran Church </p>
+</div>
+
+      
+</body>
+</html>
+<!-- Brice did the slideshow, pictures and the footer on all pages. brice did the about us page and the pastor page
+    Max did the navbar, logo and typing on the home page. he put the schedule and map on. -->

@@ -1,0 +1,51 @@
+.roboto {
+	font-family: 'Roboto Slab', serif;
+}
+
+.fira {
+	font-family: 'Fira Sans', sans-serif;
+}
+
+header {
+	background-image: url("Guitar Picture 2.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.w3-padding-128 {
+	padding-top: 128px;
+	padding-bottom: 128px;
+}
+
+.parallax1 {
+	background-image: url("Guitar%20Picture%203.jpg");
+	height: 700px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.parallax2 {
+	background-image: url(Guitar%20Picture%201.jpg);
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+.red {
+	color: red;
+}
+
+.p1 {
+	padding-left: 300px;
+	padding-right: 300px;
+
+}
+
+.space-bottom {
+	padding-bottom: 100px;
+}

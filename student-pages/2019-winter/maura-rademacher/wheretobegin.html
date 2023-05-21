@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Where to Begin</title>
+</head>
+
+
+<body id="body4">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;color:F18F01" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="myprojects.html" class="w3-bar-item w3-button">My Projects</a>
+        <a href="wheretolearn.html" class="w3-bar-item w3-button">Where to learn</a>
+        <a href="wheretobegin.html" class="w3-bar-item w3-button">Where to Begin</a>
+    </div>
+    <div id="main">
+        <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+            <button id="openNav" class="w3-button w3-black w3-xlarge w3-display-topleft" onclick="w3_open()">&#9776;</button>
+            <img src="images/studio.jpeg" alt="Stuio" width="1200" height="500">
+            <div class="w3-display-bottomright w3-padding-large w3-opacity">
+                <h1 class="w3-xxlarge" id="imgtext4">Where to Begin</h1>
+            </div>
+        </header>
+        <div class="w3-container">
+            <h1 id="heading1">What is Right For You?</h1>
+            <p>When it comes to actually making your ideas a reality, I stick to two different ways of composing: notation and digital production.</p>
+            <!--Notation info-->
+            <h2 id="heading2">Pros and Cons of Notation</h2>
+            <img src="images/notation.jpg" alt="Notation">
+            <p>If you are starting out with writing music, I suggest that you start with notation before you move on to the more difficult stuff. However, some people like to stick this way of writing music, and it definitely has its pros and cons.</p>
+            <ul>Pros
+                <li>Easier to use</li>
+                <li>Easier to learn</li>
+                <li>Makes more sense if you want your music to be played live</li>
+            </ul>
+            <ul>Cons
+                <li>Limited tools</li>
+                <li>Can be glitchy</li>
+                <li>Sound quality isn't usually the greatest</li>
+            </ul>
+            <p>There's a good number of notation softwares that I think are really great, my favorites being Noteflight, ScoreCloud, and MuseScore. You can find the links to their websites and/or download links below</p>
+            <ul>
+                <li><a href="https://www.noteflight.com/">Noteflight</a></li>
+                <li><a href="https://scorecloud.com/">ScoreCloud</a></li>
+                <li><a href="https://musescore.org/en/download">MuseScore</a></li>
+            </ul>
+            <!--DAW info-->
+            <h2 id="heading3">Pros and Cons of Digital Production</h2>
+            <img src="images/daw.jpeg" alt="DAW">
+            <p>Digital production has recently become my new favorite thing. I've been able to create more realistic sounding music without the hassle of testing my ideas on a piano. That said, it still has its pros and cons.</p>
+            <ul>Pros
+                <li>Realistic sounds</li>
+                <li>Much more resources</li>
+                <li>Can create a wide variety of genres</li>
+            </ul>
+            <ul>Cons
+                <li>Very complicated to use</li>
+                <li>Built in plugins can suck up a lot of CPU</li>
+                <li>EXPENSIVE!! Most digital audio workstations(DAWs) range in price from 99$ to well over 1000$</li>
+            </ul>
+            <p>Since these programs like to drain your wallet, you should always try the trial version of each DAW you're interested before you buy. I tried out a few DAWs before I settled on the one I thought was the most user friendly, which is Image-Line's FL Studio. Some other popular DAWs are Ableton Live, Avid Pro Tools, and Logic Pro. Download links and websites are below</p>
+            <ul>
+                <li><a href="https://www.image-line.com/flstudio/">Image-Line FL Studio</a></li>
+                <li><a href="https://www.ableton.com/en/">Ableton Live</a></li>
+                <li><a href="https://www.avid.com/audio-recording-software?utm_source=Google&utm_medium=cpc&utm_campaign=protools&&gclid=EAIaIQobChMI0Jmh_eXx4AIVLh-tBh1FBAUoEAAYASAAEgKYfvD_BwE">Avid Pro Tools</a></li>
+                <li><a href="https://www.apple.com/logic-pro/">Apple Logic Pro(Mac only)</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+
+    </script>
+</body>
+<div id="footer">
+    <footer>Created by Maura Rademacher</footer>
+</div>
+
+</html>

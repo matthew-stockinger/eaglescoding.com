@@ -1,0 +1,285 @@
+/*****************************************************************************
+Organization:
+    First, global settings and utility classes.
+    Sections after that are organized from top to bottom, 
+			in order of appearance on the web page.
+*****************************************************************************/
+
+/* ****************************** Global ********************************** */
+
+/* intl tel input override */
+
+.iti__flag {
+  background-image: url("../imgs/flags.png");
+}
+
+@meda (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../imgs/flags@2x.png");
+  }
+}
+
+html {
+  box-sizing: border-box;
+  background-color: lightgray;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h6 {
+  font-family: sans;
+  font-size: 12px;
+  text-align: center;
+}
+
+body {
+  font-family: sans;
+  margin: 0;
+}
+
+/*jason*/
+
+/* @font-face {
+  src:url("../orbitron-bold.otf");
+  font-family:"orb";
+} */
+
+@font-face {
+  src: url("../OpenSans-Light.ttf");
+  font-family: "sans";
+}
+
+/* setup for a 6-column grid layout */
+
+/* on phones and narrow screens, the multi-column layout 
+		becomes a 1-column scroller layout. */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-column-gap: 30px;
+}
+
+.span-2 {
+  grid-column: span 6;
+}
+
+.span-3 {
+  grid-column: span 6;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.span-4 {
+  grid-column: span 6;
+}
+
+.span-5 {
+  grid-column: span 6;
+}
+
+.span-6 {
+  grid-column: span 6;
+}
+
+@media only screen and (min-width: 750px) {
+  .span-2 {
+    grid-column: span 2;
+  }
+  .span-3 {
+    grid-column: span 3;
+    padding-top: 10px;
+  }
+  .span-4 {
+    grid-column: span 4;
+  }
+  .span-5 {
+    grid-column: span 5;
+  }
+  .responsive {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+}
+
+.responsive {
+  display: block;
+  width: 100%;
+}
+
+/*jason*/
+
+/**************************** utility classes ****************************/
+
+/** These are just for this demo.  Helps make the results more visible. **/
+
+.dark-gray {
+  background-color: darkgray;
+  color: white;
+}
+
+.gray {
+  background-color: gray;
+  color: white;
+}
+
+.light-gray {
+  background-color: lightgray;
+  color: black;
+}
+
+/******************************* Header *************************************/
+
+/* navbar stuff here */
+
+/* phone navbar code here */
+
+@media only screen and (max-width: 600px) {
+  polygon {
+    visibility: hidden;
+  }
+  #CloseButton {
+    opacity: 0;
+    visibility: hidden;
+  }
+  ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  li {
+    margin: 10px;
+  }
+  a {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* desktop navbar code here. */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transition: width 0.3s;
+    z-index: 11;
+    /* arrow tab beneath has z-index 10 */
+    background-color: rgb(177, 31, 37);
+    border-radius: 0 20px 20px 0;
+    padding-top: 16px;
+    text-align: center;
+  }
+  nav.hidden {
+    width: 0px;
+    overflow: hidden;
+  }
+  nav.visible {
+    width: 200px;
+    overflow: hidden;
+  }
+  nav>ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  nav a {
+    display: block;
+    width: 200px;
+    overflow: hidden;
+    padding: 16px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+  nav a:hover,
+  .close-x-top:hover,
+  .close-x-bottom:hover {
+    color: #2e2e2e;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  .close-x-top,
+  .close-x-bottom {
+    font-size: 1.2rem;
+    display: block;
+    width: 200px;
+    overflow: hidden;
+    padding: 16px;
+  }
+  .close-x-bottom {
+    position: relative;
+    top: 35vh;
+  }
+  .nav-arrow {
+    background-color: rgba(173, 68, 72, 0.37);
+    position: fixed;
+    height: 100vh;
+    width: 40px;
+    z-index: 10;
+    padding-left: 10px;
+    padding-top: calc(50vh - 20px);
+    border-radius: 0 20px 20px 0;
+  }
+  .nav-arrow:hover {
+    cursor: pointer;
+    background-color: rgba(173, 68, 72, 0.6);
+  }
+  /*   navbar css ends */
+  a {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+/******************************* Main Body ***********************************/
+
+p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* for phones.  Brings text close to edges. */
+
+.content-wrap {
+  margin: 0 auto;
+  /* keep this greater than the default padding to allow div's to abutt each other. */
+  padding: 0px 10px;
+  overflow: auto;
+}
+
+/* for desktop: add some padding around edges */
+
+@media only screen and (min-width: 600px) {
+  .content-wrap {
+    /* This keeps the paragraphs from getting hella-wide on desktop screens. */
+    max-width: 900px;
+    margin: 0 auto;
+    /* keep this greater than the default padding to allow div's to abutt each other. */
+    padding: 50px;
+    overflow: auto;
+  }
+}
+
+/**************************************** Footer ***************************************/
+
+footer {
+  padding: 30px;
+  padding-top: 10px;
+}
+
+#footerPara {
+  font-size: 12px;
+}
+
+img {
+  padding-left: 50px;
+}

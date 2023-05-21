@@ -1,0 +1,81 @@
+/****************************************************/
+                        /*Global*/
+/****************************************************/
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+.hidden { display: none !important; }
+.visible { display: block; }
+.inline { display: inline-block; }
+/* these classes are needed because fading in hidden objects
+    must happen a few milliseconds after display:block is
+    applied.  This is a known limitation of CSS
+    transitions. */
+.opacity-0 { opacity: 0; }
+.opacity-1 { opacity: 1; }
+.fade-in { transition: opacity 1s; }
+
+/*****************************************************/
+                    /*Contact Form*/
+/*****************************************************/
+/* these are overwrites. */
+/* all other form CSS is in mustard-ui.min.css */
+
+/* general spacing */
+form {
+  /* uncomment margin auto for centered form. */
+/*     margin: auto; */
+    margin: 20px;
+    max-width: 600px;
+}
+form > div {
+    margin-bottom: 30px;
+}
+fieldset {
+    margin: 0 0 30px 0;
+}
+
+/* the radio buttons */
+ul { 
+    padding-left: 10px;
+    margin-bottom: 4px;
+}
+li { 
+    list-style-type: none;
+}
+li:nth-last-child(n+2) {
+    margin-bottom: 5px;
+}
+li > input {
+    transform: translateY(2px);
+}
+
+/* "describe your need" */
+textarea {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* the submit button */
+button {
+    background-color: #ff9c1a;
+    color: black;
+}
+
+/* the banner that appears after submitting. */
+#response-banner {
+    margin-top: 0;
+}

@@ -1,0 +1,86 @@
+    <!DOCTYPE html>
+    <html lang="en-US">
+    
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="w3.css">
+            
+            <style>
+                body{
+                    display:block;
+                }
+
+            .mySlides {display:none;}
+
+            body {font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; background-color: lightgray}
+
+            footer { text-align: center;}
+
+            a {text-decoration: none;}
+
+                iframe{
+                    margin-top: 10px;
+                    display: block;
+                }
+                h1{
+                    margin-top:20px
+                }
+             </style>
+        
+    <title>SonRise Lutheran Church</title>
+    
+    </head>
+    
+    <body>
+    
+    <div>
+    <ul class="w3-navbar w3-white w3-large w3-text-orange">
+    <li><a class=" w3-hover-orange w3-hover-text-white" href="index.html">SonRise Church</a></li>
+    <li class="w3-right"><a class="w3-hover-orange w3-hover-text-white" href="whatwebelieve.html">What We Believe</a></li>
+    <li class="w3-right"><a class="w3-hover-orange w3-hover-text-white" href="visionsandvaluespage.html">Visions and Values</a></li>
+    <li class="w3-right"><a class="w3-hover-orange w3-hover-text-white" href="calendarpage.html">Calendar</a></li>
+    <li class="w3-right"><a class="w3-hover-orange w3-hover-text-white" href="aboutpage.html">About</a></li>
+    <li class="w3-right"><a class="w3-hover-orange w3-hover-text-white" href="index.html">Home</a></li>
+    </ul>
+    </div>
+    
+    <div class="w3-container w3-orange w3-text-white"><h1>Directions</h1></div>
+    
+    <div class="w3-container w3-orange"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.543528219814!2d-94.4564044843631!3d45.599720332411245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b4539b28827005%3A0x9d6dda05fb171976!2sSonrise+Lutheran+Church!5e0!3m2!1sen!2sus!4v1487343615870" class="w3-conatiner" width="100%" height="720" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+
+    <footer class="w3-white w3-text-orange">501 County Rd. 9<br>
+    Avon, MN 56310<br>
+    If you have any questions,<br> call the church at 320-761-0715<br>Jeff Manthe, jmanthe@clearwire.net</footer>
+        
+            
+            <script>
+                $(function () {
+                setIFrameSize();
+                $(window).resize(function () {
+                    setIFrameSize();
+                });
+            });
+
+            function setIFrameSize() {
+                var ogWidth = 700;
+                var ogHeight = 600;
+                var ogRatio = ogWidth / ogHeight;
+
+                var windowWidth = $(window).width();
+                if (windowWidth < 480) {
+                    var parentDivWidth = $(".iframe-class").parent().width();
+                    var newHeight = (parentDivWidth / ogRatio);
+                    $(".iframe-class").addClass("iframe-class-resize");
+                    $(".iframe-class-resize").css("width", parentDivWidth);
+                    $(".iframe-class-resize").css("height", newHeight);
+                } else {
+                    // $(".iframe-class-resize").removeAttr("width");
+                    // $(".iframe-class-resize").removeAttr("height");
+                    $(".iframe-class").removeClass("iframe-class-resize");
+                }
+            }
+            </script>
+        
+    </body>
+</html>        

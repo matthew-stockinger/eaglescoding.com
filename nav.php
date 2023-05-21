@@ -15,6 +15,9 @@ echo '<nav rel="js-mainNav" class="w3-sidenav w3-collapse w3-padding flexcontain
     <div class="w3-black w3-margin">
         <a href="javascript:void(0)" rel="js-code-art-button" class="w3-biryani">Student Code Art<br><br></a>
     </div>
+    <div class="w3-black w3-margin">
+        <a href="./text-adventures-2023.php" class="w3-biryani">Text Games 2023!<br><br></a>
+    </div>
 </nav>';
 
 /************ subNav stuff *****************/

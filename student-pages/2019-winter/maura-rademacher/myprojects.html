@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|PT+Sans+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Projects</title>
+</head>
+<style>
+
+
+</style>
+
+<body id="body2">
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none;color:F18F01" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+        <h3 class="w3-bar-item">Menu</h3>
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="myprojects.html" class="w3-bar-item w3-button">My Projects</a>
+        <a href="wheretolearn.html" class="w3-bar-item w3-button">Where to learn</a>
+        <a href="wheretobegin.html" class="w3-bar-item w3-button">Where to Begin</a>
+    </div>
+    <div id="main">
+        <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+            <button id="openNav" class="w3-button w3-black w3-xlarge w3-display-topleft" onclick="w3_open()">&#9776;</button>
+            <img src="images/sheetmusic.jpeg" alt="Sheet Music" width="1500" height="500">
+            <div class="w3-display-bottomright w3-padding-large w3-opacity">
+                <h1 class="w3-xxlarge" id="imgtext2">My Projects</h1>
+            </div>
+        </header>
+        <!--first row-->
+        <div class="w3-row w3-border">
+            <!--first column-->
+            <div class="w3-container w3-half">
+                <h2 id="heading1">Notation and Sheet Music</h2>
+                <p>The first place anyone should go to to create music would be musical notaion. In my opinion, it's the best way to learn how the basics to music theory work. It's also a good way to learn all the different clefs that instuments play in, and it's quite fun to mess with all the keys you can play in.</p>
+
+            </div>
+            <!--second column-->
+            <div class="w3-container w3-half">
+                <img class="w3-container" src="images/noteflightex.jpg" width="900" height="500">
+                <figcaption><a href="https://www.noteflight.com/scores/view/34df7a515cff6d7b298143d8ace5030a14f70bd3" target="_blank">Listen to my arrangement of Vivaldi's <em>The Four Seasons</em> here.</a></figcaption>
+            </div>
+        </div>
+        <!--second row-->
+        <div class="w3-row w3-border">
+            <!--first column-->
+            <div class="w3-container w3-half w3-border">
+                <img class="w3-container" src="images/noteflightex2.jpg" width="550" height="300">
+                <figcaption><a href="https://www.noteflight.com/scores/view/aa8e2225c0fc52aa0e8b383b789caa94b62a603b" target="_blank">Listen to my arrangement of Karma Fields'<em>Stickup Classical Deviations</em> here.</a></figcaption>
+            </div>
+            <!--second column-->
+            <div class="w3-container w3-half">
+                <h2 id="heading2">Finding what inspires you the most</h2>
+                <p>About a few years ago, I became really interested in electonic music. One artist in particular caught my attention. When the artist Karma Fields first released his song "Build The Cities" on the record label Monstercat, I immediately fell in love. Later, that same artist recreated some of his songs into classial style pieces, so I obviously had to make my own arrangement of one of the songs. I arranged the classical version of his song titled "Stickup", which I wrote to be played by an orchestra.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+
+    </script>
+</body>
+<div id="footer">
+    <footer>Created by Maura Rademacher</footer>
+</div>
+
+
+</html>

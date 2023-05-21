@@ -1,0 +1,25 @@
+.about {
+  text-align: center;
+  font-family: amagro-bold,ttf, sans-serif;
+}
+.column {
+  column-count: 2;
+  column-gap: 40px;
+}
+.aimg1 {
+  border: 2px solid black;
+  width: 90%;
+  margin: 10px;
+}
+.aimg2 {
+  border: 2px solid black;
+  width: 90%;
+  margin: 10px;
+}
+.ptext {
+  padding-top: 15px;
+}
+.habout {
+ text-align: center;
+ font-family: amagro-bold,ttf, sans-serif;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link href="w3.css" rel="stylesheet">
+	<link href="link.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<title>Kerchu mein due</title>
+</head>
+
+<body class="backblack">
+	<header>
+		<div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width:100%;right:0;" id="mySidebar">
+			<button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+			<nav class="w3-bar w3-xlarge" style="background-color: #49C834">
+				<a href="index.html"><img src="images/JS_Fence_Logo%20.jpg" alt="logo" width="69px" class="w3-round-large"></a>
+				<a href="index.html" style="height:69px" class="hover w3-mobile"><i class="fa fa-home"></i> Home</a>
+				<a href="contactcopy.html" style="height:69px" class="hover w3-mobile"><i class="fa fa-phone"></i> Contact</a>
+				<a href="#" style="height:69px" class="hover w3-mobile"><i class="fa fa-dungeon"></i> Fences</a>
+				<a href="DarkInfo.html" style="height:69px" class="hover w3-mobile"><i class="fa fa-book"></i> Info</a>
+				<a href="index.html" style="height:69px" class="hover w3-mobile"><i class="fa fa-sun"></i> Light Mode</a>
+				<a href="#" style="height:69px" class="blue w3-right">Call Us 615-509-1963</a>
+			</nav>
+		</div>
+		<div class="w3-main green" style="margin-right:200px">
+			<div class="w3-container">
+				<p class="black">
+					<button class="w3-button w3-xlarge w3-left w3-hide-large w3-container green" onclick="w3_open()" style="background-color: #007EA7"><i class="fa fa-bars"></i></button>
+					&nbsp;Call Us 615-509-1963
+				</p>
+			</div>
+		</div>
+		<script>
+			function w3_open() {
+				document.getElementById("mySidebar").style.display = "block";
+				document.getElementById("mySidebar").style.height = "506px";
+			}
+
+			function w3_close() {
+				document.getElementById("mySidebar").style.display = "none";
+				document.getElementById("mySidebar").style.height = "69px";
+			}
+
+		</script>
+	</header>
+
+	<!-- Slideshow container -->
+	<div class="slideshow-container w3-round-large w3-card-2 blue">
+
+		<!-- Full-width images with number and caption text -->
+		<div class="mySlides fade">
+			<div class="numbertext">1 / 5</div>
+			<img src="images/Untitled.png" style="width:100%">
+			<div class="text"><br><br> A stylish fence for a hilly landscape<br><br><br></div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">2 / 5</div>
+			<img src="20180517_220150315_iOS.jpg" style="width:100%">
+			<div class="text"><br><br> Tall fence to keep in pets and add some privacy to your lawn<br><br></div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 5</div>
+			<img src="20180526_210140180_iOS.jpg" style="width:100%">
+			<div class="text"><br><br> A nice vinyl gate to go perfect with a pool<br><br><br></div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">4 / 5</div>
+			<img src="20181017_171225727_iOS.jpg" style="width:100%">
+			<div class="text"><br><br> An open feel that still can guard your yard<br><br><br></div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">5 / 5</div>
+			<img src="20181101_213551117_iOS.jpg" style="width:100%">
+			<div class="text"><br><br>Matches perfectly with natural beauty
+				<br><br><br></div>
+		</div>
+		<!-- Next and previous buttons -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+		<span class="dot" onclick="currentSlide(1)"></span>
+		<span class="dot" onclick="currentSlide(2)"></span>
+		<span class="dot" onclick="currentSlide(3)"></span>
+		<span class="dot" onclick="currentSlide(4)"></span>
+		<span class="dot" onclick="currentSlide(5)"></span>
+	</div>
+	<footer class="w3-container green w3-center">
+		<br>
+		<p>Copyright ©2019 J&amp;S FiFence All rights reserved.</p>
+	</footer>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " active";
+		}
+
+	</script>
+
+
+</body>
+
+</html>

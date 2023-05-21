@@ -1,0 +1,384 @@
+/*
+color scheme:
+#1abc9c teal green
+#FF4136 salmon
+#cdff36 yellow
+#121111 black
+#d98714 orange
+#b11f25 red
+
+*/
+
+:root {
+  --teal: #1abc9c;
+  --salmon: #ff4136;
+  --sky-blue: #b3e0ff;
+  --yellow: #cdff36;
+  --black: #121111;
+  --orange: #d98714;
+  --red: #b11f25;
+}
+
+/*********Queralt********/
+
+@font-face {
+  font-family: metropolis;
+  src: url("fonts/Metropolis-Light.otf");
+}
+
+@font-face {
+  font-family: abhaya;
+  src: url("fonts/AbhayaLibre-Regular.ttf");
+}
+
+/*******Maria********/
+
+h1,
+h2 {
+  font-family: abhaya;
+  line-height: 5rem;
+}
+h3 {
+  font-family:abhaya;
+  line-height: 8rem;
+}
+
+.paragraphfont {
+  font-family: metropolis;
+  text-align: justify;
+  line-height: 3rem;
+}
+
+.img-full {
+  width: 100%;
+}
+
+.img-box {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.img-box-container {
+  height: 300px;
+}
+
+body {
+  margin: 0px;
+}
+
+/***********Queralt*****/
+
+.bg {
+  background-color: #B0C4DE;
+}
+
+/**********Amran**********/
+
+header {
+  padding: 20px 0px 20px 20px;
+  text-aligen: center;
+  background-color: var(--black);
+}
+
+/******************** narrow screens navbar & header **************************/
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 1rem;
+  font-family: abhaya;
+}
+
+#logo {
+  grid-row: 1 / span 3;
+  justify-self: center;
+}
+
+nav img {
+  box-sizing: border-box;
+  width: 8rem;
+  padding: 0px 20px;
+}
+
+.navlink {
+  text-decoration: none;
+  font-size: 2rem;
+  text-align: left;
+  margin: 10px;
+}
+
+/***Maria***/
+
+nav a:hover {
+  /*   color: white; */
+  color: var(--red);
+}
+
+nav a {
+  /*  color: var(--red); */
+  color: white;
+}
+
+/***Maria***/
+
+#what-we-do {
+  /* fixes word-wrapping issue for this item on narrow screens. */
+  line-height: 1;
+}
+
+/************************ desktop screen navbar *************************/
+
+@media only screen and (min-width: 740px) {
+  nav {
+    display: flex;
+    align-items: center;
+    font-family: abhaya;
+  }
+  #logo {
+    /*     border: 1px solid red; */
+    height: 100%;
+  }
+  .navlink {
+    margin: 35px;
+  }
+  #what-we-do {
+    /* go back to default line height for wide screens */
+    line-height: unset;
+  }
+}
+
+/***********Amran************/
+
+/******************************** slidshow ***********************************/
+
+* {
+  box-sizing: border-box
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+
+.text {
+  color: #f2f2f2;
+  background-color: black;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+/*******************Queralt***************/
+
+/********************** button *******************/
+
+/* phone screens */
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--red);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  /*   margin: 377px; */
+  position: relative;
+  bottom: 200px;
+  left: 50px;
+  height: 80px;
+}
+
+/* large screens  */
+
+@media only screen and (min-width: 740px) {
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: var(--red);
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 28px;
+    padding: 30px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    /*   margin: 377px; */
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    height: 102px
+  }
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/**********************content*****************/
+
+.content1 {
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+}
+
+/*******background-color: white;********/
+
+.content {
+  margin: 20px;
+}
+
+/*************************************** footer *****************************/
+
+footer {
+  left: 0;
+  bottom: 0;
+  background-color: var(--black);
+  color: white;
+  text-align: left;
+  padding: 35px;
+  font-family: abhaya;
+  font-size: 1rem;
+}
+
+footer a {
+  display: inline-block;
+  color: white;
+  margin-right: 7vw;
+  margin-top: 3rem;
+}
+
+footer a:hover {
+  color: var(--red)
+}

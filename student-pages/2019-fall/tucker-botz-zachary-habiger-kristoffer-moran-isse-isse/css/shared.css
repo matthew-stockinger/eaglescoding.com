@@ -1,0 +1,351 @@
+*, ::after, ::before {
+  box-sizing: content-box;
+}
+
+html,body {
+   margin:0;
+   padding:0;
+   height:100%;
+   line-height: 1;
+   background-color: var(--bg-color);
+}
+/* nav blocks and links/text */
+/* Made navbar on side (KRIS) */
+.nav_side {
+/*  float: left;*/
+  border: 2px rgb(190, 190, 190);
+/*  border-collapse: collapse;*/
+  text-align: center;
+  display: block;
+  width: 80px;
+  color: white;
+  text-decoration: none;
+  font-family: amagro-bold,ttf, sans-serif;
+  font-size: large;
+  text-shadow: 1px 1px #e52424;
+  margin: 10px 8px 0px 8px;
+  padding: 16px 50px 16px 50px;
+  /* list-style: none;*/
+  background-color: black;
+}
+
+/* nav logo */
+#nav_logo {
+  width: 200px;
+    position: absolute;
+    left: 6px;
+    top: 10px;
+}
+/* change this to space out nav blocks */
+a.nav_side {
+  /*margin: 0px 8px 0px 8px;*/
+}
+/* nav hover effects */
+a.nav_side:hover {
+  color: rgba(0, 0, 0, 0.24);
+}
+
+#footer {
+   /* bottom:0; */
+   width:100%;
+   height:140px;   /* Height of the footer */
+  font-family:  'amagro-bold';
+  background-color: var(--heading-color);
+/*  padding: 24px 40px 24px 40px;*/
+  border-top: 2px solid black;
+  color: white;
+}
+/* try to keep this sorted a bit */
+
+/* ------------------------------------ */
+
+/* FONTS */
+@font-face {
+  font-family: amagro-bold;
+  src: url("../fonts/amagro-bold.ttf")
+}
+@font-face {
+  font-family: 'playfair-display';
+  src: url(../fonts/playfairdisplaysc-regular.otf)
+}
+/* TEXT */
+.ptext {
+  font-family: 'playfair-display', sans-serif;
+  color: var(--font-color);
+  padding: 0px 40px 0px 40px;
+}
+a:-webkit-any-link {
+    text-decoration: none;
+}
+
+/* THIS CODE IS BUTTON PLZ NO EAT */
+
+:root {
+    --nav-color: rgb(204, 204, 204);
+    --secondary-color: #536390;
+    --font-color: #151515;
+    --bg-color: #fff;
+    --heading-color: rgb(50,50,50);
+    --navblock-color: rgba(129, 129, 129, 0.39);
+}
+.textcolor {
+  color: var(--font-color);
+   color: var(--secondary-color);
+   color: var(--nav-color);
+}
+
+[data-theme="dark"] {
+    --nav-color: #424652;
+    --secondary-color: #818cab;
+    --font-color: white;
+    --bg-color: rgb(38, 38, 59);
+    --heading-color: rgb(16, 16, 28);
+    --navblock-color: rgb(16, 16, 28);
+}
+/*Simple css to style it like a toggle switch*/
+@media only screen and (max-width: 999px) {
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 2.5%;
+        top: 24px;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 25px;
+        top: 24px;
+    }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+.theme-switch input {
+  display:none;
+}
+.slider {
+  background-color: black;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+input:checked + .slider {
+  background-color: grey;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.monavleft{
+    text-align: center;
+    font-family:  amagro-bold,ttf, sans-serif;
+}
+.monavmid {
+    text-align: center;
+    font-family:  amagro-bold,ttf, sans-serif;
+}
+.monavright {
+     text-align: center;
+    font-family:  amagro-bold,ttf, sans-serif; 
+}
+
+
+
+/* PUT STUFF BELOW THIS PLZ */
+
+@media only screen and (max-width: 600px) {
+  /* nav border and box */
+  .nav_block {
+    /* border: 2px solid black; */
+  display: none;
+  }
+  /* main part of site, everything in a div with this class moves over for navbar */
+  #main {
+    min-height:100%;
+    position:relative;
+    height:100%;
+    /* (KRIS) */
+    background-color: var(--bg-color);
+  }
+  /* FOOTER CSS (KRIS) */
+  #footercontainer {
+    position: auto;
+    padding-top: 50px;
+  }
+  .header {
+    border-bottom: 2px solid black;
+    padding: 30px 33% 30px 33%;
+    margin-top: 0px;
+    color: white;
+      text-align: center;
+    font-family: amagro-bold;
+    text-shadow: 1px 1px #e52424;
+    width: inherit;
+    background-image: url("../img/header_img.2.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100px; /* You must set a specified height */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%;
+    background-position: 30% 28%;
+    /* background-origin: border-box; */
+  }
+  .header_link {
+    position: absolute;
+    top: 100px;
+    right: 1%;
+    background-color: #e52424;
+    color: white;
+    padding: 16px;
+    border: 2px solid black;
+    text-shadow: 1px 1px black;
+    font-family: Verdana, sans-serif;
+  }
+  .home {
+    text-align: center;
+    font-family:  amagro-bold,ttf, sans-serif;
+  }
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 601px) { 
+  /* nav border and box */
+  .nav_block {
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 100px;
+    border-right: 2px solid black;
+    padding-right: 5px;
+    background-color: rgb(190, 190, 190);
+  }
+  /* main part of site, everything in a div with this class moves over for navbar */
+  #main {
+    margin-left: 205px; 
+    /* Same as the width of the sidenav */
+    min-height:100%;
+    position:relative;
+    height:100%;
+    /* (KRIS) */
+    background-color: var(--bg-color);
+  }
+  /* FOOTER CSS (KRIS) */
+  #footercontainer {
+    position: auto;
+    padding-top: 50px;
+    /* margin-left: 205px; Same as the width of the sidenav */
+  }
+  .header {
+    border-bottom: 2px solid black;
+    padding: 50px 33% 50px 33%;
+    margin-top: 0px;
+    color: ivory;
+      text-align: center;
+    font-family: amagro-bold;
+    text-shadow: 2px 2px black;
+    width: inherient;
+    background-image: url("../img/header_img.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100px; /* You must set a specified height */
+    background-position: 30% 28%;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%;
+  }
+    
+  .header_link {
+    position: absolute;
+    top: 142px;
+    right: 1%;
+    background-color: #e52424;
+    color: white;
+    padding: 16px;
+    border: 2px solid black;
+    text-shadow: 1px 1px black;
+    font-family: Verdana, sans-serif;
+  }
+  .home {
+    font-family:  amagro-bold,ttf, sans-serif;
+  }
+  .navMobileContainer {
+    display: none;
+  }
+}
+
+
+
+a {
+  text-decoration:none;
+  color:#e52424;
+  font-weight:400;
+  transition:opacity .1s ease-out;
+}
+a:focus,a:hover {
+  opacity:0.75;
+}a:active {
+  opacity:1;
+}
+ul,ol,dl {
+  list-style:none;
+  margin-bottom:15px;
+}
+
+
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	grid-column-gap: 20px;
+}
+.span-3 { grid-column: span 2; }
+
+/* for phones.  Brings text close to edges. */
+.content-wrap {
+	margin: 0 auto;
+	/* keep this greater than the default padding to allow div's to abutt each other. */
+	padding: 0px 10px;
+	overflow: auto;
+}  
+
+.ftext {
+  color: white;
+}
+
+.fcolumn {
+  column-count: 3;
+}

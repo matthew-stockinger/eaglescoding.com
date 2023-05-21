@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/intl-tel-input.min.css">
+  <link rel="stylesheet" href="css/mustard-ui.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Contact North Berkeley</title>
+</head>
+
+<body>
+  <header>
+    <div class="headerTop">
+      <img src="/img/logo.jpg" alt="logo" class="mainImage">
+      <a href="contact.html" class="action">Contact Me</a>
+      <h2 class="title">
+        North Berkeley
+      </h2>
+    </div>
+    <nav>
+      <a href="contact.html" class="navItem">Contact</a>
+      <a href="index.html" class="navItem">Home</a>
+      <a href="experience.html" class="navItem">Experience</a>
+    </nav>
+  </header>
+  <!-- note to self: check if this action results in a security warning when viewing the page via https.  If so, then use an https value for the action attribute. -->
+  <!--<form method="post" action="" class="js-form" id="contact-form">-->
+  <form class="js-form" id="contact-form">
+    <h1>Contact North Berkeley</h1>
+    <p>Serious inquiries only.</p>
+    <p>*All fields are required.</p>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="user_name" autofocus data-validate-field="name">
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="user_email" data-validate-field="email">
+    </div>
+    <div>
+      <label for="phone">Phone</label><br>
+      <input type="tel" id="phone" name="user_phone" data-validate-field="phoneRequired">
+    </div>
+    <div>
+      <label for="location">Your Location</label>
+      <input type="text" id="location" name="user_location" data-validate-field="text">
+    </div>
+    <fieldset>
+      <legend>Inquiry Type</legend>
+      <ul>
+        <li>
+          <input type="radio" checked name="user_category" id="category-1" value="insurance">
+          <label for="category-1">Insurance adjuster</label>
+        </li>
+        <li>
+          <input type="radio" name="user_category" id="category-2" value="municipality">
+          <label for="category-2">Municipality</label>
+        </li>
+        <li>
+          <input type="radio" name="user_category" id="category-3" value="ngo">
+          <label for="category-3">Non-governmental organization (NGO)</label>
+        </li>
+        <li>
+          <input type="radio" name="user_category" id="category-4" value="other">
+          <label for="category-4">Other</label>
+        </li>
+      </ul>
+    </fieldset>
+    <div>
+      <label for="msg">Describe your need:</label>
+      <textarea id="msg" name="user_message" data-validate-field="textArea"></textarea>
+    </div>
+    <p id="response-banner" class="alert hidden opacity-0 fade-in">response message</p>
+    <!--must be type="submit" for just-validate. No type="button"-->
+    <button type="submit" id="submit-button">Submit</button>
+  </form>
+
+  <!--Erics 2 colum layout-->
+
+  <div class="pad col-2">
+    <div>
+      <h2>Mailing Address</h2>
+      <p>203 - 289 Alexander Street <br>Vancouver, BC V6A 4H6 <br>Canada</p>
+    </div>
+
+    <div>
+      <h2>Off-Site Address</h2>
+      <p>Nishi-ku, Fukuoka-shi <br>Fukuoka-ken <br>Japan</p>
+    </div>
+
+  </div>
+  <!--Footer by Jacob-->
+  <footer>
+    <h3>Copyright ©2019 North Berkeley All rights reserved.</h3>
+  </footer>
+  <script src="js/intl-tel-input.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/contact.js"></script>
+
+</body>
+
+</html>

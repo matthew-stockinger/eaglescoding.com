@@ -2,6 +2,8 @@
 <!-- 
 To Do:
 -Refactor:
+  -attach event handlers in JS modules.
+  -rewrite JS files with module pattern.
   -all CSS animations: can use a transition instead of CSS animation.
   -make index.php the wireframe.  Put all content in separate files and load with ajax requests.
 
@@ -10,7 +12,6 @@ To Do:
 -host YouTube videos locally.
 -swipe with CSS.  clickstops?  I forget what they're called.  CSS tricks.
     https://css-tricks.com/the-javascript-behind-touch-friendly-sliders/
-    More options: hammerjs.github.io or zingchart.github.io/zingtouch/
 -AJAX the site?
 -fix ugly display of code-art-nav 2-line items.  e.g. 2017 winter JavaScript
 -->

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="Family To Family" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/lib/w3.css">
+<body>
+
+<div class="w3-content w3-section" style="max-width:500px">
+    <!-- giant div here -->
+        
+  <img class="mySlides w3-animate-fading" src="20160808_201901.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="20160807_191302.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="20160808_201820.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="20160808_201843.jpg" style="width:100%">
+</div>
+
+ <div class="w3-display-container w3-text-white">
+    <img src="img_lights.jpg" alt="Lights" style="width:100%">
+
+    <div class="w3-padding w3-display-middle w3-xxlarge">Family To Family</div>
+    
+      <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000);    
+}
+</script>
+
+</body>
+</html>

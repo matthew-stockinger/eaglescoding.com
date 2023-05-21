@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+
+<!-- Sidenav -->
+<nav class="w3-sidenav w3-black w3-animate-top w3-center w3-xxlarge" style="display:none; padding-top:150px;" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-jumbo w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="javascript:void(0)" class="w3-text-grey w3-hover-black">home</a>
+  <a href="javascript:void(0)" class="w3-text-grey w3-hover-black">Calender</a>
+  <a href="javascript:void(0)" class="w3-text-grey w3-hover-black">Vision Values, and Beliefs</a>
+  <a href="javascript:void(0)" class="w3-text-grey w3-hover-black">News Letter</a>
+</nav>  
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+<!-- Header -->
+<header class="w3-container w3-padding-32 w3-center w3-opacity w3-margin-bottom">
+  <span class="w3-opennav w3-xxlarge w3-right w3-margin-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+  <div class="w3-clear"></div>  
+  <img src="sonrise.jpg" alt="SonRise" width="300" height="200">  
+</header>
+    
+</div>
+<!-- End Page Content -->
+</div>  
+    
+ <div class="w3-container w3-bottom"> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.5437149610143!2d-94.45640984964886!3d45.59971657900014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b4539b28827005%3A0x9d6dda05fb171976!2sSonrise+Lutheran+Church!5e0!3m2!1sen!2sus!4v1488361657309" width="100%" height="300" frameborder="0" style="margin-bottom:30px;" allowfullscreen></iframe>
+</div>
+ 
+    <!-- Footer -->
+ <footer class="w3-container w3-padding-16 w3-light-grey w3-center  w3-opacity w3-xlarge" style=" margin-top:200px"> 
+  <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
+   <i class="fa fa-instagram w3-hover-text-purple"></i>
+  <i class="fa fa-snapchat w3-hover-text-yellow"></i>
+  <i class="fa fa-pinterest-p w3-hover-text-red"></i>
+  <i class="fa fa-twitter w3-hover-text-light-blue"></i>
+  <i class="fa fa-linkedin w3-hover-text-indigo"></i>
+</footer>   
+    
+<script>
+
+// Open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("mySidenav").style.display = "block";
+    document.getElementById("mySidenav").style.zIndex = "10";
+}
+
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+
+</body>
+</html>

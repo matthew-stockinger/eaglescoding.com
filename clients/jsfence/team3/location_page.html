@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <title>JS Fences</title>
+</head>
+
+<body>
+  <nav class="w3-sidebar w3-bar-block w3-animate-left w3-card-4" style="display:none;z-index:5" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large w3-green" onclick="w3_close()">Close &times;</button>
+
+    <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hover-text-green">
+      <i class="fa fa-home"></i>
+      Home
+    </a>
+
+    <a href="tel:6155091963" class="w3-bar-item w3-button w3-mobile w3-hover-text-green">
+      <i class="fa fa-mobile "></i> Jeff Bilben<br>&nbsp;&nbsp;&nbsp;615-509-1963
+    </a>
+
+    <a href="tel:6155091962" class="w3-bar-item w3-button w3-mobile w3-hover-text-green">
+      <i class="fa fa-mobile "></i> Summer Bilben<br>&nbsp;&nbsp;&nbsp;615-509-1962
+    </a>
+
+    <a href="#" class="w3-bar-item w3-button w3-mobile w3-hover-text-green">
+      <i class="fa fa-map "></i> Location
+    </a>
+  </nav>
+
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+
+  <div>
+    <button class="w3-button w3-xxlarge" onclick="w3_open()">&#9776;</button>
+    <h1 class="w3-center">Location</h1>
+    <div class="w3-container w3-center">
+      <h1><img src="images/radius.png" alt="50 Mile radius" class="w3-mobile" style="max-width: 650px"></h1>
+    </div>
+  </div>
+  <div class="w3-center w3-container w3-grey">
+    <p>
+      <font face="italic">
+        We are a quality fencing company in central Minnesota. Our service area is 50 miles from St. Cloud.
+      </font>
+    </p>
+    <p>
+      <font face="italic">
+        Located in Sartell, MN
+      </font>
+    </p>
+  </div>
+  <div class="w3-container w3-black w3-center w3-mobile">
+    <p> Jeff Bilben: jeff@jandsfences.com </p>
+
+    <a href="tel:6155091963" class="w3-mobile ">
+      615-509-1963
+    </a>
+    </br>
+    <p> Summer Bilben: summer@jandsfences.com</p>
+    <p><a href="tel:6155091962" class="w3-mobile">
+        615-509-1962
+      </a></p>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
